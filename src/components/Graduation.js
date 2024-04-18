@@ -6,11 +6,11 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import Badge from "react-bootstrap/Badge";
 
-class Experience extends Component {
+class Graduation extends Component {
   render() {
-    if (this.props.resumeExperience && this.props.resumeBasicInfo) {
-      var sectionName = this.props.resumeBasicInfo.section_name.experience;
-      var work = this.props.resumeExperience.map(function (work, i) {
+    if (this.props.resumeGraduate && this.props.resumeBasicInfo) {
+      var sectionName = this.props.resumeBasicInfo.section_name.graduate;
+      var work = this.props.resumeGraduate.map(function (work, i) {
         const technologies = work.technologies;
         const mainTechnologies = work.mainTech;
 
@@ -37,7 +37,7 @@ class Experience extends Component {
               color: "#fff",
               textAlign: "center",
             }}
-            icon={<i className="iconify experience-icon" data-icon="icomoon-free:office"></i>}
+            icon={<i className="iconify experience-icon" data-icon="mdi:certificate-outline"></i>}
             key={i}
           >
             <div style={{ textAlign: "left", marginBottom: "4px" }}>
@@ -83,7 +83,7 @@ class Experience extends Component {
                 textAlign: "center",
               }}
               icon={
-                <i className="fas fa-hourglass-start mx-auto experience-icon"></i>
+                <i className="iconify experience-icon" data-icon="fa-solid:user-graduate"></i>
               }
             />
           </VerticalTimeline>
@@ -93,4 +93,4 @@ class Experience extends Component {
   }
 }
 
-export default Experience;
+export default Graduation;

@@ -1,18 +1,27 @@
 import React, { Component } from "react";
 import { Icon } from "@iconify/react";
-import angularIcon from "@iconify/icons-logos/angular-icon";
-import reactIcon from "@iconify/icons-logos/react";
-import vueIcon from "@iconify/icons-logos/vue";
-
+import awsIcon from "@iconify/icons-logos/aws";
+import LogosServerless from "@iconify/icons-logos/serverless";
 class About extends Component {
   render() {
     if (this.props.sharedBasicInfo) {
       var profilepic = "images/" + this.props.sharedBasicInfo.image;
+      var certs = this.props.sharedBasicInfo.cert;
+      var iconCert = certs.map((cert) => (
+        <a key={cert.title} href={cert.url} target="_blank" rel="noopener noreferrer">
+          <img
+            src={"images/cert/" + cert.icon}
+            alt={cert.title}
+            style={{ width: "auto", height: "100px", margin: "0 10px", cursor: "pointer" }}
+          />
+        </a>
+      ));
     }
     if (this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.about;
       var hello = this.props.resumeBasicInfo.description_header;
       var about = this.props.resumeBasicInfo.description;
+
     }
 
     return (
@@ -30,18 +39,10 @@ class About extends Component {
                     src={profilepic}
                     alt="Avatar placeholder"
                   />
-                  <Icon
-                    icon={angularIcon}
-                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
-                  />
-                  <Icon
-                    icon={reactIcon}
-                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
-                  />
-                  <Icon
-                    icon={vueIcon}
-                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
-                  />
+                  <div style={{ display: "flex", alignItems: "center" ,justifyContent: "center"}}>
+                    {iconCert}
+                  </div>
+
                 </span>
               </div>
             </div>
