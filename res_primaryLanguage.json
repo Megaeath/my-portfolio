@@ -1,0 +1,182 @@
+{
+  "basic_info": {
+    "description_header": "Hi",
+    "description": "Hi there! I'm a passionate developer with a diverse set of interests. When I'm not coding, you can find me indulging in my hobbies - playing video games, building Lego sets and Gundam models, and keeping fit through regular workouts. I'm always eager to explore new technologies and stay up-to-date with the latest tech stacks. Above all, I pride myself on being a kind and fun-loving person, always ready to connect and learn from others. Let's chat and see what we can create together!",
+    "section_name": {
+      "about": "About me",
+      "projects": "Side Projects",
+      "skills": "Skills",
+      "experience": "Experience",
+      "graduate": "Graduation"
+    }
+  },
+  "projects": [
+    {
+      "title": "Animal Shelter",
+      "startDate": "2020",
+      "description": "The most expanded application I had opportunity to work with. I've learned many technologies and my code was reviewed by awesome curator. Application handles all adoption processess and allows to store all evidence on adopting animals from animal shelter.",
+      "images": [
+        "images/portfolio/animal-shelter/p1.jpg",
+        "images/portfolio/animal-shelter/p2.jpg"
+      ],
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon-angularjs-plain",
+          "name": "Angular"
+        },
+        {
+          "class": "devicon-typescript-plain",
+          "name": "TypeScript"
+        },
+        {
+          "class": "devicon-csharp-plain",
+          "name": "C#"
+        }
+      ]
+    },
+    {
+      "title": "Photography",
+      "startDate": "2018",
+      "description": "Personal project for study subject. I was responsible for testing photography application that optimizes images with popular algorithms used by graphic editors like Pixlr or Adobe Photoshop. I've earned A grade :)",
+      "images": [
+        "images/portfolio/photography/p1.jpg",
+        "images/portfolio/photography/p2.jpg"
+      ],
+      "url": "https://github.com",
+      "technologies": [
+        {
+          "class": "devicon-react-original",
+          "name": "React"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        }
+      ]
+    },
+    {
+      "title": "3D Object Viewer",
+      "startDate": "2015",
+      "description": "One of the first apps I was working on my internship. I had to develop front-end implementation for app that shows 3D models of known buildings. This was also my first project in Angular framework. I've learned a lot!",
+      "images": [
+        "images/portfolio/adventure/p1.jpg",
+        "images/portfolio/adventure/p2.jpg"
+      ],
+      "url": "https://github.com",
+      "technologies": [
+        {
+          "class": "devicon-angularjs-plain",
+          "name": "Angular"
+        },
+        {
+          "class": "devicon-typescript-plain",
+          "name": "TypeScript"
+        },
+        {
+          "class": "devicon-csharp-plain",
+          "name": "C#"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Vgidigitallab",
+      "title": "Assistant Manager,Software Developer",
+      "years": "03.2021 - Present",
+      "mainTech": [
+        "VGIONE",
+        "CDP"
+      ],
+      "technologies": [
+        "AWS",
+        "Serverless",
+        "C#.NET",
+        "Java",
+        "Javascript",
+        "Postgresql",
+        "Opensearch",
+        "Elasticsearch",
+        "Postgresql",
+        "Typescript"
+      ]
+    },
+    {
+      "company": "Thanachart Security",
+      "title": "Assistant Manager,Software Developer",
+      "years": "01.2021 - 03.2021",
+      "mainTech": [
+        "Mobile API"
+      ],
+      "technologies": [
+        "C#.NET",
+        "Postgresql"
+      ]
+    },
+    {
+      "company": "goSoft",
+      "title": "Specialist,Developer Lead",
+      "years": "03.2012 - 01.2021",
+      "mainTech": [
+        "Ticket Management System",
+        "Contract Center System"
+      ],
+      "technologies": [
+        "Java",
+        "Oracle",
+        "NodeJS",
+        "Javascript",
+        "SQL"
+      ]
+    },
+    {
+      "company": "KP Soft",
+      "title": "System Analyst,Senior Programmer",
+      "years": "03.2011 - 01.2012",
+      "mainTech": [
+        "Personal Loan System"
+      ],
+      "technologies": [
+        "Delphi",
+        "Microsoft SQL"
+      ]
+    },
+    {
+      "company": "Abstract Computer",
+      "title": "Programmer",
+      "years": "01.2005 - 03.2011",
+      "mainTech": [
+        "Hospital Management System"
+      ],
+      "technologies": [
+        "Oracle",
+        "C#.NET",
+        "VB.NET",
+        "Sybase Data Windows"
+      ]
+    }
+  ],
+  "graduate": [
+    {
+      "company": "AWS Certification",
+      "title": "AWS Cloud Practitioner",
+      "years": "01.2021 - present",
+      "mainTech": [],
+      "technologies": [
+        "AWS"
+      ]
+    },
+    {
+      "company": "King Mongkut's University Of Technology North Bangkok",
+      "title": "Master's degree",
+      "years": "01.2010 - 03.2012",
+      "mainTech": [
+        "Information Technology"
+      ],
+      "technologies": [
+        "Information Technology"
+      ]
+    }
+  ]
+}
