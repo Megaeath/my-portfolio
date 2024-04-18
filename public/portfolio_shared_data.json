@@ -22,12 +22,12 @@
     "cert": [
       {
         "title": "AWS Certified Cloud Practitioner",
-        "url": "https://www.credly.com/badges/d95a384f-daeb-409f-873e-4984ae52dc16/public_url",
+        "url": "",
         "icon": "aws-certified-cloud-practitioner.png"
       },
       {
         "title": "AWS Cloud Quest: Cloud Practitioner",
-        "url": "https://www.credly.com/badges/6c7009b0-5758-44c2-8adb-d79c64e5a2c9/public_url",
+        "url": "",
         "icon": "aws-cloud-quest-cloud-practitioner.png"
       }
     ]
