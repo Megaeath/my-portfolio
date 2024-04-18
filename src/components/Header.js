@@ -39,7 +39,7 @@ class Header extends Component {
         <div className="row aligner" style={{height: '100%'}}>
           <div className="col-md-12">
             <div>
-              <span className="iconify header-icon" data-icon="la:laptop-code" data-inline="false"></span>
+              <span className="iconify header-icon" data-icon="game-icons:cat" data-inline="false"></span>
               <br/>
               <h1 className="mb-0">
                 <Typical steps={[name]} wrapper="p" />
@@ -58,7 +58,7 @@ class Header extends Component {
                 uncheckedIcon={
                   <span
                     className="iconify"
-                    data-icon="twemoji:owl"
+                    data-icon="f7:moon-zzz-fill"
                     data-inline="false"
                     style={{
                       display: "block",
@@ -73,7 +73,7 @@ class Header extends Component {
                 checkedIcon={
                   <span
                     className="iconify"
-                    data-icon="noto-v1:sun-with-face"
+                    data-icon="emojione-v1:sun-with-face"
                     data-inline="false"
                     style={{
                       display: "block",

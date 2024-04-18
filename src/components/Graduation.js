@@ -33,7 +33,7 @@ class Graduation extends Component {
             className="vertical-timeline-element--work"
             date={work.years}
             iconStyle={{
-              background: "#AE944F",
+              background: "#D6D1CE",
               color: "#fff",
               textAlign: "center",
             }}
@@ -78,7 +78,7 @@ class Graduation extends Component {
             {work}
             <VerticalTimelineElement
               iconStyle={{
-                background: "#AE944F",
+                background: "#D6D1CE",
                 color: "#fff",
                 textAlign: "center",
               }}
