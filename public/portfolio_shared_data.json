@@ -2,31 +2,32 @@
   "basic_info": {
     "name": "MR.Auii",
     "titles": [
-      "Developer",
-      "Senior Software Engineer",
-      "Dev Team lead"
+      "Full Stack Developer",
+      "Software Developer",
+      "Solution Architect",
+      "Team Leader"
     ],
     "social": [
       {
-        "name": "github",
-        "url": "https://github.com",
-        "class": "fab fa-github"
+        "name": "website",
+        "url": "https://megaeath.github.io/my-portfolio/index.html",
+        "class": "fas fa-globe"
       },
       {
-        "name": "instagram",
-        "url": "https://www.instagram.com",
-        "class": "fab fa-instagram"
+        "name": "email",
+        "url": "mailto:nirut.auii@gmail.com",
+        "class": "fas fa-envelope" 
       }
     ],
-    "image": "catProfile.png",
+    "image": "myProfile.png",
     "cert": [
       {
-        "title": "AWS Certified Cloud Practitioner",
+        "title": "Certified Cloud Practitioner",
         "url": "",
         "icon": "aws-certified-cloud-practitioner.png"
       },
       {
-        "title": "AWS Cloud Quest: Cloud Practitioner",
+        "title": "Cloud Quest: Cloud Practitioner",
         "url": "",
         "icon": "aws-cloud-quest-cloud-practitioner.png"
       }
@@ -35,9 +36,49 @@
   "skills": {
     "icons": [
       {
-        "name": "HTML 5",
-        "class": "devicon-html5-plain",
-        "level": "95"
+        "name": "Node.js",
+        "class": "devicon-nodejs-plain",
+        "level": "90"
+      },
+      {
+        "name": "React",
+        "class": "devicon-react-original",
+        "level": "85"
+      },
+      {
+        "name": "Express.js",
+        "class": "devicon-express-original",
+        "level": "80"
+      },
+      {
+        "name": "NextJS",
+        "class": "devicon-nextjs-original-wordmark",
+        "level": "80"
+      },
+      {
+        "name": "Oracle",
+        "class": "devicon-oracle-original",
+        "level": "70"
+      },
+      {
+        "name": "MySQL",
+        "class": "devicon-mysql-plain",
+        "level": "70"
+      },
+      {
+        "name": "PostgreSQL",
+        "class": "devicon-postgresql-plain",
+        "level": "75"
+      },
+      {
+        "name": "SQL Server",
+        "class": "devicon-microsoftsqlserver-plain",
+        "level": "70"
+      },
+      {
+        "name": "DynamoDB",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "70"
       },
       {
         "name": "AWS",
@@ -45,88 +86,127 @@
         "level": "95"
       },
       {
-        "name": "CSS 3",
-        "class": "devicon-css3-plain",
-        "level": "95"
+        "name": "Docker",
+        "class": "devicon-docker-plain",
+        "level": "80"
       },
       {
-        "name": "TypeScript",
-        "class": "devicon-typescript-plain",
-        "level": "90"
+        "name": "Jenkins",
+        "class": "devicon-jenkins-plain",
+        "level": "75"
       },
       {
-        "name": "NodeJS",
-        "class": "devicon-nodejs-plain",
-        "level": "90"
+        "name": "RESTful APIs",
+        "class": "fas fa-cloud",
+        "level": "85"
       },
       {
-        "name": "JavaScript",
-        "class": "devicon-javascript-plain",
-        "level": "70"
+        "name": "GraphQL",
+        "class": "devicon-graphql-plain",
+        "level": "75"
       },
       {
-        "name": "React",
-        "class": "devicon-react-original",
-        "level": "70"
+        "name": "JWT",
+        "class": "fas fa-key",
+        "level": "80"
       },
       {
-        "name": "C#",
-        "class": "devicon-csharp-plain",
-        "level": "65"
+        "name": "OAuth2",
+        "class": "fas fa-lock",
+        "level": "80"
       },
       {
-        "name": "DotnetCore",
-        "class": "devicon-dotnetcore-plain",
-        "level": "65"
+        "name": "CloudWatch",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "85"
       },
       {
-        "name": "Python",
-        "class": "devicon-python-plain",
-        "level": "65"
+        "name": "CloudFormation",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "85"
       },
       {
-        "name": "Django",
-        "class": "devicon-django-plain",
-        "level": "65"
+        "name": "Lambda",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "85"
       },
       {
-        "name": "Java",
-        "class": "devicon-java-plain",
-        "level": "65"
+        "name": "S3",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "85"
       },
       {
-        "name": "Electron",
-        "class": "devicon-electron-original",
-        "level": "65"
+        "name": "RDS",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "85"
       },
       {
-        "name": "MySql",
-        "class": "devicon-mysql-plain",
-        "level": "60"
+        "name": "DynamoDB",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "85"
       },
       {
-        "name": "PostgreSQL",
-        "class": "devicon-postgresql-plain",
-        "level": "60"
+        "name": "API Gateway",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "85"
       },
       {
-        "name": "Oracle",
-        "class": "devicon-oracle-original",
-        "level": "60"
+        "name": "Cognito",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "85"
       },
       {
-        "name": "Bitbucket",
-        "class": "devicon-bitbucket-original",
-        "level": "60"
+        "name": "SNS",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "85"
       },
       {
-        "name": "Github",
-        "class": "devicon-github-original",
-        "level": "60"
+        "name": "SQS",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "85"
+      },
+      {
+        "name": "SES",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "85"
+      },
+      {
+        "name": "CodePipeline",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "85"
+      },
+      {
+        "name": "CodeBuild",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "85"
+      },
+      {
+        "name": "CodeDeploy",
+        "class": "devicon-amazonwebservices-plain",
+        "level": "85"
+      },
+      {
+        "name": "CodeCommit",
+        "class": "devicon-amazonwebservices-plain"
       },
       {
         "name": "Git",
         "class": "devicon-git-plain",
+        "level": "65"
+      },
+      {
+        "name": "Bitbucket",
+        "class": "devicon-bitbucket-original",
+        "level": "65"
+      },
+      {
+        "name": "GitHub",
+        "class": "devicon-github-original",
+        "level": "65"
+      },
+      {
+        "name": "Jira",
+        "class": "devicon-jira-plain",
         "level": "60"
       },
       {
@@ -135,9 +215,54 @@
         "level": "60"
       },
       {
-        "name": "Jira",
-        "class": "devicon-jira-plain",
-        "level": "60"
+        "name": "Jest",
+        "class": "devicon-jest-plain",
+        "level": "75"
+      },
+      {
+        "name": "Postman",
+        "class": "fas fa-flask",
+        "level": "80"
+      },
+      {
+        "name": "Cypress",
+        "class": "fas fa-vial",
+        "level": "75"
+      },
+      {
+        "name": "Selenium",
+        "class": "devicon-selenium-original",
+        "level": "70"
+      },
+      {
+        "name": "Java",
+        "class": "devicon-java-plain",
+        "level": "75"
+      },
+      {
+        "name": "C#.NET",
+        "class": "devicon-csharp-plain",
+        "level": "80"
+      },
+      {
+        "name": "JavaScript",
+        "class": "devicon-javascript-plain",
+        "level": "85"
+      },
+      {
+        "name": "TypeScript",
+        "class": "devicon-typescript-plain",
+        "level": "90"
+      },
+      {
+        "name": "Python",
+        "class": "devicon-python-plain",
+        "level": "70"
+      },
+      {
+        "name": "Delphi",
+        "class": "fas fa-code",
+        "level": "65"
       }
     ]
   }

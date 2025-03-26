@@ -1,7 +1,7 @@
 {
   "basic_info": {
     "description_header": "Hi",
-    "description": "Hi there! I'm a passionate developer with a diverse set of interests. When I'm not coding, you can find me indulging in my hobbies - playing video games, building Lego sets and Gundam models, and keeping fit through regular workouts. I'm always eager to explore new technologies and stay up-to-date with the latest tech stacks. Above all, I pride myself on being a kind and fun-loving person, always ready to connect and learn from others. Let's chat and see what we can create together!",
+    "description": "Seasoned IT professional with 15 years of experience in full-stack development, API integration, and system architecture. Proficient in designing andoptimizing backend solutions using Node.js, JavaScript, C#.NET, and various database technologies. Skilled in cloud computing with AWS and experienced inleading development teams, reviewing code quality, and integrating third-party APIs for digital marketing platforms.",
     "section_name": {
       "about": "About me",
       "projects": "Side Projects",
@@ -82,9 +82,9 @@
   ],
   "experience": [
     {
-      "company": "Vgidigitallab",
-      "title": "Assistant Manager,Software Developer",
-      "years": "03.2021 - Present",
+      "company": "VGI Digital Lab",
+      "title": "Assistant Manager, Full Stack Developer",
+      "years": "Oct 2021 - Present",
       "mainTech": [
         "VGIONE",
         "CDP"
@@ -94,58 +94,96 @@
         "Serverless",
         "C#.NET",
         "Java",
-        "Javascript",
-        "Postgresql",
-        "Opensearch",
+        "JavaScript",
+        "PostgreSQL",
+        "GraphQL",
         "Elasticsearch",
-        "Postgresql",
-        "Typescript"
+        "AWS SQS",
+        "TypeScript"
+      ],
+      "description": [
+        "Designed, developed, and optimized backend APIs using Node.js, JavaScript, and PostgreSQL on AWS.",
+        "Integrated Facebook, Google, and TikTok APIs to enable audience data uploads to ad platforms.",
+        "Led API architecture decisions to ensure scalability, performance, and security.",
+        "Reviewed and approved pull requests on Bitbucket, ensuring code quality and best practices.",
+        "Collaborated with cross-functional teams to integrate APIs with frontend and third-party services.",
+        "Developed internal tools and dashboards for monitoring system performance and API usage.",
+        "Optimized database queries and indexing strategies for performance improvement.",
+        "Managed DevOps pipelines and deployment automation for continuous integration and delivery.",
+        "Implemented logging and monitoring using AWS CloudWatch and third-party observability tools.",
+        "Enhanced security by implementing role-based access control (RBAC) and JWT authentication."
       ]
     },
     {
       "company": "Thanachart Security",
-      "title": "Assistant Manager,Software Developer",
-      "years": "01.2021 - 03.2021",
+      "title": "Assistant Manager, Software Development",
+      "years": "Jul 2021 - Oct 2021",
       "mainTech": [
-        "Mobile API"
+        "Backend Mobile API"
       ],
       "technologies": [
         "C#.NET",
-        "Postgresql"
+        "PostgreSQL",
+        "Microsoft SQL"
+      ],
+      "description": [
+        "Developed backend APIs for mobile applications using C#.NET and SQL Server.",
+        "Designed and maintained secure authentication and authorization mechanisms.",
+        "Enhanced API efficiency and scalability through caching and load balancing techniques.",
+        "Worked closely with frontend developers to create seamless user experiences.",
+        "Developed and optimized stored procedures for high-performance database operations."
       ]
     },
     {
-      "company": "goSoft",
-      "title": "Specialist,Developer Lead",
-      "years": "03.2012 - 01.2021",
+      "company": "Gosoft Thailand",
+      "title": "Development Lead, Specialist",
+      "years": "2012 - 2021",
       "mainTech": [
         "Ticket Management System",
-        "Contract Center System"
+        "Contact Center System"
       ],
       "technologies": [
         "Java",
         "Oracle",
-        "NodeJS",
-        "Javascript",
-        "SQL"
+        "Node.js",
+        "JavaScript",
+        "SQL",
+        "AWS (Lambda, S3, RDS)"
+      ],
+      "description": [
+        "Designed, developed, and implemented Contact Center Systems and Ticket Management Systems.",
+        "Integrated backend solutions with other enterprise systems using Java, Angular, C#.NET, Oracle, MySQL, AWS (Lambda, S3, RDS).",
+        "Led development teams and provided mentorship to junior developers.",
+        "Spearheaded cloud migration initiatives for legacy applications, reducing infrastructure costs.",
+        "Developed RESTful APIs for seamless data exchange across multiple platforms.",
+        "Ensured compliance with security best practices and data protection policies.",
+        "Designed scalable microservices architecture for high-traffic applications."
       ]
     },
     {
       "company": "KP Soft",
-      "title": "System Analyst,Senior Programmer",
-      "years": "03.2011 - 01.2012",
+      "title": "System Analyst",
+      "years": "2011 - 2012",
       "mainTech": [
-        "Personal Loan System"
+        "Personal Loan System",
+        "Leasing System"
       ],
       "technologies": [
         "Delphi",
         "Microsoft SQL"
+      ],
+      "description": [
+        "Developed insurance applications using Delphi and SQL Server.",
+        "Conducted system analysis to improve performance and security.",
+        "Designed and implemented database structures to optimize query performance.",
+        "Assisted in requirement gathering and documentation for new system enhancements.",
+        "Integrated insurance claims processing with third-party financial services."
       ]
     },
     {
       "company": "Abstract Computer",
       "title": "Programmer",
-      "years": "01.2005 - 03.2011",
+      "years": "2005 - 2011",
       "mainTech": [
         "Hospital Management System"
       ],
@@ -154,6 +192,14 @@
         "C#.NET",
         "VB.NET",
         "Sybase Data Windows"
+      ],
+      "description": [
+        "Implemented and developed hospital management systems for various hospitals (Bhumibol Adulyadej Hospital, Vajira Hospital, Taksin Hospital, Charoenkrung Pracharak Hospital, Klang Hospital, etc.).",
+        "Utilized C#.NET, Oracle, and SQL Server for development.",
+        "Developed reporting modules for hospital staff to streamline operations.",
+        "Integrated hospital systems with third-party healthcare providers and insurance databases.",
+        "Conducted software testing and debugging to maintain system reliability.",
+        "Designed HL7 interfaces for secure and standardized health data exchange."
       ]
     }
   ],

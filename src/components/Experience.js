@@ -28,6 +28,7 @@ class Experience extends Component {
             </Badge>
           );
         });
+
         return (
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -37,7 +38,12 @@ class Experience extends Component {
               color: "#fff",
               textAlign: "center",
             }}
-            icon={<i className="iconify experience-icon" data-icon="icomoon-free:office"></i>}
+            icon={
+              <i
+                className="iconify experience-icon"
+                data-icon="icomoon-free:office"
+              ></i>
+            }
             key={i}
           >
             <div style={{ textAlign: "left", marginBottom: "4px" }}>
@@ -56,6 +62,13 @@ class Experience extends Component {
             >
               {work.company}
             </h4>
+            <p style={{ textAlign: "left", marginTop: "10px" }}>
+              <ul>
+                {work.description.map((line, index) => (
+                  <li key={index}>{line}</li>
+                ))}
+              </ul>
+            </p>
             <div style={{ textAlign: "left", marginTop: "15px" }}>{tech}</div>
           </VerticalTimelineElement>
         );
