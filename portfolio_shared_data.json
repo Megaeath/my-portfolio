@@ -17,18 +17,23 @@
         "name": "email",
         "url": "mailto:nirut.auii@gmail.com",
         "class": "fas fa-envelope" 
+      },
+      {
+        "name": "linkedin",
+        "url": "https://linkedin.com/in/617599358",
+        "class": "fab fa-linkedin"
       }
     ],
     "image": "myProfile.png",
     "cert": [
       {
         "title": "Certified Cloud Practitioner",
-        "url": "",
+        "url": "https://www.credly.com/badges/d95a384f-daeb-409f-873e-4984ae52dc16/public_url",
         "icon": "aws-certified-cloud-practitioner.png"
       },
       {
         "title": "Cloud Quest: Cloud Practitioner",
-        "url": "",
+        "url": "https://www.credly.com/badges/6c7009b0-5758-44c2-8adb-d79c64e5a2c9/public_url",
         "icon": "aws-cloud-quest-cloud-practitioner.png"
       }
     ]
