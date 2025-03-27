@@ -102,16 +102,16 @@
         "TypeScript"
       ],
       "description": [
-        "Designed, developed, and optimized backend APIs using Node.js, JavaScript, and PostgreSQL on AWS.",
-        "Integrated Facebook, Google, and TikTok APIs to enable audience data uploads to ad platforms.",
-        "Led API architecture decisions to ensure scalability, performance, and security.",
-        "Reviewed and approved pull requests on Bitbucket, ensuring code quality and best practices.",
-        "Collaborated with cross-functional teams to integrate APIs with frontend and third-party services.",
-        "Developed internal tools and dashboards for monitoring system performance and API usage.",
-        "Optimized database queries and indexing strategies for performance improvement.",
-        "Managed DevOps pipelines and deployment automation for continuous integration and delivery.",
-        "Implemented logging and monitoring using AWS CloudWatch and third-party observability tools.",
-        "Enhanced security by implementing role-based access control (RBAC) and JWT authentication."
+        "Designed, developed, and optimized data pipelines to process 100M+ records from Amazon Redshift, transforming and uploading audience data to Facebook, Google, and TikTok APIs for targeted advertising.",
+        "Built and launched end-to-end projects from scratch, ensuring scalability, performance, and security of backend APIs using Node.js, JavaScript, and PostgreSQL on AWS.",
+        "Led API architecture decisions, ensuring efficient data flow, low latency, and high reliability for digital marketing platforms.",
+        "Reviewed and approved pull requests on Bitbucket, enforcing code quality, performance optimization, and best practices.",
+        "Worked closely with cross-functional teams to integrate APIs with frontend applications and third-party services.",
+        "Developed internal tools and dashboards to monitor system performance, API usage, and data pipeline efficiency.",
+        "Optimized database queries and indexing strategies, improving query execution times and overall system responsiveness.",
+        "Managed DevOps pipelines and automated deployments using AWS CodePipeline for AWS Serverless Framework (SAM) and Jenkins for seamless CI/CD workflows.",
+        "Implemented logging and monitoring using AWS CloudWatch tools to ensure system health and quick issue resolution.",
+        "Strengthened system security by implementing Role-Based Access Control (RBAC), OAuth2 authentication, and JWT-based authorization."
       ]
     },
     {
@@ -127,11 +127,13 @@
         "Microsoft SQL"
       ],
       "description": [
-        "Developed backend APIs for mobile applications using C#.NET and SQL Server.",
-        "Designed and maintained secure authentication and authorization mechanisms.",
-        "Enhanced API efficiency and scalability through caching and load balancing techniques.",
-        "Worked closely with frontend developers to create seamless user experiences.",
-        "Developed and optimized stored procedures for high-performance database operations."
+        "Developed backend APIs for mobile applications using C#.NET and SQL Server, ensuring high performance and scalability.",
+        "Designed and maintained secure authentication and authorization mechanisms, implementing JWT and OAuth2 for enhanced security.",
+        "Created automated test scripts to validate API changes, ensuring that new updates do not impact overall functionality or performance.",
+        "Integrated unit and integration tests using Postman, Jest, and Selenium, improving code reliability and reducing production issues.",
+        "Enhanced API efficiency and scalability through caching strategies (Redis), query optimization, and load balancing techniques.",
+        "Worked closely with frontend developers to debug and optimize API responses, creating a seamless user experience.",
+        "Developed and optimized stored procedures and indexing strategies for high-performance database operations, reducing query execution time."
       ]
     },
     {
