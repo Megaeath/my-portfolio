@@ -9,9 +9,11 @@
 
 **How to deploy to github pages**
 
-1. `npm run build`
+1. push every code to latest code.
+   
+2. `npm run build`
 
-2. `npm run deploy`
+3. `npm run deploy`
 
 **this code for my portfolio only**
 
