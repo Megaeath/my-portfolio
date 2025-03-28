@@ -102,6 +102,7 @@
         "TypeScript"
       ],
       "description": [
+        "Designed and implemented a serverless data pipeline to process 100M+ transactions from Amazon Redshift to Elasticsearch and RDS with zero downtime.",
         "Designed, developed, and optimized data pipelines to process 100M+ records from Amazon Redshift, transforming and uploading audience data to Facebook, Google, and TikTok APIs for targeted advertising.",
         "Built and launched end-to-end projects from scratch, ensuring scalability, performance, and security of backend APIs using Node.js, JavaScript, and PostgreSQL on AWS.",
         "Led API architecture decisions, ensuring efficient data flow, low latency, and high reliability for digital marketing platforms.",
@@ -110,7 +111,7 @@
         "Developed internal tools and dashboards to monitor system performance, API usage, and data pipeline efficiency.",
         "Optimized database queries and indexing strategies, improving query execution times and overall system responsiveness.",
         "Managed DevOps pipelines and automated deployments using AWS CodePipeline for AWS Serverless Framework (SAM) and Jenkins for seamless CI/CD workflows.",
-        "Implemented logging and monitoring using AWS CloudWatch tools to ensure system health and quick issue resolution.",
+        "Implemented logging, real-time monitoring, and fault tolerance using AWS CloudWatch and X-Ray to ensure system health and quick issue resolution.",
         "Strengthened system security by implementing Role-Based Access Control (RBAC), OAuth2 authentication, and JWT-based authorization."
       ]
     },
