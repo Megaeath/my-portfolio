@@ -427,3 +427,65 @@ footer a:focus {
 	margin-top: 50px;
 	font-size: 22px;
 }
+
+/* Certification Image Styling */
+.cert-image {
+	width: 100px; /* Set a consistent width */
+	height: auto; /* Maintain aspect ratio */
+	margin: 0 10px; /* Add spacing between images */
+	cursor: pointer; /* Indicate the image is clickable */
+	transition: transform 0.2s ease; /* Add a hover effect */
+  }
+  
+  .cert-image:hover {
+	transform: scale(1.1); /* Slightly enlarge the image on hover */
+  }
+
+/* Certificate Section Styling */
+#certificates {
+	background: #1F1F1F; /* Same background as #skills */
+	min-height: 200px;
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 10%;
+  }
+  
+  .certificate-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 150px; /* Set a consistent width */
+	height: 250px; /* Set a consistent height for the card */
+	margin: 10px;
+	padding: 10px;
+	background-color: #2C2C2C; /* Slightly lighter background for items */
+	border-radius: 8px;
+	text-align: center;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .certificate-item:hover {
+	transform: scale(1.05); /* Slightly enlarge on hover */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+  }
+  
+  .certificate-image {
+	width: 100px; /* Set a consistent width */
+	height: 100px; /* Set a consistent height */
+	object-fit: cover; /* Ensure the image fills the box without distortion */
+	margin-bottom: 10px;
+	border-radius: 8px; /* Optional: Add rounded corners */
+	background-color: #f4f4f4; /* Optional: Add a background color for better visibility */
+  }
+  
+  .certificate-title {
+	font-size: 14px;
+	color: #fff;
+	margin-top: 5px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	white-space: nowrap; /* Prevent text wrapping */
+	overflow: hidden; /* Hide overflowing text */
+	text-overflow: ellipsis; /* Add ellipsis for long text */
+  }

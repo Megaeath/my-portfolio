@@ -39,9 +39,9 @@ class About extends Component {
                     src={profilepic}
                     alt="Avatar placeholder"
                   />
-                  <div style={{ display: "flex", alignItems: "center" ,justifyContent: "center"}}>
+                  {/* <div style={{ display: "flex", alignItems: "center" ,justifyContent: "center"}}>
                     {iconCert}
-                  </div>
+                  </div> */}
 
                 </span>
               </div>

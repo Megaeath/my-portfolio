@@ -8,7 +8,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Graduation from "./components/Graduation";
-
+import Certificate from "./components/Certificate";
 class App extends Component {
 
   constructor(props) {
@@ -79,7 +79,7 @@ class App extends Component {
           resumeBasicInfo={this.state.resumeData.basic_info}
           sharedBasicInfo={this.state.sharedData.basic_info}
         />
-
+        <Certificate sharedBasicInfo={this.state.sharedData.basic_info} />
         <Experience
           resumeExperience={this.state.resumeData.experience}
           resumeBasicInfo={this.state.resumeData.basic_info}
