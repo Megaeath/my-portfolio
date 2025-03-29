@@ -40,6 +40,16 @@
         "title": "JavaScript (Basic) Certificate",
         "url": "https://www.hackerrank.com/certificates/7c4a527b36dd",
         "icon": "hackerrank-javascript-basic.png"
+      },
+      {
+        "title": "SQL (Basic) Certificate",
+        "url": "https://www.hackerrank.com/certificates/fde0406dd2ae",
+        "icon": "hackerrank-sql-basic.png"
+      },
+      {
+        "title": "SQL (Intermediate) Certificate",
+        "url": "https://www.hackerrank.com/certificates/09aba1131e59",
+        "icon": "hackerrank-sql-intermediate.png"
       }
     ]
   },
