@@ -36,6 +36,13 @@
         "url": "https://www.credly.com/badges/6c7009b0-5758-44c2-8adb-d79c64e5a2c9/public_url",
         "icon": "aws-cloud-quest-cloud-practitioner.png"
       }
+      {
+        "title": "JavaScript (Basic) Certificate",
+        "url": "https://www.hackerrank.com/certificates/7c4a527b36dd",
+        "icon": "hackerrank-javascript-basic.png"
+        
+
+      }
     ]
   },
   "skills": {
