@@ -32,7 +32,7 @@ class Certificate extends Component {
             <div className="foto" onClick={() => detailsModalShow(cert)}>
               <div>
                 <img
-                  src={"/images/cert/" + cert.icon} // Correct path for certification images
+                  src={"images/cert/" + cert.icon} // Correct path for certification images
                   alt={cert.title}
                   className="certificate-image" // Apply consistent styling
                 />
