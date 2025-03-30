@@ -5,7 +5,7 @@ import LogosServerless from "@iconify/icons-logos/serverless";
 class About extends Component {
   render() {
     if (this.props.sharedBasicInfo) {
-      var profilepic = "images/" + this.props.sharedBasicInfo.image;
+      var profilepic = process.env.PUBLIC_URL +"/images/" + this.props.sharedBasicInfo.image;
       var certs = this.props.sharedBasicInfo.cert;
       var iconCert = certs.map((cert) => (
         <a key={cert.title} href={cert.url} target="_blank" rel="noopener noreferrer">

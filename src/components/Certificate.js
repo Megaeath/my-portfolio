@@ -1,28 +1,8 @@
 import React, { Component } from "react";
-import CertificateModal from "./CertificateModal";
 
 class Certificate extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      detailsModalShow: false, // Controls the modal visibility
-      selectedCert: null, // Holds the currently selected certificate
-    };
-  }
-
-  detailsModalShow = (cert) => {
-    console.log("Opening modal with data:", cert); // Debugging log
-    this.setState({ detailsModalShow: true, selectedCert: cert });
-  };
-
-  detailsModalClose = () => {
-    console.log("Closing modal"); // Debugging log
-    this.setState({ detailsModalShow: false, selectedCert: null }); // Reset selectedCert
-  };
-
   render() {
     const { sharedBasicInfo } = this.props;
-    const { detailsModalShow, selectedCert } = this.state;
 
     let sectionName = "Certificates"; // Default section name
     let certificates = [];
@@ -35,8 +15,14 @@ class Certificate extends Component {
           key={cert.title}
           style={{ cursor: "pointer", marginBottom: "20px" }}
         >
-          <span className="portfolio-item d-block">
-            <div className="foto" /**onClick={() => this.detailsModalShow(cert)}**/>
+          <a
+            href={cert.url} // Redirect to the certificate URL on click
+            target="_blank" // Open in a new tab
+            rel="noopener noreferrer" // Security for external links
+            title={cert.title} // Show the certificate title on hover
+            className="portfolio-item d-block"
+          >
+            <div className="foto">
               <div>
                 <img
                   src={process.env.PUBLIC_URL + "/images/cert/" + cert.icon} // Display the certificate logo
@@ -45,7 +31,7 @@ class Certificate extends Component {
                   style={{
                     width: "100%", // Make the image responsive
                     height: "auto",
-                    maxWidth: "150px", // Limit the maximum width of the icon
+                    maxWidth: "120px", // Limit the maximum width of the icon
                     margin: "0 auto",
                   }}
                 />
@@ -54,7 +40,7 @@ class Certificate extends Component {
                 <p className="project-title-settings mt-3">{cert.title}</p>
               </div>
             </div>
-          </span>
+          </a>
         </div>
       ));
     }
@@ -68,13 +54,6 @@ class Certificate extends Component {
           <div className="col-md-12 mx-auto">
             <div className="row mx-auto justify-content-center">{certificates}</div>
           </div>
-          {detailsModalShow && (
-            <CertificateModal
-              show={detailsModalShow}
-              onHide={this.detailsModalClose}
-              data={selectedCert} // Pass the selected certificate directly
-            />
-          )}
         </div>
       </section>
     );
