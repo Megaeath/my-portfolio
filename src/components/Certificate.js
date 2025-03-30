@@ -1,40 +1,53 @@
 import React, { Component } from "react";
-import ProjectDetailsModal from "./ProjectDetailsModal";
+import CertificateModal from "./CertificateModal";
 
 class Certificate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      deps: {}, // Holds the data for the modal
       detailsModalShow: false, // Controls the modal visibility
+      selectedCert: null, // Holds the currently selected certificate
     };
   }
 
-  render() {
-    const detailsModalShow = (data) => {
-      this.setState({ detailsModalShow: true, deps: data });
-    };
+  detailsModalShow = (cert) => {
+    console.log("Opening modal with data:", cert); // Debugging log
+    this.setState({ detailsModalShow: true, selectedCert: cert });
+  };
 
-    const detailsModalClose = () => this.setState({ detailsModalShow: false });
+  detailsModalClose = () => {
+    console.log("Closing modal"); // Debugging log
+    this.setState({ detailsModalShow: false, selectedCert: null }); // Reset selectedCert
+  };
+
+  render() {
+    const { sharedBasicInfo } = this.props;
+    const { detailsModalShow, selectedCert } = this.state;
 
     let sectionName = "Certificates"; // Default section name
     let certificates = [];
 
-    if (this.props.sharedBasicInfo) {
-      const certs = this.props.sharedBasicInfo.cert;
+    if (sharedBasicInfo) {
+      const certs = sharedBasicInfo.cert;
       certificates = certs.map((cert) => (
         <div
-          className="col-sm-12 col-md-6 col-lg-4"
+          className="col-6 col-md-4 col-lg-2" // Adjusted column size for 5 items in a row
           key={cert.title}
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", marginBottom: "20px" }}
         >
           <span className="portfolio-item d-block">
-            <div className="foto" onClick={() => detailsModalShow(cert)}>
+            <div className="foto" /**onClick={() => this.detailsModalShow(cert)}**/>
               <div>
                 <img
-                  src={"images/cert/" + cert.icon} // Correct path for certification images
+                  src={process.env.PUBLIC_URL + "/images/cert/" + cert.icon} // Display the certificate logo
                   alt={cert.title}
                   className="certificate-image" // Apply consistent styling
+                  style={{
+                    width: "100%", // Make the image responsive
+                    height: "auto",
+                    maxWidth: "150px", // Limit the maximum width of the icon
+                    margin: "0 auto",
+                  }}
                 />
                 <span className="project-date">{cert.title}</span>
                 <br />
@@ -53,13 +66,15 @@ class Certificate extends Component {
             <span>{sectionName}</span>
           </h1>
           <div className="col-md-12 mx-auto">
-            <div className="row mx-auto">{certificates}</div>
+            <div className="row mx-auto justify-content-center">{certificates}</div>
           </div>
-          <ProjectDetailsModal
-            show={this.state.detailsModalShow}
-            onHide={detailsModalClose}
-            data={this.state.deps}
-          />
+          {detailsModalShow && (
+            <CertificateModal
+              show={detailsModalShow}
+              onHide={this.detailsModalClose}
+              data={selectedCert} // Pass the selected certificate directly
+            />
+          )}
         </div>
       </section>
     );

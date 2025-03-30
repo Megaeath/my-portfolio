@@ -16,7 +16,7 @@
       {
         "name": "email",
         "url": "mailto:nirut.auii@gmail.com",
-        "class": "fas fa-envelope" 
+        "class": "fas fa-envelope"
       },
       {
         "name": "linkedin",
@@ -29,28 +29,39 @@
       {
         "title": "Certified Cloud Practitioner",
         "url": "https://www.credly.com/badges/d95a384f-daeb-409f-873e-4984ae52dc16/public_url",
-        "icon": "aws-certified-cloud-practitioner.png"
+        "icon": "aws-certified-cloud-practitioner.png",
+        "original": "aws-certified-cloud-practitioner.pdf"
       },
       {
         "title": "Cloud Quest: Cloud Practitioner",
         "url": "https://www.credly.com/badges/6c7009b0-5758-44c2-8adb-d79c64e5a2c9/public_url",
-        "icon": "aws-cloud-quest-cloud-practitioner.png"
+        "icon": "aws-cloud-quest-cloud-practitioner.png",
+        "original": "aws-cloud-quest-cloud-practitioner.pdf"
       },
       {
         "title": "JavaScript (Basic) Certificate",
         "url": "https://www.hackerrank.com/certificates/7c4a527b36dd",
-        "icon": "hackerrank-javascript-basic.png"
+        "icon": "hackerrank-javascript-basic.png",
+        "original": "hackerrank-javascript-basic.pdf"
       },
       {
         "title": "SQL (Basic) Certificate",
         "url": "https://www.hackerrank.com/certificates/fde0406dd2ae",
-        "icon": "hackerrank-sql-basic.png"
+        "icon": "hackerrank-sql-basic.png",
+        "original": "hackerrank-sql-basic.pdf"
       },
       {
         "title": "SQL (Intermediate) Certificate",
         "url": "https://www.hackerrank.com/certificates/09aba1131e59",
-        "icon": "hackerrank-sql-intermediate.png"
-      }
+        "icon": "hackerrank-sql-intermediate.png",
+        "original": "hackerrank-sql-intermediate.pdf"
+      },
+    {
+      "title": "SQL (Advanced) Certificate",
+      "url": "https://www.hackerrank.com/certificates/3383e6c8bebf",
+      "icon": "hackerrank-sql-advanced.png",
+      "original": "hackerrank-sql-advanced.pdf"
+    }
     ]
   },
   "skills": {
