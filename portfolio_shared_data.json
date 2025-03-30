@@ -56,24 +56,30 @@
         "icon": "hackerrank-sql-intermediate.png",
         "original": "hackerrank-sql-intermediate.pdf"
       },
-    {
-      "title": "SQL (Advanced) Certificate",
-      "url": "https://www.hackerrank.com/certificates/3383e6c8bebf",
-      "icon": "hackerrank-sql-advanced.png",
-      "original": "hackerrank-sql-advanced.pdf"
-    },
-    {
-      "title": "Node (Basic) Certificate",
-      "url": "https://www.hackerrank.com/certificates/bdb185cc402e",
-      "icon": "hackerrank-node-basic.png",
-      "original": "hackerrank-node-basic.pdf"
-    },
-    {
-      "title": "C# (Basic) Certificate",
-      "url": "https://www.hackerrank.com/certificates/c4853fa78916",
-      "icon": "hackerrank-csharp-basic.png",
-      "original": "hackerrank-csharp-basic.pdf"
-    }
+      {
+        "title": "SQL (Advanced) Certificate",
+        "url": "https://www.hackerrank.com/certificates/3383e6c8bebf",
+        "icon": "hackerrank-sql-advanced.png",
+        "original": "hackerrank-sql-advanced.pdf"
+      },
+      {
+        "title": "Node (Basic) Certificate",
+        "url": "https://www.hackerrank.com/certificates/bdb185cc402e",
+        "icon": "hackerrank-node-basic.png",
+        "original": "hackerrank-node-basic.pdf"
+      },
+      {
+        "title": "C# (Basic) Certificate",
+        "url": "https://www.hackerrank.com/certificates/c4853fa78916",
+        "icon": "hackerrank-csharp-basic.png",
+        "original": "hackerrank-csharp-basic.pdf"
+      },
+      {
+        "title": "Node.js (Intermediate) Certificate",
+        "url": "https://www.hackerrank.com/certificates/c80b78d070db",
+        "icon": "hackerrank-node-intermediate.png",
+        "original": "hackerrank-node-intermediate.pdf"
+      }
     ]
   },
   "skills": {
