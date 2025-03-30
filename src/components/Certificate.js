@@ -35,8 +35,8 @@ class Certificate extends Component {
                     margin: "0 auto",
                   }}
                 />
-                <span className="project-date">{cert.title}</span>
-                <br />
+                {/* <span className="project-date">{cert.title}</span>
+                <br /> */}
                 <p className="project-title-settings mt-3">{cert.title}</p>
               </div>
             </div>
