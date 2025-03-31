@@ -79,6 +79,18 @@
         "url": "https://www.hackerrank.com/certificates/c80b78d070db",
         "icon": "hackerrank-node-intermediate.png",
         "original": "hackerrank-node-intermediate.pdf"
+      },
+      {
+        "title": "Rest API (Intermediate) Certificate",
+        "url": "https://www.hackerrank.com/certificates/5d66f55b30d1",
+        "icon": "hackerrank-rest-api-intermediate.png",
+        "original": "hackerrank-rest-api-intermediate.pdf"
+      },
+      {
+        "title": "Problem Solving (Basic) Certificate",
+        "url": "https://www.hackerrank.com/certificates/c8824d8dfd6b",
+        "icon": "hackerrank-problem-solving-basic.png",
+        "original": "hackerrank-problem-solving-basic.pdf"
       }
     ]
   },
