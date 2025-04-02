@@ -91,6 +91,12 @@
         "url": "https://www.hackerrank.com/certificates/c8824d8dfd6b",
         "icon": "hackerrank-problem-solving-basic.png",
         "original": "hackerrank-problem-solving-basic.pdf"
+      },
+      {
+        "title":"JavaScript (Intermediate) Certificate",
+        "url":"https://www.hackerrank.com/certificates/93adf7e54bbe",
+        "icon":"hackerrank-javascript-intermediate.png",
+        "original":"hackerrank-javascript-intermediate.pdf"
       }
     ]
   },
