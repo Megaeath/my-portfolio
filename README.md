@@ -20,3 +20,6 @@
 **Special thank**
 this code is clone from 
 `https://github.com/Dorota1997/react-frontend-dev-portfolio?tab=readme-ov-file`
+
+**How to run Docker**
+1. docker build -t my-portfolio .
