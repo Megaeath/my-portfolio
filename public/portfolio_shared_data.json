@@ -133,6 +133,21 @@
         "level": "70"
       },
       {
+        "name": "MongoDB",
+        "class": "devicon-mongodb-plain",
+        "level": "75"
+      },
+      {
+        "name": "Azure",
+        "class": "devicon-azure-plain",
+        "level": "80"
+      },
+      {
+        "name": "Google Cloud (GCP)",
+        "class": "devicon-googlecloud-plain",
+        "level": "80"
+      },
+      {
         "name": "PostgreSQL",
         "class": "devicon-postgresql-plain",
         "level": "75"
