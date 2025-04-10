@@ -97,7 +97,14 @@
         "url":"https://www.hackerrank.com/certificates/93adf7e54bbe",
         "icon":"hackerrank-javascript-intermediate.png",
         "original":"hackerrank-javascript-intermediate.pdf"
+      },
+      {
+        "title":"Python (Basic) Certificate",
+        "url":"https://www.hackerrank.com/certificates/4174006d4fc5",
+        "icon":"hackerrank-python-basic.png",
+        "original":"hackerrank-python-basic.pdf"
       }
+      
     ]
   },
   "skills": {
@@ -314,6 +321,16 @@
       {
         "name": "Selenium",
         "class": "devicon-selenium-original",
+        "level": "70"
+      },
+      {
+        "name": "Grafana",
+        "class": "fas fa-chart-line",
+        "level": "75"
+      },
+      {
+        "name": "Prometheus",
+        "class": "fas fa-database",
         "level": "70"
       },
       {
