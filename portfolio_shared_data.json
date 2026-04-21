@@ -109,6 +109,12 @@
         "url":"https://www.hackerrank.com/certificates/917f2eff79ee",
         "icon":"hackerrank-software-engineer.png",
         "original":"hackerrank-software-engineer.pdf"
+      },
+      {
+        "title":"Go (Basic) Certificate",
+        "url":"https://www.hackerrank.com/certificates/748720bdaa2b",
+        "icon":"hackerrank-go-basic.png",
+        "original":"hackerrank-go-basic.pdf"
       }
       
     ]
@@ -368,6 +374,11 @@
         "name": "Delphi",
         "class": "fas fa-code",
         "level": "65"
+      },
+      {
+        "name":"GO",
+        "class":"devicon-go-plain",
+        "level":"70"
       }
     ]
   }
