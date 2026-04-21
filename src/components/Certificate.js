@@ -23,21 +23,15 @@ class Certificate extends Component {
             className="portfolio-item d-block"
           >
             <div className="foto">
-              <div>
-                <img
-                  src={process.env.PUBLIC_URL + "/images/cert/" + cert.icon} // Display the certificate logo
-                  alt={cert.title}
-                  className="certificate-image" // Apply consistent styling
-                  style={{
-                    width: "100%", // Make the image responsive
-                    height: "auto",
-                    maxWidth: "120px", // Limit the maximum width of the icon
-                    margin: "0 auto",
-                  }}
-                />
-                {/* <span className="project-date">{cert.title}</span>
-                <br /> */}
-                <p className="project-title-settings mt-3">{cert.title}</p>
+              <div className="neo-card cert-card">
+                <div className="cert-img-wrap">
+                  <img
+                    src={process.env.PUBLIC_URL + "/images/cert/" + cert.icon}
+                    alt={cert.title}
+                    className="certificate-image"
+                  />
+                </div>
+                <p className="project-title-settings mt-3 cert-title">{cert.title}</p>
               </div>
             </div>
           </a>
@@ -46,7 +40,7 @@ class Certificate extends Component {
     }
 
     return (
-      <section id="certificates">
+      <section id="certificates" className="fx-section">
         <div className="col-md-12">
           <h1 className="section-title" style={{ color: "white" }}>
             <span>{sectionName}</span>

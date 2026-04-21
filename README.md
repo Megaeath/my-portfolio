@@ -1,51 +1,102 @@
+# My Portfolio
 
-**How to install**
+Welcome to my personal portfolio! This project showcases my skills, experiences, and projects in a modern and visually appealing way.
 
--  1. install `npm install`
+## Features
 
--  2. run local `npm run start`
+- **Responsive Design**: Optimized for all devices, from desktops to mobile phones.
+- **Modern UI/UX**: Incorporates glassmorphism, gradients, and animations.
+- **Dynamic Content**: Easily customizable data for projects, skills, and more.
 
--  3. deploy `npm run deploy`
+## Installation
 
-**How to deploy to github pages**
+1. Clone the repository:
 
-1. push every code to latest code.
-   
-2. `npm run build`
+   ```bash
+   git clone https://github.com/your-username/my-portfolio.git
+   ```
 
-3. `npm run deploy`
+2. Navigate to the project directory:
 
-**this code for my portfolio only**
+   ```bash
+   cd my-portfolio
+   ```
 
-**Special thank**
-this code is clone from 
-`https://github.com/Dorota1997/react-frontend-dev-portfolio?tab=readme-ov-file`
+3. Install dependencies:
 
-**How to run Docker**
-1. docker build -t my-portfolio .
+   ```bash
+   npm install
+   ```
 
-**make it to gcp storage host**
-1. build app
-npm run build
+4. Start the development server:
 
-****https://www.youtube.com/watch?v=8Te487oYUeo****
+   ```bash
+   npm run start
+   ```
 
-2. create bucket on gcp
-gsutil mb -p [PROJECT_ID] -l asia-southeast1 -b on gs://[YOUR_BUCKET_NAME]
-gsutil mb -p scenic-style-456211-p5 -l asia-southeast1 -b on gs://therutss-portfolio
+## Deployment
 
-**create acl to bucket**
-gsutil uniformbucketlevelaccess get gs://therutss-portfolio
-gsutil uniformbucketlevelaccess set on gs://therutss-portfolio
-gsutil iam ch allUsers:objectViewer gs://therutss-portfolio
+To deploy the portfolio:
 
-3. create bucket to web host
-gsutil web set -m index.html -e 404.html gs://[YOUR_BUCKET_NAME]
-gsutil web set -m index.html -e 404.html gs://therutss-portfolio
+1. Build the application:
 
-4. push build local to gcp storage
-gsutil -m cp -r build/* gs://[YOUR_BUCKET_NAME]
-gsutil -m rsync -d -r build/ gs://therutss-portfolio
+   ```bash
+   npm run build
+   ```
 
-6. set cores to bucket
-gsutil cors set public/cors.json gs://therutss-portfolio
+2. Deploy to GitHub Pages:
+
+   ```bash
+   npm run deploy
+   ```
+
+## Docker Support
+
+Build and run the portfolio using Docker:
+
+1. Build the Docker image:
+
+   ```bash
+   docker build -t my-portfolio .
+   ```
+
+2. Run the Docker container:
+
+   ```bash
+   docker run -p 3000:3000 my-portfolio
+   ```
+
+## Hosting on Google Cloud Storage
+
+1. Build the application:
+
+   ```bash
+   npm run build
+   ```
+
+2. Create a bucket on Google Cloud Storage:
+
+   ```bash
+   gsutil mb -p [PROJECT_ID] -l asia-southeast1 -b on gs://[YOUR_BUCKET_NAME]
+   ```
+
+3. Set permissions for the bucket:
+
+   ```bash
+   gsutil uniformbucketlevelaccess set on gs://[YOUR_BUCKET_NAME]
+   gsutil iam ch allUsers:objectViewer gs://[YOUR_BUCKET_NAME]
+   ```
+
+4. Upload the build files:
+
+   ```bash
+   gsutil cp -r build/* gs://[YOUR_BUCKET_NAME]
+   ```
+
+## About
+
+This portfolio is a reflection of my journey as a developer. It highlights my projects, skills, and achievements. Feel free to explore and connect with me!
+
+---
+
+**Note**: This project is entirely my own work and is not based on any other repository.

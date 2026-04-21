@@ -1,21 +1,8 @@
 import React, { Component } from "react";
-import { Icon } from "@iconify/react";
-import awsIcon from "@iconify/icons-logos/aws";
-import LogosServerless from "@iconify/icons-logos/serverless";
 class About extends Component {
   render() {
     if (this.props.sharedBasicInfo) {
       var profilepic = process.env.PUBLIC_URL +"/images/" + this.props.sharedBasicInfo.image;
-      var certs = this.props.sharedBasicInfo.cert;
-      var iconCert = certs.map((cert) => (
-        <a key={cert.title} href={cert.url} target="_blank" rel="noopener noreferrer">
-          <img
-            src={"images/cert/" + cert.icon}
-            alt={cert.title}
-            style={{ width: "auto", height: "100px", margin: "0 10px", cursor: "pointer" }}
-          />
-        </a>
-      ));
     }
     if (this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.about;
@@ -25,32 +12,28 @@ class About extends Component {
     }
 
     return (
-      <section id="about">
+      <section id="about" className="fx-section">
         <div className="col-md-12">
           <h1 style={{ color: "black" }}>
             <span>{sectionName}</span>
           </h1>
-          <div className="row center mx-auto mb-5">
+          <div className="row center mx-auto mb-5 about-shell">
             <div className="col-md-4 mb-5 center">
               <div className="polaroid">
-                <span style={{ cursor: "auto" }}>
+                <span style={{ cursor: "auto" }} className="profile-frame">
                   <img
                     height="250px"
                     src={profilepic}
                     alt="Avatar placeholder"
                   />
-                  {/* <div style={{ display: "flex", alignItems: "center" ,justifyContent: "center"}}>
-                    {iconCert}
-                  </div> */}
-
                 </span>
               </div>
             </div>
 
             <div className="col-md-8 center">
               <div className="col-md-10">
-                <div className="card">
-                  <div className="card-header">
+                <div className="card about-card">
+                  <div className="card-header about-card-header">
                     <span
                       className="iconify"
                       data-icon="emojione:red-circle"
@@ -70,7 +53,7 @@ class About extends Component {
                     ></span>
                   </div>
                   <div
-                    className="card-body font-trebuchet text-justify ml-3 mr-3"
+                    className="card-body font-trebuchet text-justify ml-3 mr-3 about-card-body"
                     style={{
                       height: "auto",
                       fontSize: "132%",

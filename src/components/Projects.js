@@ -27,18 +27,19 @@ class Projects extends Component {
           >
             <span className="portfolio-item d-block">
               <div className="foto" onClick={() => detailsModalShow(projects)}>
-                <div>
-                  <img
-                    src={projects.images[0]}
-                    alt="projectImages"
-                    height="230"
-                    style={{marginBottom: 0, paddingBottom: 0, position: 'relative'}}
-                  />
-                  <span className="project-date">{projects.startDate}</span>
-                  <br />
-                  <p className="project-title-settings mt-3">
-                    {projects.title}
-                  </p>
+                <div className="neo-card project-card">
+                  <div className="project-img-wrap">
+                    <img
+                      src={projects.images[0]}
+                      alt="projectImages"
+                    />
+                  </div>
+                  <div className="project-card-body">
+                    <span className="project-date">{projects.startDate}</span>
+                    <p className="project-title-settings mt-2">
+                      {projects.title}
+                    </p>
+                  </div>
                 </div>
               </div>
             </span>
@@ -48,7 +49,7 @@ class Projects extends Component {
     }
 
     return (
-      <section id="portfolio">
+      <section id="portfolio" className="fx-section">
         <div className="col-md-12">
           <h1 className="section-title" style={{ color: "black" }}>
             <span>{sectionName}</span>

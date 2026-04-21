@@ -8,15 +8,11 @@ class Skills extends Component {
         return (
           <li className="list-inline-item mx-3" key={i}>
             <span>
-              <div className="text-center skills-tile">
-                <i className={skills.class} style={{ fontSize: "220%" }}>
-                  <p
-                    className="text-center"
-                    style={{ fontSize: "30%", marginTop: "4px" }}
-                  >
-                    {skills.name}
-                  </p>
-                </i>
+              <div className="text-center skills-tile neo-card">
+                <div className="skill-icon-wrap">
+                  <i className={skills.class} />
+                </div>
+                <p className="skill-label">{skills.name}</p>
               </div>
             </span>
           </li>
@@ -25,7 +21,7 @@ class Skills extends Component {
     }
 
     return (
-      <section id="skills">
+      <section id="skills" className="fx-section">
         <div className="col-md-12">
           <div className="col-md-12">
             <h1 className="section-title">
