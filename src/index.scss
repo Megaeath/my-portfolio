@@ -1,13 +1,112 @@
-body {
+:root {
+  --font-primary: 'Plus Jakarta Sans', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #fbfbfd;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+  --card-shadow: 0 40px 100px rgba(0,0,0,0.05);
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 10rem 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 5rem 0;
+  }
+}
+
+/* "Rotating Arc" Animation System */
+.reveal {
+  transform-origin: 0% 50%; /* Left Axis */
+  opacity: 0;
+  /* Incoming State: 6 o'clock position (rotated down) */
+  transform: rotate(20deg) translateY(100px) scale(0.9);
+  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              transform 1s cubic-bezier(0.2, 0.8, 0.2, 1),
+              filter 1s ease;
+  filter: blur(5px);
+  will-change: transform, opacity;
+}
+
+@media (max-width: 768px) {
+  .reveal {
+    transform: rotate(10deg) translateY(50px) scale(0.95);
+  }
+}
+
+.reveal.active {
+  opacity: 1;
+  /* Active State: 9 o'clock position (centered) */
+  transform: rotate(0deg) translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.reveal.past {
+  opacity: 0;
+  /* Outgoing State: 12 o'clock position (rotated up) */
+  transform: rotate(-20deg) translateY(-100px) scale(0.9);
+  filter: blur(5px);
+}
+
+@media (max-width: 768px) {
+  .reveal.past {
+    transform: rotate(-10deg) translateY(-50px) scale(0.95);
+  }
+}
+
+/* Instant visibility for components that should show immediately */
+.no-arc {
+  transform: none !important;
+  opacity: 1 !important;
+  filter: none !important;
 }

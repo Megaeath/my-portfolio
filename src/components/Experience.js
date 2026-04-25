@@ -1,105 +1,44 @@
 import React, { Component } from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import Badge from "react-bootstrap/Badge";
 
 class Experience extends Component {
   render() {
     if (this.props.resumeExperience && this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.experience;
-      var work = this.props.resumeExperience.map(function (work, i) {
-        const technologies = work.technologies;
-        const mainTechnologies = work.mainTech;
-
-        var mainTech = mainTechnologies.map((technology, i) => {
-          return (
-            <Badge pill className="main-badge mr-2 mb-2" key={i}>
-              {technology}
-            </Badge>
-          );
-        });
-        var tech = technologies.map((technology, i) => {
-          return (
-            <Badge pill className="experience-badge mr-2 mb-2" key={i}>
-              {technology}
-            </Badge>
-          );
-        });
-
-        return (
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date={work.years}
-            iconStyle={{
-              background: "#D6D1CE",
-              color: "#fff",
-              textAlign: "center",
-            }}
-            icon={
-              <i
-                className="iconify experience-icon"
-                data-icon="icomoon-free:office"
-              ></i>
-            }
-            key={i}
-          >
-            <div style={{ textAlign: "left", marginBottom: "4px" }}>
-              {mainTech}
-            </div>
-
-            <h3
-              className="vertical-timeline-element-title"
-              style={{ textAlign: "left" }}
-            >
-              {work.title}
-            </h3>
-            <h4
-              className="vertical-timeline-element-subtitle"
-              style={{ textAlign: "left" }}
-            >
-              {work.company}
-            </h4>
-            <p style={{ textAlign: "left", marginTop: "10px" }}>
+      var work = this.props.resumeExperience.map((work, i) => (
+        <div key={i} className="exp-item reveal">
+          <div className="exp-date">{work.years}</div>
+          <div className="exp-content">
+            <span className="exp-company">{work.company}</span>
+            <h3>{work.title}</h3>
+            <div className="exp-description">
               <ul>
                 {work.description.map((line, index) => (
                   <li key={index}>{line}</li>
                 ))}
               </ul>
-            </p>
-            <div style={{ textAlign: "left", marginTop: "15px" }}>{tech}</div>
-          </VerticalTimelineElement>
-        );
-      });
+            </div>
+            <div className="pill-grid" style={{ marginTop: '1.5rem' }}>
+              {work.technologies.map((tech, index) => (
+                <span key={index} className="pill" style={{ fontSize: '0.8rem' }}>
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ));
     }
 
     return (
-      <section id="resume" className="pb-5 fx-section fx-experience">
-        <div className="col-md-12 mx-auto">
-          <div className="col-md-12">
-            <h1 className="section-title" style={{ color: "black" }}>
-              <span className="text-black" style={{ textAlign: "center" }}>
-                {sectionName}
-              </span>
-            </h1>
+      <section id="experience">
+        <div className="container">
+          <div className="section-header reveal">
+            <span className="section-label">{sectionName}</span>
+            <h2 className="section-title">Professional Trajectory</h2>
           </div>
-        </div>
-        <div className="col-md-8 mx-auto">
-          <VerticalTimeline>
+          <div className="exp-list">
             {work}
-            <VerticalTimelineElement
-              iconStyle={{
-                background: "#D6D1CE",
-                color: "#fff",
-                textAlign: "center",
-              }}
-              icon={
-                <i className="fas fa-hourglass-start mx-auto experience-icon"></i>
-              }
-            />
-          </VerticalTimeline>
+          </div>
         </div>
       </section>
     );

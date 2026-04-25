@@ -7,84 +7,67 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import Graduation from "./components/Graduation";
 import Certificate from "./components/Certificate";
-class App extends Component {
+import Graduation from "./components/Graduation";
 
+class App extends Component {
   constructor(props) {
     super();
     this.state = {
-      foo: "bar",
       resumeData: {},
       sharedData: {},
     };
-    this.sectionObserver = null;
-  }
-
-  applyPickedLanguage() {
-
-    this.loadResumeFromPath(`res_primaryLanguage.json`);
-  }
-
-  swapCurrentlyActiveLanguage(oppositeLangIconId) {
-    var pickedLangIconId = window.$primaryLanguageIconId;
-    document
-      .getElementById(oppositeLangIconId)
-      .removeAttribute("filter", "brightness(40%)");
-    document
-      .getElementById(pickedLangIconId)
-      .setAttribute("filter", "brightness(40%)");
   }
 
   componentDidMount() {
     this.loadSharedData();
-    this.applyPickedLanguage(
-    );
-    this.initSectionReveal();
+    this.loadResumeData();
+    this.initScrollReveal();
   }
 
-  componentWillUnmount() {
-    if (this.sectionObserver) {
-      this.sectionObserver.disconnect();
-      this.sectionObserver = null;
-    }
-  }
+  initScrollReveal() {
+    const observerOptions = { 
+      threshold: [0, 0.1, 0.5, 0.9, 1],
+      rootMargin: "0px"
+    };
 
-  initSectionReveal() {
-    const sections = document.querySelectorAll(".fx-section");
-
-    if (!sections.length) {
-      return;
-    }
-
-    this.sectionObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const { target, isIntersecting, boundingClientRect } = entry;
+        
+        if (isIntersecting) {
+          target.classList.add("active");
+          target.classList.remove("past");
+        } else {
+          // If the element is above the viewport (it's "past")
+          if (boundingClientRect.top < 0) {
+            target.classList.add("past");
+            target.classList.remove("active");
+          } else {
+            // It's below the viewport (reset to incoming state)
+            target.classList.remove("active");
+            target.classList.remove("past");
           }
-        });
-      },
-      {
-        threshold: 0.18,
-        rootMargin: "0px 0px -80px 0px",
-      }
-    );
+        }
+      });
+    }, observerOptions);
 
-    sections.forEach((section) => this.sectionObserver.observe(section));
+    const observeElements = () => {
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    };
+
+    setTimeout(observeElements, 500);
   }
 
-  loadResumeFromPath(path) {
+  loadResumeData() {
     $.ajax({
-      url: path,
+      url: `res_primaryLanguage.json`,
       dataType: "json",
       cache: false,
       success: function (data) {
         this.setState({ resumeData: data });
       }.bind(this),
-      error: function (xhr, status, err) {
-        alert(err);
-      },
+      error: function (xhr, status, err) { console.error(err); },
     });
   }
 
@@ -95,54 +78,41 @@ class App extends Component {
       cache: false,
       success: function (data) {
         this.setState({ sharedData: data });
-        document.title = `${this.state.sharedData.basic_info.name}`;
+        if (data.basic_info) document.title = data.basic_info.name;
       }.bind(this),
-      error: function (xhr, status, err) {
-        alert(err);
-      },
+      error: function (xhr, status, err) { console.error(err); },
     });
   }
 
   render() {
+    const sharedData = this.state.sharedData.basic_info;
+    const resumeData = this.state.resumeData;
+
     return (
       <div className="app-shell">
-        <div className="cyber-grid" />
-        <div className="aurora-band" />
-        <div className="noise-overlay" />
-        <div className="floating-shapes">
-          {Array.from({ length: 12 }).map((_, index) => (
-            <span key={`shape-${index}`} className="shape-dot" />
-          ))}
-        </div>
-        <div className="bg-orb orb-1" />
-        <div className="bg-orb orb-2" />
-        <div className="bg-orb orb-3" />
-        <Header sharedData={this.state.sharedData.basic_info} />
+        <nav className="nav">
+          <div className="container nav-container">
+            <div className="nav-logo">{sharedData?.name}</div>
+            <div className="nav-links">
+              <a href="#about">About</a>
+              <a href="#experience">Experience</a>
+              <a href="#skills">Expertise</a>
+              <a href="#projects">Work</a>
+            </div>
+          </div>
+        </nav>
 
-        <main className="content-shell">
-          <About
-            resumeBasicInfo={this.state.resumeData.basic_info}
-            sharedBasicInfo={this.state.sharedData.basic_info}
-          />
-          <Certificate sharedBasicInfo={this.state.sharedData.basic_info} />
-          <Experience
-            resumeExperience={this.state.resumeData.experience}
-            resumeBasicInfo={this.state.resumeData.basic_info}
-          />
-          <Graduation
-            resumeGraduate={this.state.resumeData.graduate}
-            resumeBasicInfo={this.state.resumeData.basic_info}
-          />
-          <Skills
-            sharedSkills={this.state.sharedData.skills}
-            resumeBasicInfo={this.state.resumeData.basic_info}
-          />
-          <Projects
-            resumeProjects={this.state.resumeData.projects}
-            resumeBasicInfo={this.state.resumeData.basic_info}
-          />
+        <main className="main-content">
+          <Header sharedData={sharedData} />
+          <About resumeBasicInfo={resumeData.basic_info} sharedBasicInfo={sharedData} />
+          <Experience resumeExperience={resumeData.experience} resumeBasicInfo={resumeData.basic_info} />
+          <Skills sharedSkills={this.state.sharedData.skills} resumeBasicInfo={resumeData.basic_info} />
+          <Certificate sharedBasicInfo={sharedData} />
+          <Graduation resumeGraduate={resumeData.graduate} resumeBasicInfo={resumeData.basic_info} />
+          <Projects resumeProjects={resumeData.projects} resumeBasicInfo={resumeData.basic_info} />
         </main>
-        <Footer sharedBasicInfo={this.state.sharedData.basic_info} />
+
+        <Footer sharedBasicInfo={sharedData} />
       </div>
     );
   }

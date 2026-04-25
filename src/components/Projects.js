@@ -1,67 +1,35 @@
 import React, { Component } from "react";
-import ProjectDetailsModal from "./ProjectDetailsModal";
 
 class Projects extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      deps: {},
-      detailsModalShow: false,
-    };
-  }
-
   render() {
-    let detailsModalShow = (data) => {
-      this.setState({ detailsModalShow: true, deps: data });
-    };
-
-    let detailsModalClose = () => this.setState({ detailsModalShow: false });
     if (this.props.resumeProjects && this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.projects;
-      var projects = this.props.resumeProjects.map(function (projects) {
-        return (
-          <div
-            className="col-sm-12 col-md-6 col-lg-4"
-            key={projects.title}
-            style={{ cursor: "pointer" }}
-          >
-            <span className="portfolio-item d-block">
-              <div className="foto" onClick={() => detailsModalShow(projects)}>
-                <div className="neo-card project-card">
-                  <div className="project-img-wrap">
-                    <img
-                      src={projects.images[0]}
-                      alt="projectImages"
-                    />
-                  </div>
-                  <div className="project-card-body">
-                    <span className="project-date">{projects.startDate}</span>
-                    <p className="project-title-settings mt-2">
-                      {projects.title}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </span>
+      var projects = this.props.resumeProjects.map((project) => (
+        <div key={project.title} className="project-card reveal">
+          <div className="project-image">
+            <img src={project.images[0]} alt={project.title} />
           </div>
-        );
-      });
+          <div className="project-info">
+            <span style={{ fontSize: '0.9rem', fontWeight: '800', color: 'var(--accent)', textTransform: 'uppercase' }}>
+              {project.startDate}
+            </span>
+            <h3 style={{ marginTop: '0.5rem' }}>{project.title}</h3>
+            <p style={{ marginTop: '1rem' }}>{project.description}</p>
+          </div>
+        </div>
+      ));
     }
 
     return (
-      <section id="portfolio" className="fx-section">
-        <div className="col-md-12">
-          <h1 className="section-title" style={{ color: "black" }}>
-            <span>{sectionName}</span>
-          </h1>
-          <div className="col-md-12 mx-auto">
-            <div className="row mx-auto">{projects}</div>
+      <section id="projects">
+        <div className="container">
+          <div className="section-header reveal">
+            <span className="section-label">{sectionName}</span>
+            <h2 className="section-title">Selected Engineering Work</h2>
           </div>
-          <ProjectDetailsModal
-            show={this.state.detailsModalShow}
-            onHide={detailsModalClose}
-            data={this.state.deps}
-          />
+          <div className="project-grid">
+            {projects}
+          </div>
         </div>
       </section>
     );

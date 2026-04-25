@@ -1,11 +1,11 @@
 {
   "basic_info": {
-    "description_header": "Hi This is me    ",
-    "description": "Experienced IT professional with over 15 years of expertise in full-stack development, API integration, and system architecture. Adept at designing and optimizing backend solutions using modern technologies such as Node.js, JavaScript, C#.NET, and various database systems. Highly skilled in cloud computing with AWS, leading development teams, ensuring code quality through rigorous reviews, and integrating third-party APIs for enhanced digital marketing capabilities.",
+    "description_header": "AI-First Solution Architect",
+    "description": "Forward-thinking Senior Tech Lead with over 15 years of expertise, now specializing in the intersection of robust enterprise architecture and Generative AI. Beyond traditional full-stack development, I architect intelligent systems leveraging LLMs (GPT-4o/o1), LangChain, and Agentic workflows. Expert in AWS cloud-native solutions, leading high-performance squads at TTB Bank to deliver disruptive digital banking initiatives. I bridge the gap between scalable backend systems and cutting-edge AI integration to build future-ready financial products.",
     "section_name": {
       "about": "About me",
       "projects": "Side Projects",
-      "skills": "Skills",
+      "skills": "Expertise",
       "experience": "Experience",
       "graduate": "Graduation"
     }
@@ -82,9 +82,35 @@
   ],
   "experience": [
     {
+      "company": "TTB Bank",
+      "title": "Senior Technical Lead",
+      "years": "May 2025 - Present",
+      "mainTech": [
+        "Banking Solutions",
+        "AI Integration",
+        "IT Governance"
+      ],
+      "technologies": [
+        "AI/LLM",
+        "Cloud Architecture",
+        "Agile/Scrum",
+        "IT Governance",
+        "Stakeholder Management",
+        "System Integration"
+      ],
+      "description": [
+        "Led high-level solution design for disruptive digital banking initiatives, integrating AI-driven automation into core financial services.",
+        "Acted as Scrum Master to manage complex Sprints and Releases, ensuring seamless alignment between business strategy and technical execution.",
+        "Authored and managed critical project artifacts including BRD, FRD, and PID, ensuring robust IT governance for large-scale enterprise initiatives.",
+        "Facilitated stakeholder workshops to bridge the gap between business operations and highly scalable technical implementations.",
+        "Provided technical advisory on hardware capacity planning and cloud infrastructure for mission-critical banking channels.",
+        "Directed training sessions for new digital solutions, fostering a culture of technical excellence and continuous learning."
+      ]
+    },
+    {
       "company": "VGI Digital Lab",
       "title": "Assistant Manager, Full Stack Developer",
-      "years": "Oct 2021 - Present",
+      "years": "Oct 2021 - May 2025",
       "mainTech": [
         "VGIONE",
         "CDP"
