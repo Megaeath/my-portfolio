@@ -72,14 +72,14 @@ const resumeData = {
       projects: { en: "Side Projects", th: "โปรเจกต์ส่วนตัว" },
       skills: { en: "Expertise", th: "ความเชี่ยวชาญ" },
       experience: { en: "Experience", th: "ประสบการณ์" },
-      graduate: { en: "Education", th: "การศึกษา" }
+      graduate: { en: "Education", th: "การศึกษา" },
     },
     section_title: {
       projects: { en: "Selected Engineering Work", th: "ผลงานวิศวกรรมที่คัดสรร" },
       skills: { en: "Technical Expertise", th: "ความเชี่ยวชาญทางเทคนิค" },
       experience: { en: "Professional Trajectory", th: "เส้นทางสายอาชีพ" },
-      graduate: { en: "Academic Foundation", th: "พื้นฐานทางการศึกษา" }
-    }
+      graduate: { en: "Academic Foundation", th: "พื้นฐานทางการศึกษา" },
+    },
   },
   projects: [
     {
@@ -88,8 +88,8 @@ const resumeData = {
       description: { en: "English project copy", th: "ข้อความโปรเจกต์ภาษาไทย" },
       images: ["images/portfolio/testmykid/student-highlight.png"],
       url: "https://testmykid-27ac8.web.app/student/",
-      technologies: []
-    }
+      technologies: [],
+    },
   ],
   experience: [
     {
@@ -97,66 +97,60 @@ const resumeData = {
       title: { en: "Senior Technical Lead", th: "Senior Technical Lead" },
       years: "May 2025 - Present",
       technologies: ["AI/LLM"],
-      description: [
-        { en: "English experience bullet", th: "รายละเอียดประสบการณ์ภาษาไทย" }
-      ]
-    }
+      description: [{ en: "English experience bullet", th: "รายละเอียดประสบการณ์ภาษาไทย" }],
+    },
   ],
   graduate: [
     {
       company: "AWS Certification",
       title: { en: "AWS Cloud Practitioner", th: "AWS Cloud Practitioner" },
       years: "01.2021 - present",
-      technologies: ["AWS"]
+      technologies: ["AWS"],
     },
     {
       company: "King Mongkut's University Of Technology North Bangkok",
       title: { en: "Master's degree", th: "ปริญญาโท" },
       years: "01.2010 - 03.2012",
-      technologies: ["Information Technology"]
-    }
-  ]
+      technologies: ["Information Technology"],
+    },
+  ],
 };
 
 const sharedData = {
   basic_info: {
     name: "MR.Auii",
     image: "myProfile.png",
-    titles: [
-      { en: "AI-Driven Solution Architect", th: "Solution Architect ที่ขับเคลื่อนด้วย AI" }
-    ],
+    titles: [{ en: "AI-Driven Solution Architect", th: "Solution Architect ที่ขับเคลื่อนด้วย AI" }],
     social: [],
     cert: [
       {
         title: {
           en: "Certified Cloud Practitioner",
-          th: "ใบรับรอง Certified Cloud Practitioner"
+          th: "ใบรับรอง Certified Cloud Practitioner",
         },
         url: "https://example.com/cert",
-        icon: "cert.png"
-      }
+        icon: "cert.png",
+      },
     ],
     hero: {
       label: { en: "AI-First Architecture", th: "สถาปัตยกรรมที่ให้ AI เป็นแกนหลัก" },
       summary: { en: "English hero summary", th: "สรุปส่วนหัวภาษาไทย" },
       cta: {
         experience: { en: "Explore Experience", th: "ดูประสบการณ์" },
-        projects: { en: "Side Projects", th: "ดูโปรเจกต์ส่วนตัว" }
-      }
+        projects: { en: "Side Projects", th: "ดูโปรเจกต์ส่วนตัว" },
+      },
     },
     footer: {
-      tagline: { en: "Built for impact.", th: "สร้างขึ้นเพื่อให้เกิดผลลัพธ์จริง" }
+      tagline: { en: "Built for impact.", th: "สร้างขึ้นเพื่อให้เกิดผลลัพธ์จริง" },
     },
     certificates: {
       label: { en: "Certifications", th: "ใบรับรอง" },
-      title: { en: "Industry Credentials", th: "ใบรับรองวิชาชีพ" }
-    }
+      title: { en: "Industry Credentials", th: "ใบรับรองวิชาชีพ" },
+    },
   },
   skills: {
-    icons: [
-      { name: { en: "Generative AI", th: "Generative AI" }, class: "fas fa-brain", level: "95" }
-    ]
-  }
+    icons: [{ name: { en: "Generative AI", th: "Generative AI" }, class: "fas fa-brain", level: "95" }],
+  },
 };
 
 beforeEach(() => {
@@ -191,7 +185,6 @@ test("defaults to english, restores saved language, and persists language change
   fireEvent.click(screen.getByRole("button", { name: "EN" }));
 
   expect((await screen.findAllByText("About me")).length).toBeGreaterThan(0);
-
   expect(window.localStorage.getItem("portfolio-language")).toBe("en");
 });
 
@@ -208,6 +201,8 @@ test("defaults to english when localStorage is empty", async () => {
 
   expect(screen.queryByText("สรุปส่วนหัวภาษาไทย")).toBeNull();
   expect(window.localStorage.getItem("portfolio-language")).toBeNull();
+  expect(screen.getByRole("button", { name: "EN" })).toHaveClass("active");
+  expect(screen.getByRole("button", { name: "TH" })).toBeInTheDocument();
 });
 
 function getLastProps(componentMock) {
@@ -257,6 +252,10 @@ test("switches visible hero, project, experience, and footer copy together", asy
   expect(screen.getByText("English project copy")).toBeInTheDocument();
   expect(screen.getByText("English experience bullet")).toBeInTheDocument();
   expect(screen.getByText(/Built for impact\./)).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: /TestMyKid Student App/i })).toHaveAttribute(
+    "href",
+    "https://testmykid-27ac8.web.app/student/"
+  );
 
   fireEvent.click(screen.getByRole("button", { name: "TH" }));
 
@@ -268,4 +267,8 @@ test("switches visible hero, project, experience, and footer copy together", asy
   expect(screen.getByText("ข้อความโปรเจกต์ภาษาไทย")).toBeInTheDocument();
   expect(screen.getByText("รายละเอียดประสบการณ์ภาษาไทย")).toBeInTheDocument();
   expect(screen.getByText(/สร้างขึ้นเพื่อให้เกิดผลลัพธ์จริง/)).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: /แอปนักเรียน TestMyKid/i })).toHaveAttribute(
+    "href",
+    "https://testmykid-27ac8.web.app/student/"
+  );
 });

@@ -52,6 +52,22 @@
   "projects": [
     {
       "title": {
+        "en": "TestMyKid Student App",
+        "th": "แอปนักเรียน TestMyKid"
+      },
+      "startDate": "2026",
+      "description": {
+        "en": "Student-facing web app for TestMyKid that highlights the learner journey through the /student experience.",
+        "th": "เว็บแอปสำหรับนักเรียนของ TestMyKid ที่นำเสนอเส้นทางการเรียนรู้ผ่านประสบการณ์ /student"
+      },
+      "images": [
+        "images/portfolio/testmykid/student-highlight.png"
+      ],
+      "url": "https://testmykid-27ac8.web.app/student/",
+      "technologies": []
+    },
+    {
+      "title": {
         "en": "Animal Shelter",
         "th": "ระบบศูนย์พักพิงสัตว์"
       },

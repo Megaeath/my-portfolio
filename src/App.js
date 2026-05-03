@@ -248,7 +248,7 @@ class App extends Component {
         <nav className="nav">
           <div className="container nav-container">
             <div className="nav-logo">{sharedData?.name}</div>
-            <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+            <div className="nav-actions">
               <div className="nav-links">
                 <a href="#about">{navLabels?.about}</a>
                 <a href="#experience">{navLabels?.experience}</a>
