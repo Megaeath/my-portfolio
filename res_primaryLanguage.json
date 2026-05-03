@@ -1,20 +1,81 @@
 {
   "basic_info": {
-    "description_header": "AI-First Solution Architect",
-    "description": "Forward-thinking Senior Tech Lead with over 15 years of expertise, now specializing in the intersection of robust enterprise architecture and Generative AI. Beyond traditional full-stack development, I architect intelligent systems leveraging LLMs (GPT-4o/o1), LangChain, and Agentic workflows. Expert in AWS cloud-native solutions, leading high-performance squads at TTB Bank to deliver disruptive digital banking initiatives. I bridge the gap between scalable backend systems and cutting-edge AI integration to build future-ready financial products.",
+    "description_header": {
+      "en": "AI-Forward Solution Architect",
+      "th": "สถาปนิกโซลูชันที่ขับเคลื่อนด้วยแนวคิด AI"
+    },
+    "description": {
+      "en": "Senior technology leader with extensive experience in enterprise delivery, solution architecture, and scalable product execution, now focusing that foundation on practical AI adoption. I am especially interested in applying proven engineering judgment, cloud architecture, and cross-functional leadership to AI-enabled products, while continuously exploring local and self-hosted LLM workflows in my own time.",
+      "th": "ผู้นำด้านเทคโนโลยีที่มีประสบการณ์ยาวนานในงานส่งมอบระบบองค์กร สถาปัตยกรรมโซลูชัน และการพัฒนาผลิตภัณฑ์ที่ขยายตัวได้ โดยกำลังนำพื้นฐานเหล่านั้นมาต่อยอดกับการประยุกต์ใช้ AI ในโลกจริงอย่างจริงจัง ผมสนใจเป็นพิเศษกับการใช้วิจารณญาณเชิงวิศวกรรม ประสบการณ์ด้านคลาวด์ และการทำงานข้ามทีม เพื่อสร้างผลิตภัณฑ์ที่มี AI เป็นส่วนสำคัญ พร้อมศึกษางานด้าน LLM ทั้งแบบ local และ self-hosted อย่างต่อเนื่องในเวลาส่วนตัว"
+    },
     "section_name": {
-      "about": "About me",
-      "projects": "Side Projects",
-      "skills": "Expertise",
-      "experience": "Experience",
-      "graduate": "Graduation"
+      "about": {
+        "en": "About me",
+        "th": "เกี่ยวกับผม"
+      },
+      "projects": {
+        "en": "Side Projects",
+        "th": "โปรเจกต์ส่วนตัว"
+      },
+      "skills": {
+        "en": "Expertise",
+        "th": "ความเชี่ยวชาญ"
+      },
+      "experience": {
+        "en": "Experience",
+        "th": "ประสบการณ์"
+      },
+      "graduate": {
+        "en": "Education",
+        "th": "การศึกษา"
+      }
+    },
+    "section_title": {
+      "projects": {
+        "en": "Selected Engineering Work",
+        "th": "ผลงานวิศวกรรมที่คัดสรร"
+      },
+      "skills": {
+        "en": "Technical Expertise",
+        "th": "ความเชี่ยวชาญทางเทคนิค"
+      },
+      "experience": {
+        "en": "Professional Trajectory",
+        "th": "เส้นทางสายอาชีพ"
+      },
+      "graduate": {
+        "en": "Academic Foundation",
+        "th": "พื้นฐานทางการศึกษา"
+      }
     }
   },
   "projects": [
     {
-      "title": "Animal Shelter",
+      "title": {
+        "en": "TestMyKid Student App",
+        "th": "แอปนักเรียน TestMyKid"
+      },
+      "startDate": "2026",
+      "description": {
+        "en": "Student-facing web app for TestMyKid that highlights the learner journey through the /student experience.",
+        "th": "เว็บแอปสำหรับนักเรียนของ TestMyKid ที่นำเสนอเส้นทางการเรียนรู้ผ่านประสบการณ์ /student"
+      },
+      "images": [
+        "images/portfolio/testmykid/student-highlight.png"
+      ],
+      "url": "https://testmykid-27ac8.web.app/student/",
+      "technologies": []
+    },
+    {
+      "title": {
+        "en": "Animal Shelter",
+        "th": "ระบบศูนย์พักพิงสัตว์"
+      },
       "startDate": "2020",
-      "description": "The most expanded application I had opportunity to work with. I've learned many technologies and my code was reviewed by awesome curator. Application handles all adoption processess and allows to store all evidence on adopting animals from animal shelter.",
+      "description": {
+        "en": "Comprehensive shelter operations platform covering adoption workflows, case evidence, and day-to-day record management. The project strengthened my Angular, TypeScript, and C# foundation through regular code reviews and structured delivery practices.",
+        "th": "แพลตฟอร์มสำหรับการดำเนินงานของศูนย์พักพิงสัตว์ที่ครอบคลุมขั้นตอนการรับเลี้ยง การจัดเก็บหลักฐาน และการจัดการข้อมูลประจำวัน โครงการนี้ช่วยต่อยอดพื้นฐานของผมด้าน Angular, TypeScript และ C# ผ่านการรีวิวโค้ดอย่างสม่ำเสมอและการทำงานที่มีโครงสร้าง"
+      },
       "images": [
         "images/portfolio/animal-shelter/p1.jpg",
         "images/portfolio/animal-shelter/p2.jpg"
@@ -36,9 +97,15 @@
       ]
     },
     {
-      "title": "Photography",
+      "title": {
+        "en": "Photography",
+        "th": "โครงการถ่ายภาพ"
+      },
       "startDate": "2018",
-      "description": "Personal project for study subject. I was responsible for testing photography application that optimizes images with popular algorithms used by graphic editors like Pixlr or Adobe Photoshop. I've earned A grade :)",
+      "description": {
+        "en": "Academic side project focused on validating an image-processing application that applied techniques common in professional editing tools. I led the quality perspective for the project and completed the course with top marks.",
+        "th": "โปรเจกต์การศึกษาที่มุ่งทดสอบแอปพลิเคชันประมวลผลภาพซึ่งใช้เทคนิคที่พบได้ในเครื่องมือแต่งภาพระดับมืออาชีพ ผมรับผิดชอบมุมมองด้านคุณภาพของงานและจบรายวิชาด้วยผลการเรียนระดับสูง"
+      },
       "images": [
         "images/portfolio/photography/p1.jpg",
         "images/portfolio/photography/p2.jpg"
@@ -56,9 +123,15 @@
       ]
     },
     {
-      "title": "3D Object Viewer",
+      "title": {
+        "en": "3D Object Viewer",
+        "th": "ระบบแสดงผลวัตถุ 3 มิติ"
+      },
       "startDate": "2015",
-      "description": "One of the first apps I was working on my internship. I had to develop front-end implementation for app that shows 3D models of known buildings. This was also my first project in Angular framework. I've learned a lot!",
+      "description": {
+        "en": "Early-career internship project where I built frontend features for a browser-based viewer of well-known architectural models. It was my first substantial Angular assignment and gave me practical experience delivering UI features in a team setting.",
+        "th": "โครงการฝึกงานช่วงเริ่มต้นสายอาชีพที่ผมพัฒนาฟีเจอร์ฝั่งหน้าบ้านสำหรับระบบแสดงแบบจำลองสถาปัตยกรรมผ่านเบราว์เซอร์ นี่เป็นงาน Angular ที่จริงจังชิ้นแรกของผมและทำให้ได้ประสบการณ์ตรงในการส่งมอบฟีเจอร์ UI ร่วมกับทีม"
+      },
       "images": [
         "images/portfolio/adventure/p1.jpg",
         "images/portfolio/adventure/p2.jpg"
@@ -83,7 +156,10 @@
   "experience": [
     {
       "company": "TTB Bank",
-      "title": "Senior Technical Lead",
+      "title": {
+        "en": "Senior Technical Lead",
+        "th": "หัวหน้าด้านเทคนิคอาวุโส"
+      },
       "years": "May 2025 - Present",
       "mainTech": [
         "Banking Solutions",
@@ -99,17 +175,38 @@
         "System Integration"
       ],
       "description": [
-        "Led high-level solution design for disruptive digital banking initiatives, integrating AI-driven automation into core financial services.",
-        "Acted as Scrum Master to manage complex Sprints and Releases, ensuring seamless alignment between business strategy and technical execution.",
-        "Authored and managed critical project artifacts including BRD, FRD, and PID, ensuring robust IT governance for large-scale enterprise initiatives.",
-        "Facilitated stakeholder workshops to bridge the gap between business operations and highly scalable technical implementations.",
-        "Provided technical advisory on hardware capacity planning and cloud infrastructure for mission-critical banking channels.",
-        "Directed training sessions for new digital solutions, fostering a culture of technical excellence and continuous learning."
+        {
+          "en": "Led solution design for digital banking initiatives, including practical AI-assisted workflows within core financial services.",
+          "th": "เป็นผู้นำในการออกแบบโซลูชันสำหรับโครงการดิจิทัลแบงก์กิ้ง รวมถึงการประยุกต์ใช้ workflow ที่มี AI ช่วยสนับสนุนภายในบริการการเงินหลัก"
+        },
+        {
+          "en": "Served as Scrum Master across complex sprint and release cycles, keeping business priorities and technical delivery aligned.",
+          "th": "ทำหน้าที่ Scrum Master ในรอบการทำงานและการปล่อยระบบที่ซับซ้อน เพื่อให้เป้าหมายทางธุรกิจและการส่งมอบทางเทคนิคสอดคล้องกัน"
+        },
+        {
+          "en": "Authored and maintained BRD, FRD, and PID documentation to support governance and traceability for enterprise programs.",
+          "th": "จัดทำและดูแลเอกสาร BRD, FRD และ PID เพื่อสนับสนุนการกำกับดูแลและการติดตามย้อนกลับของโครงการระดับองค์กร"
+        },
+        {
+          "en": "Facilitated stakeholder workshops that translated operating needs into scalable solution designs.",
+          "th": "จัดเวิร์กช็อปกับผู้มีส่วนได้ส่วนเสียเพื่อแปลงความต้องการทางธุรกิจให้เป็นแบบออกแบบโซลูชันที่ขยายต่อได้"
+        },
+        {
+          "en": "Advised on infrastructure capacity planning and cloud architecture for business-critical banking channels.",
+          "th": "ให้คำปรึกษาด้านการวางแผนความจุของโครงสร้างพื้นฐานและสถาปัตยกรรมคลาวด์สำหรับช่องทางธนาคารที่สำคัญต่อธุรกิจ"
+        },
+        {
+          "en": "Led enablement sessions for new digital solutions, helping teams adopt delivery standards and shared technical practices.",
+          "th": "จัด session ถ่ายทอดความรู้สำหรับโซลูชันดิจิทัลใหม่ เพื่อช่วยให้ทีมทำงานตามมาตรฐานการส่งมอบและแนวปฏิบัติทางเทคนิคร่วมกัน"
+        }
       ]
     },
     {
       "company": "VGI Digital Lab",
-      "title": "Assistant Manager, Full Stack Developer",
+      "title": {
+        "en": "Assistant Manager, Full Stack Developer",
+        "th": "ผู้ช่วยผู้จัดการ, นักพัฒนา Full Stack"
+      },
       "years": "Oct 2021 - May 2025",
       "mainTech": [
         "VGIONE",
@@ -128,22 +225,58 @@
         "TypeScript"
       ],
       "description": [
-        "Designed and implemented a serverless data pipeline to process 100M+ transactions from Amazon Redshift to Elasticsearch and RDS with zero downtime.",
-        "Designed, developed, and optimized data pipelines to process 100M+ records from Amazon Redshift, transforming and uploading audience data to Facebook, Google, and TikTok APIs for targeted advertising.",
-        "Built and launched end-to-end projects from scratch, ensuring scalability, performance, and security of backend APIs using Node.js, JavaScript, and PostgreSQL on AWS.",
-        "Led API architecture decisions, ensuring efficient data flow, low latency, and high reliability for digital marketing platforms.",
-        "Reviewed and approved pull requests on Bitbucket, enforcing code quality, performance optimization, and best practices.",
-        "Worked closely with cross-functional teams to integrate APIs with frontend applications and third-party services.",
-        "Developed internal tools and dashboards to monitor system performance, API usage, and data pipeline efficiency.",
-        "Optimized database queries and indexing strategies, improving query execution times and overall system responsiveness.",
-        "Managed DevOps pipelines and automated deployments using AWS CodePipeline for AWS Serverless Framework (SAM) and Jenkins for seamless CI/CD workflows.",
-        "Implemented logging, real-time monitoring, and fault tolerance using AWS CloudWatch and X-Ray to ensure system health and quick issue resolution.",
-        "Strengthened system security by implementing Role-Based Access Control (RBAC), OAuth2 authentication, and JWT-based authorization."
+        {
+          "en": "Designed and implemented a serverless data pipeline that moved 100M+ transactions from Amazon Redshift into Elasticsearch and RDS with zero downtime.",
+          "th": "ออกแบบและพัฒนา data pipeline แบบ serverless ที่ย้ายธุรกรรมมากกว่า 100 ล้านรายการจาก Amazon Redshift ไปยัง Elasticsearch และ RDS โดยไม่เกิด downtime"
+        },
+        {
+          "en": "Built audience-data processing flows that transformed 100M+ records and delivered segments to Facebook, Google, and TikTok APIs for targeted campaigns.",
+          "th": "พัฒนา workflow ประมวลผลข้อมูลกลุ่มเป้าหมายที่แปลงข้อมูลมากกว่า 100 ล้านรายการ และส่ง segment ไปยัง API ของ Facebook, Google และ TikTok สำหรับแคมเปญแบบเจาะกลุ่ม"
+        },
+        {
+          "en": "Launched backend products from the ground up with Node.js, JavaScript, and PostgreSQL on AWS, balancing scalability, security, and maintainability.",
+          "th": "สร้างระบบ backend ตั้งแต่ต้นด้วย Node.js, JavaScript และ PostgreSQL บน AWS โดยคำนึงถึงการขยายระบบ ความปลอดภัย และการดูแลรักษาในระยะยาว"
+        },
+        {
+          "en": "Guided API architecture decisions to support efficient data movement, low latency, and reliable operations for marketing platforms.",
+          "th": "กำหนดทิศทางด้านสถาปัตยกรรม API เพื่อรองรับการไหลของข้อมูลที่มีประสิทธิภาพ latency ต่ำ และการทำงานที่เชื่อถือได้สำหรับแพลตฟอร์มการตลาด"
+        },
+        {
+          "en": "Reviewed and approved pull requests, reinforcing code quality, performance awareness, and practical engineering standards.",
+          "th": "รีวิวและอนุมัติ pull request เพื่อยกระดับคุณภาพโค้ด ความใส่ใจด้านประสิทธิภาพ และมาตรฐานวิศวกรรมที่นำไปใช้ได้จริง"
+        },
+        {
+          "en": "Partnered with cross-functional teams to integrate backend services with frontend experiences and third-party platforms.",
+          "th": "ทำงานร่วมกับทีมข้ามสายงานเพื่อเชื่อมต่อบริการ backend เข้ากับประสบการณ์ฝั่งหน้าบ้านและแพลตฟอร์มภายนอก"
+        },
+        {
+          "en": "Developed internal tools and dashboards to monitor system health, API usage, and pipeline performance.",
+          "th": "พัฒนาเครื่องมือภายในและแดชบอร์ดเพื่อติดตามสุขภาพระบบ การใช้งาน API และประสิทธิภาพของ pipeline"
+        },
+        {
+          "en": "Optimized database queries and indexing strategies to improve response times and overall system responsiveness.",
+          "th": "ปรับปรุง query และกลยุทธ์การทำดัชนีของฐานข้อมูลเพื่อเพิ่มความเร็วในการตอบสนองและสมรรถนะโดยรวมของระบบ"
+        },
+        {
+          "en": "Managed CI/CD pipelines and automated deployments with AWS CodePipeline, AWS SAM, and Jenkins.",
+          "th": "ดูแล CI/CD pipeline และการ deploy อัตโนมัติด้วย AWS CodePipeline, AWS SAM และ Jenkins"
+        },
+        {
+          "en": "Implemented logging, real-time monitoring, and resilience patterns with AWS CloudWatch and X-Ray.",
+          "th": "วางระบบ logging, การติดตามแบบ real-time และแนวทางด้านความทนทานของระบบด้วย AWS CloudWatch และ X-Ray"
+        },
+        {
+          "en": "Strengthened application security through role-based access control, OAuth2 authentication, and JWT authorization.",
+          "th": "ยกระดับความปลอดภัยของระบบด้วย role-based access control, การยืนยันตัวตนแบบ OAuth2 และการกำหนดสิทธิ์ด้วย JWT"
+        }
       ]
     },
     {
       "company": "Thanachart Security",
-      "title": "Assistant Manager, Software Development",
+      "title": {
+        "en": "Assistant Manager, Software Development",
+        "th": "ผู้ช่วยผู้จัดการ, พัฒนาซอฟต์แวร์"
+      },
       "years": "Jul 2021 - Oct 2021",
       "mainTech": [
         "Backend Mobile API"
@@ -154,18 +287,42 @@
         "Microsoft SQL"
       ],
       "description": [
-        "Developed backend APIs for mobile applications using C#.NET and SQL Server, ensuring high performance and scalability.",
-        "Designed and maintained secure authentication and authorization mechanisms, implementing JWT and OAuth2 for enhanced security.",
-        "Created automated test scripts to validate API changes, ensuring that new updates do not impact overall functionality or performance.",
-        "Integrated unit and integration tests using Postman, Jest, and Selenium, improving code reliability and reducing production issues.",
-        "Enhanced API efficiency and scalability through caching strategies (Redis), query optimization, and load balancing techniques.",
-        "Worked closely with frontend developers to debug and optimize API responses, creating a seamless user experience.",
-        "Developed and optimized stored procedures and indexing strategies for high-performance database operations, reducing query execution time."
+        {
+          "en": "Developed backend APIs for mobile applications with C#.NET and SQL Server, with a focus on performance and scalability.",
+          "th": "พัฒนา backend API สำหรับแอปพลิเคชันมือถือด้วย C#.NET และ SQL Server โดยเน้นประสิทธิภาพและการขยายระบบ"
+        },
+        {
+          "en": "Designed and maintained secure authentication and authorization mechanisms using JWT and OAuth2.",
+          "th": "ออกแบบและดูแลกลไกการยืนยันตัวตนและการกำหนดสิทธิ์ที่ปลอดภัยด้วย JWT และ OAuth2"
+        },
+        {
+          "en": "Created automated test scripts to validate API changes and reduce regression risk.",
+          "th": "สร้างสคริปต์ทดสอบอัตโนมัติเพื่อตรวจสอบการเปลี่ยนแปลงของ API และลดความเสี่ยงจาก regression"
+        },
+        {
+          "en": "Integrated unit and integration testing with Postman, Jest, and Selenium to improve release confidence.",
+          "th": "นำการทดสอบแบบ unit และ integration ด้วย Postman, Jest และ Selenium มาใช้ เพื่อเพิ่มความมั่นใจก่อนการปล่อยระบบ"
+        },
+        {
+          "en": "Improved API efficiency through caching, query optimization, and load-balancing techniques.",
+          "th": "ปรับปรุงประสิทธิภาพของ API ด้วยการทำ caching การ optimize query และเทคนิคการกระจายโหลด"
+        },
+        {
+          "en": "Worked closely with frontend developers to debug API issues and refine response design for end users.",
+          "th": "ทำงานใกล้ชิดกับนักพัฒนาฝั่งหน้าบ้านเพื่อแก้ปัญหา API และปรับรูปแบบ response ให้เหมาะกับผู้ใช้งาน"
+        },
+        {
+          "en": "Developed and optimized stored procedures and indexing strategies for high-performance database operations.",
+          "th": "พัฒนาและปรับปรุง stored procedure รวมถึงกลยุทธ์การทำดัชนี เพื่อให้การทำงานของฐานข้อมูลมีประสิทธิภาพสูง"
+        }
       ]
     },
     {
       "company": "Gosoft Thailand",
-      "title": "Development Lead, Specialist",
+      "title": {
+        "en": "Development Lead, Specialist",
+        "th": "หัวหน้าทีมพัฒนา, ผู้เชี่ยวชาญ"
+      },
       "years": "2012 - 2021",
       "mainTech": [
         "Ticket Management System",
@@ -180,18 +337,42 @@
         "AWS (Lambda, S3, RDS)"
       ],
       "description": [
-        "Designed, developed, and implemented Contact Center Systems and Ticket Management Systems.",
-        "Integrated backend solutions with other enterprise systems using Java, Angular, C#.NET, Oracle, MySQL, AWS (Lambda, S3, RDS).",
-        "Led development teams and provided mentorship to junior developers.",
-        "Spearheaded cloud migration initiatives for legacy applications, reducing infrastructure costs.",
-        "Developed RESTful APIs for seamless data exchange across multiple platforms.",
-        "Ensured compliance with security best practices and data protection policies.",
-        "Designed scalable microservices architecture for high-traffic applications."
+        {
+          "en": "Designed and delivered contact center and ticket management systems for enterprise operations.",
+          "th": "ออกแบบและส่งมอบระบบ contact center และระบบบริหารจัดการ ticket สำหรับงานระดับองค์กร"
+        },
+        {
+          "en": "Integrated backend services with enterprise platforms using Java, Angular, C#.NET, Oracle, MySQL, and AWS services.",
+          "th": "เชื่อมต่อบริการ backend กับแพลตฟอร์มองค์กรโดยใช้ Java, Angular, C#.NET, Oracle, MySQL และบริการบน AWS"
+        },
+        {
+          "en": "Led development teams and mentored junior engineers through project delivery.",
+          "th": "นำทีมพัฒนาและให้คำแนะนำแก่วิศวกรรุ่นใหม่ตลอดการส่งมอบโครงการ"
+        },
+        {
+          "en": "Supported cloud migration initiatives for legacy applications to reduce infrastructure cost and operational friction.",
+          "th": "สนับสนุนการย้ายระบบ legacy ขึ้นสู่คลาวด์เพื่อลดต้นทุนโครงสร้างพื้นฐานและภาระในการดูแลระบบ"
+        },
+        {
+          "en": "Developed RESTful APIs to enable reliable data exchange across multiple platforms.",
+          "th": "พัฒนา RESTful API เพื่อให้การแลกเปลี่ยนข้อมูลข้ามแพลตฟอร์มเป็นไปอย่างเชื่อถือได้"
+        },
+        {
+          "en": "Maintained security and data-protection practices across solution delivery.",
+          "th": "ดูแลแนวปฏิบัติด้านความปลอดภัยและการคุ้มครองข้อมูลตลอดกระบวนการส่งมอบโซลูชัน"
+        },
+        {
+          "en": "Designed scalable microservice-based solutions for high-traffic workloads.",
+          "th": "ออกแบบโซลูชันแบบ microservice ที่รองรับงานปริมาณสูงและขยายได้"
+        }
       ]
     },
     {
       "company": "KP Soft",
-      "title": "System Analyst",
+      "title": {
+        "en": "System Analyst",
+        "th": "นักวิเคราะห์ระบบ"
+      },
       "years": "2011 - 2012",
       "mainTech": [
         "Personal Loan System",
@@ -202,16 +383,34 @@
         "Microsoft SQL"
       ],
       "description": [
-        "Developed insurance applications using Delphi and SQL Server.",
-        "Conducted system analysis to improve performance and security.",
-        "Designed and implemented database structures to optimize query performance.",
-        "Assisted in requirement gathering and documentation for new system enhancements.",
-        "Integrated insurance claims processing with third-party financial services."
+        {
+          "en": "Developed insurance applications with Delphi and SQL Server.",
+          "th": "พัฒนาระบบประกันภัยด้วย Delphi และ SQL Server"
+        },
+        {
+          "en": "Performed system analysis to improve application performance and security.",
+          "th": "วิเคราะห์ระบบเพื่อปรับปรุงประสิทธิภาพและความปลอดภัยของแอปพลิเคชัน"
+        },
+        {
+          "en": "Designed and implemented database structures that improved query performance.",
+          "th": "ออกแบบและพัฒนาโครงสร้างฐานข้อมูลที่ช่วยเพิ่มประสิทธิภาพของการสืบค้น"
+        },
+        {
+          "en": "Supported requirement gathering and documentation for new system enhancements.",
+          "th": "สนับสนุนการเก็บความต้องการและการจัดทำเอกสารสำหรับการพัฒนาระบบเพิ่มเติม"
+        },
+        {
+          "en": "Integrated insurance claims processing with third-party financial services.",
+          "th": "เชื่อมต่อกระบวนการเคลมประกันเข้ากับบริการทางการเงินจากผู้ให้บริการภายนอก"
+        }
       ]
     },
     {
       "company": "Abstract Computer",
-      "title": "Programmer",
+      "title": {
+        "en": "Programmer",
+        "th": "โปรแกรมเมอร์"
+      },
       "years": "2005 - 2011",
       "mainTech": [
         "Hospital Management System"
@@ -223,19 +422,40 @@
         "Sybase Data Windows"
       ],
       "description": [
-        "Implemented and developed hospital management systems for various hospitals (Bhumibol Adulyadej Hospital, Vajira Hospital, Taksin Hospital, Charoenkrung Pracharak Hospital, Klang Hospital, etc.).",
-        "Utilized C#.NET, Oracle, and SQL Server for development.",
-        "Developed reporting modules for hospital staff to streamline operations.",
-        "Integrated hospital systems with third-party healthcare providers and insurance databases.",
-        "Conducted software testing and debugging to maintain system reliability.",
-        "Designed HL7 interfaces for secure and standardized health data exchange."
+        {
+          "en": "Implemented hospital management systems for multiple public-sector hospitals.",
+          "th": "พัฒนาระบบบริหารจัดการโรงพยาบาลให้กับโรงพยาบาลภาครัฐหลายแห่ง"
+        },
+        {
+          "en": "Built solutions with C#.NET, Oracle, and SQL Server for operational healthcare workflows.",
+          "th": "พัฒนาโซลูชันด้วย C#.NET, Oracle และ SQL Server เพื่อรองรับกระบวนการทำงานด้านสาธารณสุข"
+        },
+        {
+          "en": "Created reporting modules that helped hospital staff work more efficiently.",
+          "th": "พัฒนาโมดูลรายงานที่ช่วยให้บุคลากรโรงพยาบาลทำงานได้มีประสิทธิภาพมากขึ้น"
+        },
+        {
+          "en": "Integrated hospital systems with healthcare providers and insurance databases.",
+          "th": "เชื่อมต่อระบบโรงพยาบาลกับผู้ให้บริการด้านสุขภาพและฐานข้อมูลประกันภัย"
+        },
+        {
+          "en": "Performed testing and debugging to maintain reliable day-to-day operations.",
+          "th": "ทดสอบและแก้ไขปัญหาเพื่อให้ระบบรองรับการใช้งานประจำวันได้อย่างเชื่อถือได้"
+        },
+        {
+          "en": "Designed HL7 interfaces for standardized and secure health data exchange.",
+          "th": "ออกแบบอินเทอร์เฟซ HL7 เพื่อให้การแลกเปลี่ยนข้อมูลสุขภาพเป็นมาตรฐานและปลอดภัย"
+        }
       ]
     }
   ],
   "graduate": [
     {
       "company": "AWS Certification",
-      "title": "AWS Cloud Practitioner",
+      "title": {
+        "en": "AWS Cloud Practitioner",
+        "th": "AWS Cloud Practitioner"
+      },
       "years": "01.2021 - present",
       "mainTech": [],
       "technologies": [
@@ -244,7 +464,10 @@
     },
     {
       "company": "King Mongkut's University Of Technology North Bangkok",
-      "title": "Master's degree",
+      "title": {
+        "en": "Master's degree",
+        "th": "ปริญญาโท"
+      },
       "years": "01.2010 - 03.2012",
       "mainTech": [
         "Information Technology"
