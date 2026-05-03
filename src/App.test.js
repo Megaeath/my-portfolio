@@ -2,10 +2,58 @@ import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import $ from "jquery";
 import App from "./App";
+import Header from "./components/Header";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Certificate from "./components/Certificate";
+import Graduation from "./components/Graduation";
+import Footer from "./components/Footer";
 
 jest.mock("jquery", () => ({
   ajax: jest.fn(),
 }));
+
+jest.mock("./components/Header", () => {
+  const React = require("react");
+  return jest.fn(() => <div data-testid="header" />);
+});
+
+jest.mock("./components/About", () => {
+  const React = require("react");
+  return jest.fn(() => <div data-testid="about-section" />);
+});
+
+jest.mock("./components/Experience", () => {
+  const React = require("react");
+  return jest.fn(() => <div data-testid="experience-section" />);
+});
+
+jest.mock("./components/Projects", () => {
+  const React = require("react");
+  return jest.fn(() => <div data-testid="projects-section" />);
+});
+
+jest.mock("./components/Skills", () => {
+  const React = require("react");
+  return jest.fn(() => <div data-testid="skills-section" />);
+});
+
+jest.mock("./components/Certificate", () => {
+  const React = require("react");
+  return jest.fn(() => <div data-testid="certificate-section" />);
+});
+
+jest.mock("./components/Graduation", () => {
+  const React = require("react");
+  return jest.fn(() => <div data-testid="graduation-section" />);
+});
+
+jest.mock("./components/Footer", () => {
+  const React = require("react");
+  return jest.fn(() => <div data-testid="footer" />);
+});
 
 const resumeData = {
   basic_info: {
@@ -40,7 +88,20 @@ const resumeData = {
       ]
     }
   ],
-  graduate: []
+  graduate: [
+    {
+      company: "AWS Certification",
+      title: { en: "AWS Cloud Practitioner", th: "AWS Cloud Practitioner" },
+      years: "01.2021 - present",
+      technologies: ["AWS"]
+    },
+    {
+      company: "King Mongkut's University Of Technology North Bangkok",
+      title: { en: "Master's degree", th: "ปริญญาโท" },
+      years: "01.2010 - 03.2012",
+      technologies: ["Information Technology"]
+    }
+  ]
 };
 
 const sharedData = {
@@ -51,7 +112,16 @@ const sharedData = {
       { en: "AI-Driven Solution Architect", th: "Solution Architect ที่ขับเคลื่อนด้วย AI" }
     ],
     social: [],
-    cert: [],
+    cert: [
+      {
+        title: {
+          en: "Certified Cloud Practitioner",
+          th: "ใบรับรอง Certified Cloud Practitioner"
+        },
+        url: "https://example.com/cert",
+        icon: "cert.png"
+      }
+    ],
     hero: {
       label: { en: "AI-First Architecture", th: "สถาปัตยกรรมที่ให้ AI เป็นแกนหลัก" },
       summary: { en: "English hero summary", th: "สรุปส่วนหัวภาษาไทย" },
@@ -73,6 +143,14 @@ const sharedData = {
 
 beforeEach(() => {
   $.ajax.mockReset();
+  Header.mockClear();
+  About.mockClear();
+  Experience.mockClear();
+  Projects.mockClear();
+  Skills.mockClear();
+  Certificate.mockClear();
+  Graduation.mockClear();
+  Footer.mockClear();
   window.localStorage.clear();
   window.IntersectionObserver = jest.fn(() => ({
     observe: jest.fn(),
@@ -97,4 +175,35 @@ test("defaults to english, restores saved language, and persists language change
   expect((await screen.findAllByText("About me")).length).toBeGreaterThan(0);
 
   expect(window.localStorage.getItem("portfolio-language")).toBe("en");
+});
+
+function getLastProps(componentMock) {
+  return componentMock.mock.calls[componentMock.mock.calls.length - 1][0];
+}
+
+test("localizes rendered component props so they receive strings instead of bilingual objects", async () => {
+  $.ajax.mockImplementation(({ url, success }) => {
+    success(url === "res_primaryLanguage.json" ? resumeData : sharedData);
+  });
+
+  window.localStorage.setItem("portfolio-language", "th");
+
+  render(<App />);
+
+  await screen.findAllByText("เกี่ยวกับผม");
+
+  expect(getLastProps(Header).sharedData.titles[0]).toBe("Solution Architect ที่ขับเคลื่อนด้วย AI");
+  expect(getLastProps(Certificate).sharedBasicInfo.cert[0].title).toBe(
+    "ใบรับรอง Certified Cloud Practitioner"
+  );
+  expect(getLastProps(Graduation).resumeGraduate[1].title).toBe("ปริญญาโท");
+  expect(getLastProps(Projects).resumeProjects[0].title).toBe("แอปนักเรียน TestMyKid");
+  expect(getLastProps(Experience).resumeExperience[0].description[0]).toBe(
+    "รายละเอียดประสบการณ์ภาษาไทย"
+  );
+  expect(getLastProps(Skills).sharedSkills.icons[0].name).toBe("Generative AI");
+  expect(getLastProps(About).resumeBasicInfo.description_header).toBe(
+    "สถาปนิกโซลูชันที่ขับเคลื่อนด้วยแนวคิด AI"
+  );
+  expect(getLastProps(Footer).sharedBasicInfo.name).toBe("MR.Auii");
 });

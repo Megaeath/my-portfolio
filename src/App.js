@@ -39,6 +39,10 @@ function localizeSharedBasicInfo(basicInfo, language) {
   return {
     ...basicInfo,
     titles: basicInfo.titles?.map((title) => localizeField(title, language)),
+    cert: basicInfo.cert?.map((certification) => ({
+      ...certification,
+      title: localizeField(certification.title, language),
+    })),
   };
 }
 
@@ -77,6 +81,13 @@ function localizeExperience(experience, language) {
     ...item,
     title: localizeField(item.title, language),
     description: item.description?.map((line) => localizeField(line, language)),
+  }));
+}
+
+function localizeGraduate(graduate, language) {
+  return graduate?.map((item) => ({
+    ...item,
+    title: localizeField(item.title, language),
   }));
 }
 
@@ -184,7 +195,7 @@ class App extends Component {
       ...resumeDataState,
       basic_info: resumeBasicInfo,
       experience: localizeExperience(resumeDataState.experience, language),
-      graduate: resumeDataState.graduate,
+      graduate: localizeGraduate(resumeDataState.graduate, language),
       projects: localizeProjects(resumeDataState.projects, language),
     };
     const navLabels = resumeBasicInfo?.section_name
