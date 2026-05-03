@@ -3,6 +3,8 @@ import React, { Component } from "react";
 class Certificate extends Component {
   render() {
     if (this.props.sharedBasicInfo) {
+      var sectionName = this.props.sharedBasicInfo.certificates.label;
+      var sectionTitle = this.props.sharedBasicInfo.certificates.title;
       var certificates = this.props.sharedBasicInfo.cert.map((cert) => (
         <a 
           key={cert.title} 
@@ -24,8 +26,8 @@ class Certificate extends Component {
       <section id="certificates">
         <div className="container">
           <div className="section-header reveal">
-            <span className="section-label">Certifications</span>
-            <h2 className="section-title">Industry Credentials</h2>
+            <span className="section-label">{sectionName}</span>
+            <h2 className="section-title">{sectionTitle}</h2>
           </div>
           <div className="cert-grid">
             {certificates}

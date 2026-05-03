@@ -6,6 +6,10 @@ class Header extends Component {
       var name = this.props.sharedData.name;
       var title = this.props.sharedData.titles[0];
       var profilepic = process.env.PUBLIC_URL + "/images/" + this.props.sharedData.image;
+      var heroLabel = this.props.sharedData.hero.label;
+      var heroSummary = this.props.sharedData.hero.summary;
+      var heroExperienceCta = this.props.sharedData.hero.cta.experience;
+      var heroProjectsCta = this.props.sharedData.hero.cta.projects;
     }
 
     return (
@@ -13,17 +17,17 @@ class Header extends Component {
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content">
-              <span className="section-label" style={{ marginBottom: '1.5rem' }}>AI-First Architecture</span>
+              <span className="section-label" style={{ marginBottom: "1.5rem" }}>
+                {heroLabel}
+              </span>
               <h1>{title}.</h1>
-              <p>
-                Leading the evolution of enterprise systems through <strong>Generative AI</strong> and <strong>Agentic Frameworks</strong>. I architect intelligent, scalable cloud solutions that bridge the gap between robust backend engineering and the future of AI.
-              </p>
+              <p>{heroSummary}</p>
               <div className="hero-cta">
                 <a href="#experience" className="pill hero-btn-primary">
-                  Explore Experience
+                  {heroExperienceCta}
                 </a>
                 <a href="#projects" className="pill hero-btn-ghost">
-                  Side Projects
+                  {heroProjectsCta}
                 </a>
               </div>
             </div>

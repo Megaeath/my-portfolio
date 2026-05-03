@@ -4,6 +4,7 @@ class Experience extends Component {
   render() {
     if (this.props.resumeExperience && this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.experience;
+      var sectionTitle = this.props.resumeBasicInfo.section_title.experience;
       var work = this.props.resumeExperience.map((work, i) => (
         <div key={i} className="exp-item reveal">
           <div className="exp-date">{work.years}</div>
@@ -34,7 +35,7 @@ class Experience extends Component {
         <div className="container">
           <div className="section-header reveal">
             <span className="section-label">{sectionName}</span>
-            <h2 className="section-title">Professional Trajectory</h2>
+            <h2 className="section-title">{sectionTitle}</h2>
           </div>
           <div className="exp-list">
             {work}
