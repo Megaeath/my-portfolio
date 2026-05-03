@@ -1,6 +1,5 @@
 import React from "react";
-import { act } from "react-dom/test-utils";
-import { fireEvent, render, screen, wait as waitFor } from "@testing-library/react";
+import { act, fireEvent, render, screen, wait as waitFor, within } from "@testing-library/react";
 import $ from "jquery";
 import App from "./App";
 import Header from "./components/Header";
@@ -154,6 +153,9 @@ const sharedData = {
   },
 };
 
+let intersectionObserverCallbacks = [];
+let intersectionObserverInstances = [];
+
 beforeEach(() => {
   $.ajax.mockReset();
   Header.mockClear();
@@ -165,11 +167,24 @@ beforeEach(() => {
   Graduation.mockClear();
   Footer.mockClear();
   window.localStorage.clear();
-  window.IntersectionObserver = jest.fn(() => ({
-    observe: jest.fn(),
-    unobserve: jest.fn(),
-    disconnect: jest.fn(),
-  }));
+  intersectionObserverCallbacks = [];
+  intersectionObserverInstances = [];
+  window.IntersectionObserver = jest.fn((callback) => {
+    const instance = {
+      observe: jest.fn(),
+      unobserve: jest.fn(),
+      disconnect: jest.fn(),
+    };
+
+    intersectionObserverCallbacks.push(callback);
+    intersectionObserverInstances.push(instance);
+
+    return instance;
+  });
+});
+
+afterEach(() => {
+  jest.useRealTimers();
 });
 
 test("defaults to english, restores saved language, and persists language changes", async () => {
@@ -204,6 +219,117 @@ test("defaults to english when localStorage is empty", async () => {
   expect(window.localStorage.getItem("portfolio-language")).toBeNull();
   expect(screen.getByRole("button", { name: "EN" })).toHaveClass("active");
   expect(screen.getByRole("button", { name: "TH" })).toBeInTheDocument();
+});
+
+test("does not fall back to raw section ids before localized nav labels load", async () => {
+  jest.useFakeTimers();
+  $.ajax.mockImplementation(({ url, success }) => {
+    success(url === "res_primaryLanguage.json" ? resumeData : sharedData);
+  });
+
+  const { container } = render(<App />);
+  const navLinks = container.querySelector(".nav-links");
+
+  await waitFor(() => {
+    expect(within(navLinks).getByRole("link", { name: "About me" })).toBeInTheDocument();
+  });
+
+  act(() => {
+    jest.advanceTimersByTime(500);
+  });
+
+  const aboutLink = within(navLinks).getByRole("link", { name: "About me" });
+  expect(aboutLink.textContent).toBe("About me");
+});
+
+test("highlights the nav link for the section currently marked visible by the observer", async () => {
+  jest.useFakeTimers();
+  $.ajax.mockImplementation(({ url, success }) => {
+    success(url === "res_primaryLanguage.json" ? resumeData : sharedData);
+  });
+
+  const { container } = render(<App />);
+  const navLinks = container.querySelector(".nav-links");
+
+  await waitFor(() => {
+    expect(within(navLinks).getByRole("link", { name: "Side Projects" })).toBeInTheDocument();
+  });
+
+  act(() => {
+    jest.advanceTimersByTime(500);
+  });
+
+  const aboutLink = within(navLinks).getByRole("link", { name: "About me" });
+  const projectsLink = within(navLinks).getByRole("link", { name: "Side Projects" });
+  const aboutSection = document.getElementById("about");
+  const projectsSection = document.getElementById("projects");
+
+  expect(intersectionObserverInstances.length).toBeGreaterThan(0);
+  expect(aboutSection).not.toBeNull();
+  expect(projectsSection).not.toBeNull();
+
+  act(() => {
+    const sectionEntries = [
+      {
+        target: aboutSection,
+        isIntersecting: false,
+        boundingClientRect: { top: -24 },
+      },
+      {
+        target: projectsSection,
+        isIntersecting: true,
+        boundingClientRect: { top: 120 },
+      },
+    ];
+
+    intersectionObserverCallbacks.forEach((callback) => callback(sectionEntries));
+  });
+
+  expect(projectsLink).toHaveClass("active");
+  expect(aboutLink).not.toHaveClass("active");
+});
+
+test("prefers the topmost intersecting section when multiple nav sections are visible", async () => {
+  jest.useFakeTimers();
+  $.ajax.mockImplementation(({ url, success }) => {
+    success(url === "res_primaryLanguage.json" ? resumeData : sharedData);
+  });
+
+  const { container } = render(<App />);
+  const navLinks = container.querySelector(".nav-links");
+
+  await waitFor(() => {
+    expect(within(navLinks).getByRole("link", { name: "About me" })).toBeInTheDocument();
+  });
+
+  act(() => {
+    jest.advanceTimersByTime(500);
+  });
+
+  const aboutLink = within(navLinks).getByRole("link", { name: "About me" });
+  const projectsLink = within(navLinks).getByRole("link", { name: "Side Projects" });
+  const aboutSection = document.getElementById("about");
+  const projectsSection = document.getElementById("projects");
+
+  act(() => {
+    const sectionEntries = [
+      {
+        target: aboutSection,
+        isIntersecting: true,
+        boundingClientRect: { top: 32 },
+      },
+      {
+        target: projectsSection,
+        isIntersecting: true,
+        boundingClientRect: { top: 140 },
+      },
+    ];
+
+    intersectionObserverCallbacks.forEach((callback) => callback(sectionEntries));
+  });
+
+  expect(aboutLink).toHaveClass("active");
+  expect(projectsLink).not.toHaveClass("active");
 });
 
 function getLastProps(componentMock) {

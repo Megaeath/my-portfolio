@@ -141,6 +141,17 @@ function localizeSkills(skills, language) {
   };
 }
 
+const NAV_SECTIONS = [
+  { id: 'about' },
+  { id: 'experience' },
+  { id: 'skills' },
+  { id: 'projects' },
+];
+const NAV_SECTION_ORDER = NAV_SECTIONS.reduce((sectionOrder, { id }, index) => {
+  sectionOrder[id] = index;
+  return sectionOrder;
+}, {});
+
 class App extends Component {
   constructor(props) {
     super();
@@ -148,9 +159,11 @@ class App extends Component {
       resumeData: {},
       sharedData: {},
       language: DEFAULT_LANGUAGE,
+      activeSection: null,
     };
     this.revealObserver = null;
     this.observedRevealElements = new WeakSet();
+    this.navSectionObserver = null;
     this.handleLanguageChange = this.handleLanguageChange.bind(this);
     this.observeRevealElements = this.observeRevealElements.bind(this);
   }
@@ -160,6 +173,7 @@ class App extends Component {
     this.loadSharedData();
     this.loadResumeData();
     this.initScrollReveal();
+    this.initNavSectionSpy();
   }
 
   componentDidUpdate() {
@@ -169,6 +183,9 @@ class App extends Component {
   componentWillUnmount() {
     if (this.revealObserver) {
       this.revealObserver.disconnect();
+    }
+    if (this.navSectionObserver) {
+      this.navSectionObserver.disconnect();
     }
   }
 
@@ -212,6 +229,48 @@ class App extends Component {
         this.observedRevealElements.add(el);
       }
     });
+  }
+
+  initNavSectionSpy() {
+    const navObserverOptions = {
+      threshold: [0, 0.1, 0.5, 0.9, 1],
+      rootMargin: "-20% 0px -75% 0px"
+    };
+
+    const navObserver = new IntersectionObserver((entries) => {
+      const topmostIntersectingEntry = entries
+        .filter(({ isIntersecting }) => isIntersecting)
+        .sort((leftEntry, rightEntry) => {
+          const topDifference =
+            leftEntry.boundingClientRect.top - rightEntry.boundingClientRect.top;
+
+          if (topDifference !== 0) {
+            return topDifference;
+          }
+
+          return (
+            (NAV_SECTION_ORDER[leftEntry.target.id] ?? Number.MAX_SAFE_INTEGER) -
+            (NAV_SECTION_ORDER[rightEntry.target.id] ?? Number.MAX_SAFE_INTEGER)
+          );
+        })[0];
+
+      if (topmostIntersectingEntry) {
+        this.setState({ activeSection: topmostIntersectingEntry.target.id });
+      }
+    }, navObserverOptions);
+
+    this.navSectionObserver = navObserver;
+
+    const observeNavSections = () => {
+      NAV_SECTIONS.forEach(({ id }) => {
+        const section = document.getElementById(id);
+        if (section) {
+          navObserver.observe(section);
+        }
+      });
+    };
+
+    setTimeout(observeNavSections, 500);
   }
 
   loadResumeData() {
@@ -271,10 +330,10 @@ class App extends Component {
             <div className="nav-logo">{sharedData?.name}</div>
             <div className="nav-actions">
               <div className="nav-links">
-                <a href="#about">{navLabels?.about}</a>
-                <a href="#experience">{navLabels?.experience}</a>
-                <a href="#skills">{navLabels?.skills}</a>
-                <a href="#projects">{navLabels?.projects}</a>
+                <a href="#about" className={this.state.activeSection === 'about' ? 'active' : ''}>{navLabels?.about}</a>
+                <a href="#experience" className={this.state.activeSection === 'experience' ? 'active' : ''}>{navLabels?.experience}</a>
+                <a href="#skills" className={this.state.activeSection === 'skills' ? 'active' : ''}>{navLabels?.skills}</a>
+                <a href="#projects" className={this.state.activeSection === 'projects' ? 'active' : ''}>{navLabels?.projects}</a>
               </div>
               <LanguageToggle
                 currentLanguage={language}
