@@ -24,6 +24,10 @@ test("stores portfolio copy as explicit english and thai values", () => {
   expectLocalizedValue(resumeData.basic_info.description, "about body");
   expectLocalizedValue(resumeData.basic_info.section_name.about, "about label");
   expectLocalizedValue(resumeData.basic_info.section_name.projects, "projects label");
+  expectLocalizedValue(resumeData.basic_info.section_title.projects, "projects title");
+  expectLocalizedValue(resumeData.basic_info.section_title.skills, "skills title");
+  expectLocalizedValue(resumeData.basic_info.section_title.experience, "experience title");
+  expectLocalizedValue(resumeData.basic_info.section_title.graduate, "graduate title");
   expectLocalizedValue(resumeData.projects[0].title, "project title");
   expectLocalizedValue(resumeData.projects[0].description, "project description");
   expectLocalizedValue(resumeData.experience[0].title, "experience title");
@@ -33,6 +37,8 @@ test("stores portfolio copy as explicit english and thai values", () => {
   expectLocalizedValue(sharedData.basic_info.hero.summary, "hero summary");
   expectLocalizedValue(sharedData.basic_info.hero.cta.experience, "hero experience CTA");
   expectLocalizedValue(sharedData.basic_info.footer.tagline, "footer tagline");
+  expectLocalizedValue(sharedData.basic_info.certificates.label, "certificates label");
+  expectLocalizedValue(sharedData.basic_info.certificates.title, "certificates title");
   expectLocalizedValue(sharedData.skills.icons[0].name, "skill name");
   expectLocalizedValue(sharedData.basic_info.cert[0].title, "certificate title");
 });

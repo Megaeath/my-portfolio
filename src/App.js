@@ -43,6 +43,33 @@ function localizeSharedBasicInfo(basicInfo, language) {
       ...certification,
       title: localizeField(certification.title, language),
     })),
+    hero: basicInfo.hero
+      ? {
+          ...basicInfo.hero,
+          label: localizeField(basicInfo.hero.label, language),
+          summary: localizeField(basicInfo.hero.summary, language),
+          cta: basicInfo.hero.cta
+            ? {
+                ...basicInfo.hero.cta,
+                experience: localizeField(basicInfo.hero.cta.experience, language),
+                projects: localizeField(basicInfo.hero.cta.projects, language),
+              }
+            : basicInfo.hero.cta,
+        }
+      : basicInfo.hero,
+    footer: basicInfo.footer
+      ? {
+          ...basicInfo.footer,
+          tagline: localizeField(basicInfo.footer.tagline, language),
+        }
+      : basicInfo.footer,
+    certificates: basicInfo.certificates
+      ? {
+          ...basicInfo.certificates,
+          label: localizeField(basicInfo.certificates.label, language),
+          title: localizeField(basicInfo.certificates.title, language),
+        }
+      : basicInfo.certificates,
   };
 }
 
@@ -65,6 +92,15 @@ function localizeResumeBasicInfo(basicInfo, language) {
           graduate: localizeField(basicInfo.section_name.graduate, language),
         }
       : basicInfo.section_name,
+    section_title: basicInfo.section_title
+      ? {
+          ...basicInfo.section_title,
+          projects: localizeField(basicInfo.section_title.projects, language),
+          skills: localizeField(basicInfo.section_title.skills, language),
+          experience: localizeField(basicInfo.section_title.experience, language),
+          graduate: localizeField(basicInfo.section_title.graduate, language),
+        }
+      : basicInfo.section_title,
   };
 }
 

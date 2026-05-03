@@ -29,6 +29,24 @@
         "en": "Education",
         "th": "การศึกษา"
       }
+    },
+    "section_title": {
+      "projects": {
+        "en": "Selected Engineering Work",
+        "th": "ผลงานวิศวกรรมที่คัดสรร"
+      },
+      "skills": {
+        "en": "Technical Expertise",
+        "th": "ความเชี่ยวชาญทางเทคนิค"
+      },
+      "experience": {
+        "en": "Professional Trajectory",
+        "th": "เส้นทางสายอาชีพ"
+      },
+      "graduate": {
+        "en": "Academic Foundation",
+        "th": "พื้นฐานทางการศึกษา"
+      }
     }
   },
   "projects": [

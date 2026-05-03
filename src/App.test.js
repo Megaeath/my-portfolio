@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, wait as waitFor } from "@testing-library/react";
 import $ from "jquery";
 import App from "./App";
 import Header from "./components/Header";
@@ -17,42 +17,50 @@ jest.mock("jquery", () => ({
 
 jest.mock("./components/Header", () => {
   const React = require("react");
-  return jest.fn(() => <div data-testid="header" />);
+  const ActualHeader = jest.requireActual("./components/Header").default;
+  return jest.fn((props) => <ActualHeader {...props} />);
 });
 
 jest.mock("./components/About", () => {
   const React = require("react");
-  return jest.fn(() => <div data-testid="about-section" />);
+  const ActualAbout = jest.requireActual("./components/About").default;
+  return jest.fn((props) => <ActualAbout {...props} />);
 });
 
 jest.mock("./components/Experience", () => {
   const React = require("react");
-  return jest.fn(() => <div data-testid="experience-section" />);
+  const ActualExperience = jest.requireActual("./components/Experience").default;
+  return jest.fn((props) => <ActualExperience {...props} />);
 });
 
 jest.mock("./components/Projects", () => {
   const React = require("react");
-  return jest.fn(() => <div data-testid="projects-section" />);
+  const ActualProjects = jest.requireActual("./components/Projects").default;
+  return jest.fn((props) => <ActualProjects {...props} />);
 });
 
 jest.mock("./components/Skills", () => {
   const React = require("react");
-  return jest.fn(() => <div data-testid="skills-section" />);
+  const ActualSkills = jest.requireActual("./components/Skills").default;
+  return jest.fn((props) => <ActualSkills {...props} />);
 });
 
 jest.mock("./components/Certificate", () => {
   const React = require("react");
-  return jest.fn(() => <div data-testid="certificate-section" />);
+  const ActualCertificate = jest.requireActual("./components/Certificate").default;
+  return jest.fn((props) => <ActualCertificate {...props} />);
 });
 
 jest.mock("./components/Graduation", () => {
   const React = require("react");
-  return jest.fn(() => <div data-testid="graduation-section" />);
+  const ActualGraduation = jest.requireActual("./components/Graduation").default;
+  return jest.fn((props) => <ActualGraduation {...props} />);
 });
 
 jest.mock("./components/Footer", () => {
   const React = require("react");
-  return jest.fn(() => <div data-testid="footer" />);
+  const ActualFooter = jest.requireActual("./components/Footer").default;
+  return jest.fn((props) => <ActualFooter {...props} />);
 });
 
 const resumeData = {
@@ -65,6 +73,12 @@ const resumeData = {
       skills: { en: "Expertise", th: "ความเชี่ยวชาญ" },
       experience: { en: "Experience", th: "ประสบการณ์" },
       graduate: { en: "Education", th: "การศึกษา" }
+    },
+    section_title: {
+      projects: { en: "Selected Engineering Work", th: "ผลงานวิศวกรรมที่คัดสรร" },
+      skills: { en: "Technical Expertise", th: "ความเชี่ยวชาญทางเทคนิค" },
+      experience: { en: "Professional Trajectory", th: "เส้นทางสายอาชีพ" },
+      graduate: { en: "Academic Foundation", th: "พื้นฐานทางการศึกษา" }
     }
   },
   projects: [
@@ -132,6 +146,10 @@ const sharedData = {
     },
     footer: {
       tagline: { en: "Built for impact.", th: "สร้างขึ้นเพื่อให้เกิดผลลัพธ์จริง" }
+    },
+    certificates: {
+      label: { en: "Certifications", th: "ใบรับรอง" },
+      title: { en: "Industry Credentials", th: "ใบรับรองวิชาชีพ" }
     }
   },
   skills: {
@@ -206,4 +224,33 @@ test("localizes rendered component props so they receive strings instead of bili
     "สถาปนิกโซลูชันที่ขับเคลื่อนด้วยแนวคิด AI"
   );
   expect(getLastProps(Footer).sharedBasicInfo.name).toBe("MR.Auii");
+  expect(getLastProps(Footer).sharedBasicInfo.footer.tagline).toBe("สร้างขึ้นเพื่อให้เกิดผลลัพธ์จริง");
+});
+
+test("switches visible hero, project, experience, and footer copy together", async () => {
+  $.ajax.mockImplementation(({ url, success }) => {
+    success(url === "res_primaryLanguage.json" ? resumeData : sharedData);
+  });
+
+  render(<App />);
+
+  await waitFor(() => {
+    expect(screen.getByText("AI-Driven Solution Architect.")).toBeInTheDocument();
+  });
+
+  expect(screen.getByText("English hero summary")).toBeInTheDocument();
+  expect(screen.getByText("English project copy")).toBeInTheDocument();
+  expect(screen.getByText("English experience bullet")).toBeInTheDocument();
+  expect(screen.getByText(/Built for impact\./)).toBeInTheDocument();
+
+  fireEvent.click(screen.getByRole("button", { name: "TH" }));
+
+  await waitFor(() => {
+    expect(screen.getByText("Solution Architect ที่ขับเคลื่อนด้วย AI.")).toBeInTheDocument();
+  });
+
+  expect(screen.getByText("สรุปส่วนหัวภาษาไทย")).toBeInTheDocument();
+  expect(screen.getByText("ข้อความโปรเจกต์ภาษาไทย")).toBeInTheDocument();
+  expect(screen.getByText("รายละเอียดประสบการณ์ภาษาไทย")).toBeInTheDocument();
+  expect(screen.getByText(/สร้างขึ้นเพื่อให้เกิดผลลัพธ์จริง/)).toBeInTheDocument();
 });

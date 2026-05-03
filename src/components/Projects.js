@@ -4,6 +4,7 @@ class Projects extends Component {
   render() {
     if (this.props.resumeProjects && this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.projects;
+      var sectionTitle = this.props.resumeBasicInfo.section_title.projects;
       var projects = this.props.resumeProjects.map((project) => (
         <div key={project.title} className="project-card reveal">
           <div className="project-image">
@@ -25,7 +26,7 @@ class Projects extends Component {
         <div className="container">
           <div className="section-header reveal">
             <span className="section-label">{sectionName}</span>
-            <h2 className="section-title">Selected Engineering Work</h2>
+            <h2 className="section-title">{sectionTitle}</h2>
           </div>
           <div className="project-grid">
             {projects}
