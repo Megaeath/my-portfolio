@@ -149,7 +149,10 @@ class App extends Component {
       sharedData: {},
       language: DEFAULT_LANGUAGE,
     };
+    this.revealObserver = null;
+    this.observedRevealElements = new WeakSet();
     this.handleLanguageChange = this.handleLanguageChange.bind(this);
+    this.observeRevealElements = this.observeRevealElements.bind(this);
   }
 
   componentDidMount() {
@@ -159,13 +162,23 @@ class App extends Component {
     this.initScrollReveal();
   }
 
+  componentDidUpdate() {
+    this.observeRevealElements();
+  }
+
+  componentWillUnmount() {
+    if (this.revealObserver) {
+      this.revealObserver.disconnect();
+    }
+  }
+
   initScrollReveal() {
     const observerOptions = { 
       threshold: [0, 0.1, 0.5, 0.9, 1],
       rootMargin: "0px"
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    this.revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const { target, isIntersecting, boundingClientRect } = entry;
         
@@ -185,12 +198,20 @@ class App extends Component {
         }
       });
     }, observerOptions);
+    setTimeout(this.observeRevealElements, 500);
+  }
 
-    const observeElements = () => {
-      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-    };
+  observeRevealElements() {
+    if (!this.revealObserver) {
+      return;
+    }
 
-    setTimeout(observeElements, 500);
+    document.querySelectorAll(".reveal").forEach((el) => {
+      if (!this.observedRevealElements.has(el)) {
+        this.revealObserver.observe(el);
+        this.observedRevealElements.add(el);
+      }
+    });
   }
 
   loadResumeData() {

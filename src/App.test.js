@@ -1,4 +1,5 @@
 import React from "react";
+import { act } from "react-dom/test-utils";
 import { fireEvent, render, screen, wait as waitFor } from "@testing-library/react";
 import $ from "jquery";
 import App from "./App";
@@ -271,4 +272,33 @@ test("switches visible hero, project, experience, and footer copy together", asy
     "href",
     "https://testmykid-27ac8.web.app/student/"
   );
+});
+
+test("observes certification cards that render after shared data loads", async () => {
+  jest.useFakeTimers();
+
+  const observe = jest.fn();
+  window.IntersectionObserver = jest.fn(() => ({
+    observe,
+    unobserve: jest.fn(),
+    disconnect: jest.fn(),
+  }));
+
+  $.ajax.mockImplementation(({ url, success }) => {
+    const payload = url === "res_primaryLanguage.json" ? resumeData : sharedData;
+    const delay = url === "portfolio_shared_data.json" ? 600 : 0;
+    setTimeout(() => success(payload), delay);
+  });
+
+  render(<App />);
+
+  act(() => {
+    jest.advanceTimersByTime(600);
+  });
+
+  const certLink = await screen.findByRole("link", { name: /Certified Cloud Practitioner/i });
+
+  expect(observe).toHaveBeenCalledWith(certLink);
+
+  jest.useRealTimers();
 });
