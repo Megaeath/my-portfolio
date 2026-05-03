@@ -93,11 +93,17 @@ class App extends Component {
         <nav className="nav">
           <div className="container nav-container">
             <div className="nav-logo">{sharedData?.name}</div>
-            <div className="nav-links">
-              <a href="#about">About</a>
-              <a href="#experience">Experience</a>
-              <a href="#skills">Expertise</a>
-              <a href="#projects">Work</a>
+            <div className="nav-actions">
+              <div className="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Expertise</a>
+                <a href="#projects">Work</a>
+              </div>
+              <div className="language-toggle" role="group" aria-label="Language toggle">
+                <button type="button" className="active">EN</button>
+                <button type="button">TH</button>
+              </div>
             </div>
           </div>
         </nav>

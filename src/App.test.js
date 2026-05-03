@@ -67,3 +67,47 @@ test("renders the portfolio navigation and work section without crashing", async
   expect(screen.getByText("Work")).toBeInTheDocument();
   expect(await screen.findByText("TestMyKid Student App")).toBeInTheDocument();
 });
+
+test("renders a segmented EN/TH language toggle in the navigation row", async () => {
+  $.ajax.mockImplementation(({ url, success }) => {
+    if (url === "portfolio_shared_data.json") {
+      success({
+        basic_info: {
+          name: "MR.Auii",
+          titles: ["AI-Driven Solution Architect"],
+          image: "myProfile.png",
+          social: [],
+          cert: [],
+        },
+        skills: {
+          icons: [],
+        },
+      });
+      return;
+    }
+
+    success({
+      basic_info: {
+        description_header: "AI-First Solution Architect",
+        description: "English about copy",
+        section_name: {
+          about: "About me",
+          projects: "Side Projects",
+          skills: "Expertise",
+          experience: "Experience",
+          graduate: "Graduation",
+        },
+      },
+      projects: [],
+      experience: [],
+      graduate: [],
+    });
+  });
+
+  render(<App />);
+
+  expect(await screen.findByRole("group", { name: "Language toggle" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "EN" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "TH" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "EN" })).toHaveClass("active");
+});
