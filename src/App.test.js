@@ -195,6 +195,21 @@ test("defaults to english, restores saved language, and persists language change
   expect(window.localStorage.getItem("portfolio-language")).toBe("en");
 });
 
+test("defaults to english when localStorage is empty", async () => {
+  $.ajax.mockImplementation(({ url, success }) => {
+    success(url === "res_primaryLanguage.json" ? resumeData : sharedData);
+  });
+
+  render(<App />);
+
+  await waitFor(() => {
+    expect(screen.getByText("English hero summary")).toBeInTheDocument();
+  });
+
+  expect(screen.queryByText("สรุปส่วนหัวภาษาไทย")).toBeNull();
+  expect(window.localStorage.getItem("portfolio-language")).toBeNull();
+});
+
 function getLastProps(componentMock) {
   return componentMock.mock.calls[componentMock.mock.calls.length - 1][0];
 }
