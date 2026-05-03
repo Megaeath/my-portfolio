@@ -43,3 +43,23 @@ test("renders linked project cards as anchors and plain project cards as static 
   expect(plainCard.tagName).toBe("DIV");
   expect(container.querySelectorAll("a.project-card")).toHaveLength(1);
 });
+
+test("prefixes project image paths with PUBLIC_URL for hosted deployments", () => {
+  const originalPublicUrl = process.env.PUBLIC_URL;
+  process.env.PUBLIC_URL = "/my-portfolio";
+
+  render(
+    <Projects
+      resumeBasicInfo={resumeBasicInfo}
+      resumeProjects={resumeProjects}
+    />
+  );
+
+  const linkedImage = screen.getByAltText("Linked Project");
+  expect(linkedImage).toHaveAttribute(
+    "src",
+    "/my-portfolio/images/portfolio/testmykid/student-highlight.png"
+  );
+
+  process.env.PUBLIC_URL = originalPublicUrl;
+});

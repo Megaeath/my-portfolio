@@ -2,10 +2,11 @@ import React, { Component } from "react";
 
 class Projects extends Component {
   renderProjectCard(project) {
+    const imageSrc = [process.env.PUBLIC_URL, project.images[0]].filter(Boolean).join("/");
     const cardContent = (
       <>
         <div className="project-image">
-          <img src={project.images[0]} alt={project.title} />
+          <img src={imageSrc} alt={project.title} />
         </div>
         <div className="project-info">
           <span style={{ fontSize: "0.9rem", fontWeight: "800", color: "var(--accent)", textTransform: "uppercase" }}>
