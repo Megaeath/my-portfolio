@@ -15,7 +15,7 @@ export function writeStoredLanguage(language, storage = window.localStorage) {
 }
 
 export function getLocalizedValue(value, language) {
-  if (!value || typeof value !== "object" || !value[language]) {
+  if (!value || typeof value !== "object" || !Object.prototype.hasOwnProperty.call(value, language)) {
     throw new Error(`Missing localized value for "${language}"`);
   }
 

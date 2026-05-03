@@ -34,5 +34,8 @@ describe("language utilities", () => {
     expect(() => getLocalizedValue({ en: "About me" }, "th")).toThrow(
       'Missing localized value for "th"'
     );
+
+    // empty string is a valid localized value and should not be treated as missing
+    expect(getLocalizedValue({ en: "", th: "ไทย" }, "en")).toBe("");
   });
 });
