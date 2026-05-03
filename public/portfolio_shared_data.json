@@ -2,10 +2,22 @@
   "basic_info": {
     "name": "MR.Auii",
     "titles": [
-      "AI-Driven Solution Architect",
-      "Senior Tech Lead",
-      "Full Stack Developer",
-      "Team Leader"
+      {
+        "en": "AI-Driven Solution Architect",
+        "th": "Solution Architect ที่ขับเคลื่อนด้วย AI"
+      },
+      {
+        "en": "Senior Tech Lead",
+        "th": "Senior Tech Lead"
+      },
+      {
+        "en": "Full Stack Developer",
+        "th": "นักพัฒนา Full Stack"
+      },
+      {
+        "en": "Team Leader",
+        "th": "หัวหน้าทีม"
+      }
     ],
     "social": [
       {
@@ -27,171 +39,287 @@
     "image": "myProfile.png",
     "cert": [
       {
-        "title": "Certified Cloud Practitioner",
+        "title": {
+          "en": "Certified Cloud Practitioner",
+          "th": "ใบรับรอง Certified Cloud Practitioner"
+        },
         "url": "https://www.credly.com/badges/d95a384f-daeb-409f-873e-4984ae52dc16/public_url",
         "icon": "aws-certified-cloud-practitioner.png",
         "original": "aws-certified-cloud-practitioner.pdf"
       },
       {
-        "title": "Cloud Quest: Cloud Practitioner",
+        "title": {
+          "en": "Cloud Quest: Cloud Practitioner",
+          "th": "Cloud Quest: Cloud Practitioner"
+        },
         "url": "https://www.credly.com/badges/6c7009b0-5758-44c2-8adb-d79c64e5a2c9/public_url",
         "icon": "aws-cloud-quest-cloud-practitioner.png",
         "original": "aws-cloud-quest-cloud-practitioner.pdf"
       },
       {
-        "title": "JavaScript (Basic) Certificate",
+        "title": {
+          "en": "JavaScript (Basic) Certificate",
+          "th": "ใบรับรอง JavaScript (ระดับพื้นฐาน)"
+        },
         "url": "https://www.hackerrank.com/certificates/7c4a527b36dd",
         "icon": "hackerrank-javascript-basic.png",
         "original": "hackerrank-javascript-basic.pdf"
       },
       {
-        "title": "SQL (Basic) Certificate",
+        "title": {
+          "en": "SQL (Basic) Certificate",
+          "th": "ใบรับรอง SQL (ระดับพื้นฐาน)"
+        },
         "url": "https://www.hackerrank.com/certificates/fde0406dd2ae",
         "icon": "hackerrank-sql-basic.png",
         "original": "hackerrank-sql-basic.pdf"
       },
       {
-        "title": "SQL (Intermediate) Certificate",
+        "title": {
+          "en": "SQL (Intermediate) Certificate",
+          "th": "ใบรับรอง SQL (ระดับกลาง)"
+        },
         "url": "https://www.hackerrank.com/certificates/09aba1131e59",
         "icon": "hackerrank-sql-intermediate.png",
         "original": "hackerrank-sql-intermediate.pdf"
       },
       {
-        "title": "SQL (Advanced) Certificate",
+        "title": {
+          "en": "SQL (Advanced) Certificate",
+          "th": "ใบรับรอง SQL (ระดับสูง)"
+        },
         "url": "https://www.hackerrank.com/certificates/3383e6c8bebf",
         "icon": "hackerrank-sql-advanced.png",
         "original": "hackerrank-sql-advanced.pdf"
       },
       {
-        "title": "Node (Basic) Certificate",
+        "title": {
+          "en": "Node (Basic) Certificate",
+          "th": "ใบรับรอง Node (ระดับพื้นฐาน)"
+        },
         "url": "https://www.hackerrank.com/certificates/bdb185cc402e",
         "icon": "hackerrank-node-basic.png",
         "original": "hackerrank-node-basic.pdf"
       },
       {
-        "title": "C# (Basic) Certificate",
+        "title": {
+          "en": "C# (Basic) Certificate",
+          "th": "ใบรับรอง C# (ระดับพื้นฐาน)"
+        },
         "url": "https://www.hackerrank.com/certificates/c4853fa78916",
         "icon": "hackerrank-csharp-basic.png",
         "original": "hackerrank-csharp-basic.pdf"
       },
       {
-        "title": "Node.js (Intermediate) Certificate",
+        "title": {
+          "en": "Node.js (Intermediate) Certificate",
+          "th": "ใบรับรอง Node.js (ระดับกลาง)"
+        },
         "url": "https://www.hackerrank.com/certificates/c80b78d070db",
         "icon": "hackerrank-node-intermediate.png",
         "original": "hackerrank-node-intermediate.pdf"
       },
       {
-        "title": "Rest API (Intermediate) Certificate",
+        "title": {
+          "en": "Rest API (Intermediate) Certificate",
+          "th": "ใบรับรอง Rest API (ระดับกลาง)"
+        },
         "url": "https://www.hackerrank.com/certificates/5d66f55b30d1",
         "icon": "hackerrank-rest-api-intermediate.png",
         "original": "hackerrank-rest-api-intermediate.pdf"
       },
       {
-        "title": "Problem Solving (Basic) Certificate",
+        "title": {
+          "en": "Problem Solving (Basic) Certificate",
+          "th": "ใบรับรอง Problem Solving (ระดับพื้นฐาน)"
+        },
         "url": "https://www.hackerrank.com/certificates/c8824d8dfd6b",
         "icon": "hackerrank-problem-solving-basic.png",
         "original": "hackerrank-problem-solving-basic.pdf"
       },
       {
-        "title":"JavaScript (Intermediate) Certificate",
-        "url":"https://www.hackerrank.com/certificates/93adf7e54bbe",
-        "icon":"hackerrank-javascript-intermediate.png",
-        "original":"hackerrank-javascript-intermediate.pdf"
+        "title": {
+          "en": "JavaScript (Intermediate) Certificate",
+          "th": "ใบรับรอง JavaScript (ระดับกลาง)"
+        },
+        "url": "https://www.hackerrank.com/certificates/93adf7e54bbe",
+        "icon": "hackerrank-javascript-intermediate.png",
+        "original": "hackerrank-javascript-intermediate.pdf"
       },
       {
-        "title":"Python (Basic) Certificate",
-        "url":"https://www.hackerrank.com/certificates/4174006d4fc5",
-        "icon":"hackerrank-python-basic.png",
-        "original":"hackerrank-python-basic.pdf"
+        "title": {
+          "en": "Python (Basic) Certificate",
+          "th": "ใบรับรอง Python (ระดับพื้นฐาน)"
+        },
+        "url": "https://www.hackerrank.com/certificates/4174006d4fc5",
+        "icon": "hackerrank-python-basic.png",
+        "original": "hackerrank-python-basic.pdf"
       },
       {
-        "title":"Software Engineer Certificate",
-        "url":"https://www.hackerrank.com/certificates/917f2eff79ee",
-        "icon":"hackerrank-software-engineer.png",
-        "original":"hackerrank-software-engineer.pdf"
+        "title": {
+          "en": "Software Engineer Certificate",
+          "th": "ใบรับรอง Software Engineer"
+        },
+        "url": "https://www.hackerrank.com/certificates/917f2eff79ee",
+        "icon": "hackerrank-software-engineer.png",
+        "original": "hackerrank-software-engineer.pdf"
       },
       {
-        "title":"Go (Basic) Certificate",
-        "url":"https://www.hackerrank.com/certificates/748720bdaa2b",
-        "icon":"hackerrank-go-basic.png",
-        "original":"hackerrank-go-basic.pdf"
+        "title": {
+          "en": "Go (Basic) Certificate",
+          "th": "ใบรับรอง Go (ระดับพื้นฐาน)"
+        },
+        "url": "https://www.hackerrank.com/certificates/748720bdaa2b",
+        "icon": "hackerrank-go-basic.png",
+        "original": "hackerrank-go-basic.pdf"
       }
-    ]
+    ],
+    "hero": {
+      "label": {
+        "en": "AI-First Architecture",
+        "th": "สถาปัตยกรรมที่ให้ AI เป็นแกนหลัก"
+      },
+      "summary": {
+        "en": "I build reliable digital products by combining enterprise architecture, delivery discipline, and hands-on curiosity about practical AI systems.",
+        "th": "ผมสร้างผลิตภัณฑ์ดิจิทัลที่เชื่อถือได้ด้วยการผสานสถาปัตยกรรมองค์กร วินัยในการส่งมอบงาน และความสนใจเชิงปฏิบัติต่อระบบ AI"
+      },
+      "cta": {
+        "experience": {
+          "en": "Explore Experience",
+          "th": "ดูประสบการณ์"
+        },
+        "projects": {
+          "en": "Side Projects",
+          "th": "ดูโปรเจกต์ส่วนตัว"
+        }
+      }
+    },
+    "footer": {
+      "tagline": {
+        "en": "Built for impact.",
+        "th": "สร้างขึ้นเพื่อให้เกิดผลลัพธ์จริง"
+      }
+    }
   },
   "skills": {
     "icons": [
       {
-        "name": "Generative AI",
+        "name": {
+          "en": "Generative AI",
+          "th": "Generative AI"
+        },
         "class": "fas fa-brain",
         "level": "95"
       },
       {
-        "name": "LLMs (GPT-4o/o1)",
+        "name": {
+          "en": "LLMs (GPT-4o/o1)",
+          "th": "LLM (GPT-4o/o1)"
+        },
         "class": "fas fa-robot",
         "level": "95"
       },
       {
-        "name": "LangChain",
+        "name": {
+          "en": "LangChain",
+          "th": "LangChain"
+        },
         "class": "fas fa-link",
         "level": "90"
       },
       {
-        "name": "Vector DB (Pinecone)",
+        "name": {
+          "en": "Vector DB (Pinecone)",
+          "th": "ฐานข้อมูลเวกเตอร์ (Pinecone)"
+        },
         "class": "fas fa-database",
         "level": "85"
       },
       {
-        "name": "RAG / AI Agents",
+        "name": {
+          "en": "RAG / AI Agents",
+          "th": "RAG / เอเจนต์ AI"
+        },
         "class": "fas fa-microchip",
         "level": "90"
       },
       {
-        "name": "Python (AI Stack)",
+        "name": {
+          "en": "Python (AI Stack)",
+          "th": "Python (AI Stack)"
+        },
         "class": "devicon-python-plain",
         "level": "90"
       },
       {
-        "name": "Node.js",
+        "name": {
+          "en": "Node.js",
+          "th": "Node.js"
+        },
         "class": "devicon-nodejs-plain",
         "level": "90"
       },
       {
-        "name": "React",
+        "name": {
+          "en": "React",
+          "th": "React"
+        },
         "class": "devicon-react-original",
         "level": "85"
       },
       {
-        "name": "NextJS",
+        "name": {
+          "en": "NextJS",
+          "th": "NextJS"
+        },
         "class": "devicon-nextjs-original-wordmark",
         "level": "80"
       },
       {
-        "name": "AWS",
+        "name": {
+          "en": "AWS",
+          "th": "AWS"
+        },
         "class": "devicon-amazonwebservices-plain-wordmark",
         "level": "95"
       },
       {
-        "name": "Docker",
+        "name": {
+          "en": "Docker",
+          "th": "Docker"
+        },
         "class": "devicon-docker-plain",
         "level": "80"
       },
       {
-        "name": "GraphQL",
+        "name": {
+          "en": "GraphQL",
+          "th": "GraphQL"
+        },
         "class": "devicon-graphql-plain",
         "level": "75"
       },
       {
-        "name": "PostgreSQL",
+        "name": {
+          "en": "PostgreSQL",
+          "th": "PostgreSQL"
+        },
         "class": "devicon-postgresql-plain",
         "level": "75"
       },
       {
-        "name": "C#.NET",
+        "name": {
+          "en": "C#.NET",
+          "th": "C#.NET"
+        },
         "class": "devicon-csharp-plain",
         "level": "80"
       },
       {
-        "name": "TypeScript",
+        "name": {
+          "en": "TypeScript",
+          "th": "TypeScript"
+        },
         "class": "devicon-typescript-plain",
         "level": "90"
       }
