@@ -12,6 +12,16 @@
   },
   "projects": [
     {
+      "title": "TestMyKid Student App",
+      "startDate": "2026",
+      "description": "Student-facing web app for TestMyKid that highlights the learner journey through the /student experience.",
+      "images": [
+        "images/portfolio/testmykid/student-highlight.png"
+      ],
+      "url": "https://testmykid-27ac8.web.app/student/",
+      "technologies": []
+    },
+    {
       "title": "Animal Shelter",
       "startDate": "2020",
       "description": "The most expanded application I had opportunity to work with. I've learned many technologies and my code was reviewed by awesome curator. Application handles all adoption processess and allows to store all evidence on adopting animals from animal shelter.",
