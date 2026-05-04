@@ -1,0 +1,16 @@
+.background-canvas-container {
+  background-color: #F9FAFB;
+}
+
+/* Ensure all content layers are transparent so canvas shows through */
+.app-shell, 
+section, 
+header, 
+footer {
+  background-color: transparent !important;
+}
+
+.nav {
+  background: rgba(249, 250, 251, 0.7) !important;
+  backdrop-filter: blur(20px);
+}

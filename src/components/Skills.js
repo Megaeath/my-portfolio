@@ -14,7 +14,7 @@ class Skills extends Component {
     }
 
     return (
-      <section id="skills" style={{ background: 'var(--bg-secondary)' }}>
+      <section id="skills">
         <div className="container">
           <div className="section-header reveal">
             <span className="section-label">{sectionName}</span>

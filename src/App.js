@@ -16,6 +16,7 @@ import {
   readStoredLanguage,
   writeStoredLanguage,
 } from "./utils/language";
+import BackgroundSystem from "./components/BackgroundSystem/BackgroundSystem";
 
 function localizeField(value, language) {
   if (
@@ -45,30 +46,30 @@ function localizeSharedBasicInfo(basicInfo, language) {
     })),
     hero: basicInfo.hero
       ? {
-          ...basicInfo.hero,
-          label: localizeField(basicInfo.hero.label, language),
-          summary: localizeField(basicInfo.hero.summary, language),
-          cta: basicInfo.hero.cta
-            ? {
-                ...basicInfo.hero.cta,
-                experience: localizeField(basicInfo.hero.cta.experience, language),
-                projects: localizeField(basicInfo.hero.cta.projects, language),
-              }
-            : basicInfo.hero.cta,
-        }
+        ...basicInfo.hero,
+        label: localizeField(basicInfo.hero.label, language),
+        summary: localizeField(basicInfo.hero.summary, language),
+        cta: basicInfo.hero.cta
+          ? {
+            ...basicInfo.hero.cta,
+            experience: localizeField(basicInfo.hero.cta.experience, language),
+            projects: localizeField(basicInfo.hero.cta.projects, language),
+          }
+          : basicInfo.hero.cta,
+      }
       : basicInfo.hero,
     footer: basicInfo.footer
       ? {
-          ...basicInfo.footer,
-          tagline: localizeField(basicInfo.footer.tagline, language),
-        }
+        ...basicInfo.footer,
+        tagline: localizeField(basicInfo.footer.tagline, language),
+      }
       : basicInfo.footer,
     certificates: basicInfo.certificates
       ? {
-          ...basicInfo.certificates,
-          label: localizeField(basicInfo.certificates.label, language),
-          title: localizeField(basicInfo.certificates.title, language),
-        }
+        ...basicInfo.certificates,
+        label: localizeField(basicInfo.certificates.label, language),
+        title: localizeField(basicInfo.certificates.title, language),
+      }
       : basicInfo.certificates,
   };
 }
@@ -84,22 +85,22 @@ function localizeResumeBasicInfo(basicInfo, language) {
     description: localizeField(basicInfo.description, language),
     section_name: basicInfo.section_name
       ? {
-          ...basicInfo.section_name,
-          about: localizeField(basicInfo.section_name.about, language),
-          projects: localizeField(basicInfo.section_name.projects, language),
-          skills: localizeField(basicInfo.section_name.skills, language),
-          experience: localizeField(basicInfo.section_name.experience, language),
-          graduate: localizeField(basicInfo.section_name.graduate, language),
-        }
+        ...basicInfo.section_name,
+        about: localizeField(basicInfo.section_name.about, language),
+        projects: localizeField(basicInfo.section_name.projects, language),
+        skills: localizeField(basicInfo.section_name.skills, language),
+        experience: localizeField(basicInfo.section_name.experience, language),
+        graduate: localizeField(basicInfo.section_name.graduate, language),
+      }
       : basicInfo.section_name,
     section_title: basicInfo.section_title
       ? {
-          ...basicInfo.section_title,
-          projects: localizeField(basicInfo.section_title.projects, language),
-          skills: localizeField(basicInfo.section_title.skills, language),
-          experience: localizeField(basicInfo.section_title.experience, language),
-          graduate: localizeField(basicInfo.section_title.graduate, language),
-        }
+        ...basicInfo.section_title,
+        projects: localizeField(basicInfo.section_title.projects, language),
+        skills: localizeField(basicInfo.section_title.skills, language),
+        experience: localizeField(basicInfo.section_title.experience, language),
+        graduate: localizeField(basicInfo.section_title.graduate, language),
+      }
       : basicInfo.section_title,
   };
 }
@@ -190,7 +191,7 @@ class App extends Component {
   }
 
   initScrollReveal() {
-    const observerOptions = { 
+    const observerOptions = {
       threshold: [0, 0.1, 0.5, 0.9, 1],
       rootMargin: "0px"
     };
@@ -198,7 +199,7 @@ class App extends Component {
     this.revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const { target, isIntersecting, boundingClientRect } = entry;
-        
+
         if (isIntersecting) {
           target.classList.add("active");
           target.classList.remove("past");
@@ -316,15 +317,16 @@ class App extends Component {
     };
     const navLabels = resumeBasicInfo?.section_name
       ? {
-          about: resumeBasicInfo.section_name.about,
-          experience: resumeBasicInfo.section_name.experience,
-          skills: resumeBasicInfo.section_name.skills,
-          projects: resumeBasicInfo.section_name.projects,
-        }
+        about: resumeBasicInfo.section_name.about,
+        experience: resumeBasicInfo.section_name.experience,
+        skills: resumeBasicInfo.section_name.skills,
+        projects: resumeBasicInfo.section_name.projects,
+      }
       : null;
 
     return (
       <div className="app-shell">
+        <BackgroundSystem />
         <nav className="nav">
           <div className="container nav-container">
             <div className="nav-logo">{sharedData?.name}</div>

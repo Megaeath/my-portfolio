@@ -5,8 +5,7 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: var(--bg-primary);
-  opacity: 0.98;
+  background: rgba(249, 250, 251, 0.7);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   padding: 1.5rem 0;
@@ -111,7 +110,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-color: var(--bg-primary);
+  background-color: transparent;
   padding-top: 6rem;
 }
 
@@ -143,7 +142,8 @@
   gap: 1.5rem;
 }
 
-.hero-btn-primary, .hero-btn-ghost {
+.hero-btn-primary,
+.hero-btn-ghost {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   color: var(--text-primary) !important;
@@ -151,10 +151,12 @@
 }
 
 .hero-btn-primary {
-  border-color: var(--accent); /* Subtle distinction with accent border */
+  border-color: var(--accent);
+  /* Subtle distinction with accent border */
 }
 
-.hero-btn-primary:hover, .hero-btn-ghost:hover {
+.hero-btn-primary:hover,
+.hero-btn-ghost:hover {
   background: var(--border);
   color: var(--text-primary) !important;
   transform: translateY(-2px);
@@ -323,18 +325,18 @@
 }
 
 .cert-grid {
-  display: grid; 
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2rem;
 }
 
 .cert-item {
-  display: flex; 
-  align-items: center; 
-  gap: 1.25rem; 
-  padding: 1.75rem; 
-  background: var(--bg-secondary); 
-  border-radius: 1.25rem; 
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  background: var(--bg-secondary);
+  border-radius: 1.25rem;
   border: 1px solid var(--border);
 
   img {
@@ -344,7 +346,7 @@
   }
 
   span {
-    fontWeight: 700; 
+    fontWeight: 700;
     font-size: 0.95rem;
   }
 }
@@ -354,7 +356,7 @@
   padding: 6rem 0;
   border-top: 1px solid var(--border);
   text-align: center;
-  background: var(--bg-secondary);
+  background: transparent;
 }
 
 .footer-social {
@@ -386,7 +388,7 @@
     text-align: center;
     gap: 3rem;
   }
-  
+
   .hero-content p {
     margin-left: auto;
     margin-right: auto;
@@ -443,7 +445,8 @@
   }
 
   .nav-links {
-    display: none; /* Hide nav links on small phones to keep it clean */
+    display: none;
+    /* Hide nav links on small phones to keep it clean */
   }
 
   .language-toggle button {

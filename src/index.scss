@@ -1,14 +1,14 @@
 :root {
   --font-primary: 'Plus Jakarta Sans', sans-serif;
   --font-secondary: 'Inter', sans-serif;
-  
+
   --bg-primary: #ffffff;
   --bg-secondary: #fbfbfd;
   --text-primary: #111827;
   --text-secondary: #4b5563;
   --accent: #2563eb;
   --border: #e5e7eb;
-  --card-shadow: 0 40px 100px rgba(0,0,0,0.05);
+  --card-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -26,13 +26,18 @@ html {
 
 body {
   font-family: var(--font-secondary);
-  background-color: var(--bg-primary);
+  background-color: transparent;
   color: var(--text-primary);
   line-height: 1.5;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+
+
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-primary);
   font-weight: 800;
   line-height: 1.1;
@@ -49,6 +54,18 @@ ul {
   list-style: none;
 }
 
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(249, 250, 251, 0.7);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -57,6 +74,7 @@ ul {
 
 section {
   padding: 10rem 0;
+  background: transparent;
 }
 
 @media (max-width: 768px) {
@@ -67,13 +85,14 @@ section {
 
 /* "Rotating Arc" Animation System */
 .reveal {
-  transform-origin: 0% 50%; /* Left Axis */
+  transform-origin: 0% 50%;
+  /* Left Axis */
   opacity: 0;
   /* Incoming State: 6 o'clock position (rotated down) */
   transform: rotate(20deg) translateY(100px) scale(0.9);
-  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), 
-              transform 1s cubic-bezier(0.2, 0.8, 0.2, 1),
-              filter 1s ease;
+  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 1s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 1s ease;
   filter: blur(5px);
   will-change: transform, opacity;
 }
