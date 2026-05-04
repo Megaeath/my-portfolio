@@ -68,6 +68,72 @@
     },
     {
       "title": {
+        "en": "Serverless Omni-Channel Data Pipeline",
+        "th": "ระบบท่อข้อมูลการตลาดแบบ Serverless"
+      },
+      "startDate": "2023",
+      "description": {
+        "en": "Engineered a high-throughput serverless architecture to orchestrate multi-platform marketing data ingestion. Integrated Google Ads, Facebook, and TikTok APIs using AWS Step Functions and SQS for resilient processing, delivering real-time insights via OpenSearch and long-term analytics in Amazon Redshift.",
+        "th": "ออกแบบและพัฒนาระบบสถาปัตยกรรม Serverless ประสิทธิภาพสูงเพื่อรวบรวมข้อมูลการตลาดจากหลายแพลตฟอร์ม เชื่อมต่อ API ของ Google Ads, Facebook และ TikTok โดยใช้ AWS Step Functions และ SQS เพื่อความทนทานของระบบ พร้อมแสดงผลข้อมูลแบบ Real-time ผ่าน OpenSearch และวิเคราะห์ข้อมูลระยะยาวใน Amazon Redshift"
+      },
+      "images": [
+        "images/portfolio/marketing-pipeline/architecture.png"
+      ],
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon-amazonwebservices-plain-wordmark",
+          "name": "AWS Lambda"
+        },
+        {
+          "class": "fas fa-layer-group",
+          "name": "Step Functions"
+        },
+        {
+          "class": "fas fa-database",
+          "name": "Redshift"
+        },
+        {
+          "class": "devicon-python-plain",
+          "name": "Python"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Multi-Cloud Interactive Game Suite",
+        "th": "ชุดเกมการศึกษาแบบ Multi-Cloud"
+      },
+      "startDate": "2024",
+      "description": {
+        "en": "A private sandbox of interactive games (Othello, Tic-Tac-Toe, and Flashcards) developed to explore diverse tech stacks and cloud deployments. This project serves as a hands-on laboratory for testing real-time synchronization and database performance across Firebase, Supabase, and Netlify environments.",
+        "th": "ชุดเครื่องมือเกมแบบโต้ตอบส่วนตัว (Othello, Tic-Tac-Toe และ Flashcards) ที่พัฒนาขึ้นเพื่อทดลองใช้ Tech Stack และการปรับใช้ระบบบน Cloud ที่หลากหลาย โปรเจกต์นี้ทำหน้าที่เป็นห้องแล็บสำหรับการทดสอบการซิงโครไนซ์ข้อมูลแบบ Real-time และประสิทธิภาพของฐานข้อมูลบน Firebase, Supabase และ Netlify"
+      },
+      "images": [
+        "images/portfolio/game-suite/preview.png"
+      ],
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon-firebase-plain",
+          "name": "Firebase"
+        },
+        {
+          "class": "fas fa-bolt",
+          "name": "Supabase"
+        },
+        {
+          "class": "devicon-react-original",
+          "name": "React"
+        },
+        {
+          "class": "devicon-typescript-plain",
+          "name": "TypeScript"
+        }
+      ]
+    },
+    {
+      "title": {
         "en": "Animal Shelter",
         "th": "ระบบศูนย์พักพิงสัตว์"
       },

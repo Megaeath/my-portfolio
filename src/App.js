@@ -293,7 +293,10 @@ class App extends Component {
       cache: false,
       success: function (data) {
         this.setState({ sharedData: data });
-        if (data.basic_info) document.title = data.basic_info.name;
+        if (data.basic_info) {
+          // Enhancing page title for better professional appeal and SEO
+          document.title = `${data.basic_info.name} | Senior Tech Lead & AI Solution Architect`;
+        }
       }.bind(this),
       error: function (xhr, status, err) { console.error(err); },
     });

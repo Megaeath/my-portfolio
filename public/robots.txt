@@ -1,3 +1,35 @@
-# https://www.robotstxt.org/robotstxt.html
+# Optimized for AI Discovery and Professional SEO
+# Allowing recruitment bots while protecting private media assets
+
 User-agent: *
-Disallow:
+Allow: /
+
+# Prevent indexing of profile pictures and PDFs (Force users to visit site)
+Disallow: /images/myProfile.png
+Disallow: /images/catProfile.png
+Disallow: /pdf/
+
+# Explicitly allow AI crawlers to read text content for resume search
+User-agent: GPTBot
+Allow: /
+Disallow: /images/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /images/
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Host & Sitemap
+Host: https://megaeath.github.io/my-portfolio/
+Sitemap: https://megaeath.github.io/my-portfolio/sitemap.xml
