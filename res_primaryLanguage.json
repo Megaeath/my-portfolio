@@ -68,87 +68,100 @@
     },
     {
       "title": {
-        "en": "Animal Shelter",
-        "th": "ระบบศูนย์พักพิงสัตว์"
+        "en": "Serverless Omni-Channel Data Pipeline",
+        "th": "ระบบท่อข้อมูลการตลาดแบบ Serverless"
       },
-      "startDate": "2020",
+      "startDate": "2023",
       "description": {
-        "en": "Comprehensive shelter operations platform covering adoption workflows, case evidence, and day-to-day record management. The project strengthened my Angular, TypeScript, and C# foundation through regular code reviews and structured delivery practices.",
-        "th": "แพลตฟอร์มสำหรับการดำเนินงานของศูนย์พักพิงสัตว์ที่ครอบคลุมขั้นตอนการรับเลี้ยง การจัดเก็บหลักฐาน และการจัดการข้อมูลประจำวัน โครงการนี้ช่วยต่อยอดพื้นฐานของผมด้าน Angular, TypeScript และ C# ผ่านการรีวิวโค้ดอย่างสม่ำเสมอและการทำงานที่มีโครงสร้าง"
+        "en": "Engineered a high-throughput serverless architecture to orchestrate multi-platform marketing data ingestion. Integrated Google Ads, Facebook, and TikTok APIs using AWS Step Functions and SQS for resilient processing, delivering real-time insights via OpenSearch and long-term analytics in Amazon Redshift.",
+        "th": "ออกแบบและพัฒนาระบบสถาปัตยกรรม Serverless ประสิทธิภาพสูงเพื่อรวบรวมข้อมูลการตลาดจากหลายแพลตฟอร์ม เชื่อมต่อ API ของ Google Ads, Facebook และ TikTok โดยใช้ AWS Step Functions และ SQS เพื่อความทนทานของระบบ พร้อมแสดงผลข้อมูลแบบ Real-time ผ่าน OpenSearch และวิเคราะห์ข้อมูลระยะยาวใน Amazon Redshift"
       },
       "images": [
-        "images/portfolio/animal-shelter/p1.jpg",
-        "images/portfolio/animal-shelter/p2.jpg"
+        "images/portfolio/marketing-pipeline/architecture.png"
       ],
       "url": "",
       "technologies": [
         {
-          "class": "devicon-angularjs-plain",
-          "name": "Angular"
+          "class": "devicon-amazonwebservices-plain-wordmark",
+          "name": "AWS Lambda"
         },
         {
-          "class": "devicon-typescript-plain",
-          "name": "TypeScript"
+          "class": "fas fa-layer-group",
+          "name": "Step Functions"
         },
         {
-          "class": "devicon-csharp-plain",
-          "name": "C#"
+          "class": "fas fa-database",
+          "name": "Redshift"
+        },
+        {
+          "class": "devicon-python-plain",
+          "name": "Python"
         }
       ]
     },
     {
       "title": {
-        "en": "Photography",
-        "th": "โครงการถ่ายภาพ"
+        "en": "Multi-Cloud Interactive Game Suite",
+        "th": "ชุดเกมการศึกษาแบบ Multi-Cloud"
       },
-      "startDate": "2018",
+      "startDate": "2024",
       "description": {
-        "en": "Academic side project focused on validating an image-processing application that applied techniques common in professional editing tools. I led the quality perspective for the project and completed the course with top marks.",
-        "th": "โปรเจกต์การศึกษาที่มุ่งทดสอบแอปพลิเคชันประมวลผลภาพซึ่งใช้เทคนิคที่พบได้ในเครื่องมือแต่งภาพระดับมืออาชีพ ผมรับผิดชอบมุมมองด้านคุณภาพของงานและจบรายวิชาด้วยผลการเรียนระดับสูง"
+        "en": "A private sandbox of interactive games (Othello, Tic-Tac-Toe, and Flashcards) developed to explore diverse tech stacks and cloud deployments. This project serves as a hands-on laboratory for testing real-time synchronization and database performance across Firebase, Supabase, and Netlify environments.",
+        "th": "ชุดเครื่องมือเกมแบบโต้ตอบส่วนตัว (Othello, Tic-Tac-Toe และ Flashcards) ที่พัฒนาขึ้นเพื่อทดลองใช้ Tech Stack และการปรับใช้ระบบบน Cloud ที่หลากหลาย โปรเจกต์นี้ทำหน้าที่เป็นห้องแล็บสำหรับการทดสอบการซิงโครไนซ์ข้อมูลแบบ Real-time และประสิทธิภาพของฐานข้อมูลบน Firebase, Supabase และ Netlify"
       },
       "images": [
-        "images/portfolio/photography/p1.jpg",
-        "images/portfolio/photography/p2.jpg"
+        "images/portfolio/game-suite/preview.png"
       ],
-      "url": "https://github.com",
+      "url": "",
       "technologies": [
+        {
+          "class": "devicon-firebase-plain",
+          "name": "Firebase"
+        },
+        {
+          "class": "fas fa-bolt",
+          "name": "Supabase"
+        },
         {
           "class": "devicon-react-original",
           "name": "React"
         },
         {
-          "class": "devicon-javascript-plain",
-          "name": "JavaScript"
+          "class": "devicon-typescript-plain",
+          "name": "TypeScript"
         }
       ]
     },
     {
       "title": {
-        "en": "3D Object Viewer",
-        "th": "ระบบแสดงผลวัตถุ 3 มิติ"
+        "en": "Generative AI & Multimedia R&D Lab",
+        "th": "ห้องวิจัย Generative AI และมัลติมีเดีย"
       },
-      "startDate": "2015",
+      "startDate": "2024",
       "description": {
-        "en": "Early-career internship project where I built frontend features for a browser-based viewer of well-known architectural models. It was my first substantial Angular assignment and gave me practical experience delivering UI features in a team setting.",
-        "th": "โครงการฝึกงานช่วงเริ่มต้นสายอาชีพที่ผมพัฒนาฟีเจอร์ฝั่งหน้าบ้านสำหรับระบบแสดงแบบจำลองสถาปัตยกรรมผ่านเบราว์เซอร์ นี่เป็นงาน Angular ที่จริงจังชิ้นแรกของผมและทำให้ได้ประสบการณ์ตรงในการส่งมอบฟีเจอร์ UI ร่วมกับทีม"
+        "en": "Advanced research and development laboratory focused on Generative AI for multimedia. Engineered complex node-based workflows in ComfyUI and Python to automate high-fidelity image and video generation. Leveraged RunPod for high-performance GPU orchestration, continuously iterating on new models and experimental techniques to push the boundaries of AI-driven creative content.",
+        "th": "ห้องปฏิบัติการวิจัยและพัฒนาขั้นสูงที่มุ่งเน้น Generative AI สำหรับมัลติมีเดีย ออกแบบ Workflow ที่ซับซ้อนด้วย ComfyUI และ Python เพื่อสร้างภาพและวิดีโอที่มีความละเอียดสูงแบบอัตโนมัติ โดยใช้ RunPod ในการจัดการทรัพยากร GPU ประสิทธิภาพสูง พร้อมทดสอบโมเดลและเทคนิคใหม่ๆ อย่างต่อเนื่องเพื่อขยายขอบเขตของการสร้างสรรค์เนื้อหาด้วย AI"
       },
       "images": [
-        "images/portfolio/adventure/p1.jpg",
-        "images/portfolio/adventure/p2.jpg"
+        "images/portfolio/ai-multimedia-lab/preview.png"
       ],
-      "url": "https://github.com",
+      "url": "",
       "technologies": [
         {
-          "class": "devicon-angularjs-plain",
-          "name": "Angular"
+          "class": "devicon-python-plain",
+          "name": "Python"
         },
         {
-          "class": "devicon-typescript-plain",
-          "name": "TypeScript"
+          "class": "fas fa-microchip",
+          "name": "RunPod"
         },
         {
-          "class": "devicon-csharp-plain",
-          "name": "C#"
+          "class": "fas fa-project-diagram",
+          "name": "ComfyUI"
+        },
+        {
+          "class": "fas fa-film",
+          "name": "Multimedia AI"
         }
       ]
     }
