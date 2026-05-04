@@ -134,87 +134,34 @@
     },
     {
       "title": {
-        "en": "Animal Shelter",
-        "th": "ระบบศูนย์พักพิงสัตว์"
+        "en": "Generative AI & Multimedia R&D Lab",
+        "th": "ห้องวิจัย Generative AI และมัลติมีเดีย"
       },
-      "startDate": "2020",
+      "startDate": "2024",
       "description": {
-        "en": "Comprehensive shelter operations platform covering adoption workflows, case evidence, and day-to-day record management. The project strengthened my Angular, TypeScript, and C# foundation through regular code reviews and structured delivery practices.",
-        "th": "แพลตฟอร์มสำหรับการดำเนินงานของศูนย์พักพิงสัตว์ที่ครอบคลุมขั้นตอนการรับเลี้ยง การจัดเก็บหลักฐาน และการจัดการข้อมูลประจำวัน โครงการนี้ช่วยต่อยอดพื้นฐานของผมด้าน Angular, TypeScript และ C# ผ่านการรีวิวโค้ดอย่างสม่ำเสมอและการทำงานที่มีโครงสร้าง"
+        "en": "Advanced research and development laboratory focused on Generative AI for multimedia. Engineered complex node-based workflows in ComfyUI and Python to automate high-fidelity image and video generation. Leveraged RunPod for high-performance GPU orchestration, continuously iterating on new models and experimental techniques to push the boundaries of AI-driven creative content.",
+        "th": "ห้องปฏิบัติการวิจัยและพัฒนาขั้นสูงที่มุ่งเน้น Generative AI สำหรับมัลติมีเดีย ออกแบบ Workflow ที่ซับซ้อนด้วย ComfyUI และ Python เพื่อสร้างภาพและวิดีโอที่มีความละเอียดสูงแบบอัตโนมัติ โดยใช้ RunPod ในการจัดการทรัพยากร GPU ประสิทธิภาพสูง พร้อมทดสอบโมเดลและเทคนิคใหม่ๆ อย่างต่อเนื่องเพื่อขยายขอบเขตของการสร้างสรรค์เนื้อหาด้วย AI"
       },
       "images": [
-        "images/portfolio/animal-shelter/p1.jpg",
-        "images/portfolio/animal-shelter/p2.jpg"
+        "images/portfolio/ai-multimedia-lab/preview.png"
       ],
       "url": "",
       "technologies": [
         {
-          "class": "devicon-angularjs-plain",
-          "name": "Angular"
+          "class": "devicon-python-plain",
+          "name": "Python"
         },
         {
-          "class": "devicon-typescript-plain",
-          "name": "TypeScript"
+          "class": "fas fa-microchip",
+          "name": "RunPod"
         },
         {
-          "class": "devicon-csharp-plain",
-          "name": "C#"
-        }
-      ]
-    },
-    {
-      "title": {
-        "en": "Photography",
-        "th": "โครงการถ่ายภาพ"
-      },
-      "startDate": "2018",
-      "description": {
-        "en": "Academic side project focused on validating an image-processing application that applied techniques common in professional editing tools. I led the quality perspective for the project and completed the course with top marks.",
-        "th": "โปรเจกต์การศึกษาที่มุ่งทดสอบแอปพลิเคชันประมวลผลภาพซึ่งใช้เทคนิคที่พบได้ในเครื่องมือแต่งภาพระดับมืออาชีพ ผมรับผิดชอบมุมมองด้านคุณภาพของงานและจบรายวิชาด้วยผลการเรียนระดับสูง"
-      },
-      "images": [
-        "images/portfolio/photography/p1.jpg",
-        "images/portfolio/photography/p2.jpg"
-      ],
-      "url": "https://github.com",
-      "technologies": [
-        {
-          "class": "devicon-react-original",
-          "name": "React"
+          "class": "fas fa-project-diagram",
+          "name": "ComfyUI"
         },
         {
-          "class": "devicon-javascript-plain",
-          "name": "JavaScript"
-        }
-      ]
-    },
-    {
-      "title": {
-        "en": "3D Object Viewer",
-        "th": "ระบบแสดงผลวัตถุ 3 มิติ"
-      },
-      "startDate": "2015",
-      "description": {
-        "en": "Early-career internship project where I built frontend features for a browser-based viewer of well-known architectural models. It was my first substantial Angular assignment and gave me practical experience delivering UI features in a team setting.",
-        "th": "โครงการฝึกงานช่วงเริ่มต้นสายอาชีพที่ผมพัฒนาฟีเจอร์ฝั่งหน้าบ้านสำหรับระบบแสดงแบบจำลองสถาปัตยกรรมผ่านเบราว์เซอร์ นี่เป็นงาน Angular ที่จริงจังชิ้นแรกของผมและทำให้ได้ประสบการณ์ตรงในการส่งมอบฟีเจอร์ UI ร่วมกับทีม"
-      },
-      "images": [
-        "images/portfolio/adventure/p1.jpg",
-        "images/portfolio/adventure/p2.jpg"
-      ],
-      "url": "https://github.com",
-      "technologies": [
-        {
-          "class": "devicon-angularjs-plain",
-          "name": "Angular"
-        },
-        {
-          "class": "devicon-typescript-plain",
-          "name": "TypeScript"
-        },
-        {
-          "class": "devicon-csharp-plain",
-          "name": "C#"
+          "class": "fas fa-film",
+          "name": "Multimedia AI"
         }
       ]
     }
