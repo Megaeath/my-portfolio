@@ -64,7 +64,144 @@
         "images/portfolio/testmykid/student-highlight.png"
       ],
       "url": "https://testmykid-27ac8.web.app/student/",
-      "technologies": []
+      "technologies": [],
+      "article": {
+        "ctaLabel": {
+          "en": "Read full article",
+          "th": "อ่านบทความฉบับเต็ม"
+        },
+        "subtitle": {
+          "en": "Designing a focused student experience for daily learning momentum, confidence, and measurable progress.",
+          "th": "การออกแบบประสบการณ์ผู้เรียนที่โฟกัสการใช้งานจริงในแต่ละวัน เพื่อสร้างแรงต่อเนื่อง ความมั่นใจ และความก้าวหน้าที่วัดผลได้"
+        },
+        "readTime": {
+          "en": "10 min read",
+          "th": "ใช้เวลาอ่านประมาณ 10 นาที"
+        },
+        "highlightTitle": {
+          "en": "Project Highlights",
+          "th": "ไฮไลต์ของโปรเจกต์"
+        },
+        "outcomesTitle": {
+          "en": "Operational Outcomes",
+          "th": "ผลลัพธ์ที่เกิดขึ้นจริง"
+        },
+        "visitProjectLabel": {
+          "en": "Visit project",
+          "th": "เปิดดูโปรเจกต์"
+        },
+        "coverImage": "images/portfolio/testmykid/student-highlight.png",
+        "coverCaption": {
+          "en": "Student-facing entry point focused on clarity and fast task completion",
+          "th": "หน้าทางเข้าฝั่งนักเรียนที่ออกแบบให้ชัดเจนและทำงานหลักได้รวดเร็ว"
+        },
+        "highlights": [
+          {
+            "label": {
+              "en": "Primary Goal",
+              "th": "เป้าหมายหลัก"
+            },
+            "value": {
+              "en": "Increase learning completion rate",
+              "th": "เพิ่มอัตราการทำกิจกรรมการเรียนจนจบ"
+            }
+          },
+          {
+            "label": {
+              "en": "Product Focus",
+              "th": "จุดโฟกัสของผลิตภัณฑ์"
+            },
+            "value": {
+              "en": "Student journey and engagement",
+              "th": "เส้นทางผู้เรียนและการมีส่วนร่วม"
+            }
+          },
+          {
+            "label": {
+              "en": "Delivery Style",
+              "th": "รูปแบบการพัฒนา"
+            },
+            "value": {
+              "en": "Fast iteration with UX checkpoints",
+              "th": "ปรับปรุงแบบเร็วพร้อม UX checkpoint"
+            }
+          }
+        ],
+        "sections": [
+          {
+            "heading": {
+              "en": "Context and problem framing",
+              "th": "บริบทและการตั้งโจทย์"
+            },
+            "paragraphs": [
+              {
+                "en": "The student app was initiated to improve consistency in learning behavior. Early observations showed that students needed a cleaner entry flow and more obvious progression cues. The design objective therefore shifted from feature expansion to experience quality, especially for first-time and returning users.",
+                "th": "แอปนักเรียนถูกเริ่มขึ้นเพื่อแก้ปัญหาความต่อเนื่องในการเรียน โดยจากการใช้งานช่วงแรกพบว่าผู้เรียนต้องการทางเข้าใช้งานที่เรียบง่ายขึ้น และสัญญาณความคืบหน้าที่ชัดเจนกว่าเดิม เป้าหมายจึงเปลี่ยนจากการเพิ่มฟีเจอร์ ไปสู่การยกระดับคุณภาพประสบการณ์ โดยเฉพาะผู้ใช้ใหม่และผู้ใช้ที่กลับมาใช้งานซ้ำ"
+              },
+              {
+                "en": "I treated the product as a behavior system: reduce friction, keep instructions short, and preserve motivation through visible small wins. This model helped prioritize what truly impacted daily completion.",
+                "th": "ผมมองผลิตภัณฑ์ในฐานะระบบพฤติกรรมการเรียน โดยลดจุดติดขัด ทำคำแนะนำให้สั้น และสร้างแรงจูงใจผ่านชัยชนะเล็กๆ ที่มองเห็นได้จริง แนวคิดนี้ช่วยให้ตัดสินใจได้ว่าจุดไหนส่งผลต่อการทำภารกิจรายวันมากที่สุด"
+              }
+            ]
+          },
+          {
+            "heading": {
+              "en": "Experience architecture and implementation",
+              "th": "สถาปัตยกรรมประสบการณ์และการพัฒนา"
+            },
+            "paragraphs": [
+              {
+                "en": "The /student flow was redesigned around a clear hierarchy: task visibility first, progress context second, and supportive feedback third. I focused on reducing cognitive load by simplifying labels, consolidating actions, and eliminating unnecessary decision points.",
+                "th": "Flow ในหน้า /student ถูกออกแบบใหม่ด้วยลำดับความสำคัญที่ชัดเจน คือ เห็นงานที่ต้องทำก่อน เข้าใจความคืบหน้าถัดมา และรับ feedback สนับสนุนเป็นลำดับสุดท้าย ผมเน้นลดภาระทางความคิดด้วยการใช้ข้อความที่กระชับ รวม action ที่เกี่ยวข้องเข้าด้วยกัน และตัดจุดตัดสินใจที่ไม่จำเป็น"
+              }
+            ],
+            "bullets": [
+              {
+                "en": "Applied modular UI blocks to keep content readable across desktop and mobile.",
+                "th": "ใช้ UI แบบโมดูลาร์เพื่อให้อ่านง่ายทั้งบน desktop และ mobile"
+              },
+              {
+                "en": "Introduced clear status language to reduce uncertainty before submitting tasks.",
+                "th": "กำหนดสถานะการทำงานให้ชัดเจนเพื่อลดความไม่แน่ใจก่อนส่งงาน"
+              },
+              {
+                "en": "Prioritized responsive behavior to preserve speed and usability on low-end devices.",
+                "th": "ให้ความสำคัญกับ responsive behavior เพื่อคงความเร็วและใช้งานได้ดีบนอุปกรณ์สเปกไม่สูง"
+              }
+            ]
+          },
+          {
+            "heading": {
+              "en": "Quality validation and operating lessons",
+              "th": "การยืนยันคุณภาพและบทเรียนเชิงปฏิบัติ"
+            },
+            "paragraphs": [
+              {
+                "en": "I reviewed each release with practical student scenarios rather than generic UI checks. The team used short validation loops to confirm that each update preserved comprehension speed and reduced drop-off points.",
+                "th": "ผมประเมินแต่ละ release ด้วยสถานการณ์การใช้งานจริงของนักเรียน แทนการตรวจเช็กหน้าจอทั่วไป ทีมใช้รอบตรวจสอบสั้นๆ เพื่อยืนยันว่าแต่ละอัปเดตยังคงความเข้าใจง่ายและลดจุดที่ผู้ใช้หลุดจาก flow"
+              },
+              {
+                "en": "The key lesson was that educational products improve most when UX and delivery metrics are tied together. By aligning interface decisions with behavior outcomes, iteration quality increased significantly.",
+                "th": "บทเรียนสำคัญคือผลิตภัณฑ์ด้านการศึกษาจะดีขึ้นชัดเจนเมื่อ UX ผูกกับตัวชี้วัดการใช้งานจริง เมื่อการตัดสินใจด้านหน้าจอเชื่อมกับผลลัพธ์พฤติกรรมผู้เรียน คุณภาพของการปรับปรุงก็สูงขึ้นอย่างมีนัยสำคัญ"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "en": "Improved clarity of student task flow and reduced interaction friction.",
+            "th": "ยกระดับความชัดเจนของลำดับงานผู้เรียนและลดจุดติดขัดในการใช้งาน"
+          },
+          {
+            "en": "Enabled faster release cycles through focused UX checkpoints.",
+            "th": "ทำให้การปล่อยงานเร็วขึ้นผ่าน UX checkpoint ที่โฟกัสมากขึ้น"
+          },
+          {
+            "en": "Built a reusable student-experience foundation for future feature rollout.",
+            "th": "วางพื้นฐานประสบการณ์ผู้เรียนที่นำกลับใช้ซ้ำได้สำหรับฟีเจอร์ในอนาคต"
+          }
+        ]
+      }
     },
     {
       "title": {
@@ -97,7 +234,144 @@
           "class": "devicon-python-plain",
           "name": "Python"
         }
-      ]
+      ],
+      "article": {
+        "ctaLabel": {
+          "en": "Read full article",
+          "th": "อ่านบทความฉบับเต็ม"
+        },
+        "subtitle": {
+          "en": "Building a resilient serverless data backbone for cross-platform marketing intelligence at scale.",
+          "th": "การสร้างโครงสร้างข้อมูลแบบ Serverless ที่ทนทาน เพื่อรองรับการวิเคราะห์การตลาดข้ามแพลตฟอร์มในระดับขยายตัว"
+        },
+        "readTime": {
+          "en": "11 min read",
+          "th": "ใช้เวลาอ่านประมาณ 11 นาที"
+        },
+        "highlightTitle": {
+          "en": "Project Highlights",
+          "th": "ไฮไลต์ของโปรเจกต์"
+        },
+        "outcomesTitle": {
+          "en": "Operational Outcomes",
+          "th": "ผลลัพธ์ที่เกิดขึ้นจริง"
+        },
+        "visitProjectLabel": {
+          "en": "Visit project",
+          "th": "เปิดดูโปรเจกต์"
+        },
+        "coverImage": "images/portfolio/marketing-pipeline/architecture.png",
+        "coverCaption": {
+          "en": "High-level architecture of the omni-channel ingestion and analytics pipeline",
+          "th": "ภาพรวมสถาปัตยกรรมของระบบรับเข้าและวิเคราะห์ข้อมูลแบบ omni-channel"
+        },
+        "highlights": [
+          {
+            "label": {
+              "en": "Scale",
+              "th": "ขนาดของระบบ"
+            },
+            "value": {
+              "en": "High-throughput, multi-source ingestion",
+              "th": "รองรับข้อมูลหลายแหล่งและปริมาณสูง"
+            }
+          },
+          {
+            "label": {
+              "en": "Core Services",
+              "th": "บริการหลัก"
+            },
+            "value": {
+              "en": "AWS Step Functions, SQS, Lambda",
+              "th": "AWS Step Functions, SQS, Lambda"
+            }
+          },
+          {
+            "label": {
+              "en": "Analytics Targets",
+              "th": "ปลายทางการวิเคราะห์"
+            },
+            "value": {
+              "en": "OpenSearch + Redshift",
+              "th": "OpenSearch + Redshift"
+            }
+          }
+        ],
+        "sections": [
+          {
+            "heading": {
+              "en": "Strategic objective and constraints",
+              "th": "เป้าหมายเชิงกลยุทธ์และข้อจำกัด"
+            },
+            "paragraphs": [
+              {
+                "en": "The initiative aimed to consolidate campaign data from Google Ads, Facebook, and TikTok into a consistent analytics model. The key constraints were delivery reliability, near real-time visibility, and low operational overhead while handling variable API behavior from external platforms.",
+                "th": "โครงการนี้มีเป้าหมายรวมข้อมูลแคมเปญจาก Google Ads, Facebook และ TikTok ให้เป็นโมเดลวิเคราะห์ที่สม่ำเสมอ ข้อจำกัดหลักคือความเชื่อถือได้ของการส่งข้อมูล การมองเห็นผลใกล้เคียง real-time และภาระดูแลระบบที่ต่ำ แม้ต้องรับมือพฤติกรรม API ภายนอกที่เปลี่ยนแปลงได้"
+              },
+              {
+                "en": "I approached the problem as an event-driven architecture challenge: isolate failures, preserve throughput, and make recovery deterministic. This reduced downstream data quality issues and simplified incident response.",
+                "th": "ผมแก้โจทย์นี้ในมุม event-driven architecture โดยแยกความล้มเหลวไม่ให้กระทบทั้งระบบ รักษา throughput และทำให้กระบวนการกู้คืนมีความแน่นอน แนวทางนี้ช่วยลดปัญหาคุณภาพข้อมูลปลายทางและทำให้การแก้ incident ทำได้ง่ายขึ้น"
+              }
+            ]
+          },
+          {
+            "heading": {
+              "en": "Pipeline architecture and reliability model",
+              "th": "สถาปัตยกรรม Pipeline และโมเดลความทนทาน"
+            },
+            "paragraphs": [
+              {
+                "en": "The pipeline used Step Functions to orchestrate extraction and transformation phases, with SQS buffering to absorb burst traffic and retry-sensitive workloads. Processed datasets were indexed to OpenSearch for operational dashboards and persisted in Redshift for historical and strategic analytics.",
+                "th": "ระบบใช้ Step Functions สำหรับ orchestrate ขั้นตอน extraction และ transformation พร้อม SQS สำหรับ buffer ปริมาณงานแบบ burst และงานที่ต้อง retry อย่างระมัดระวัง ข้อมูลที่ประมวลผลแล้วถูก index ไป OpenSearch เพื่อแดชบอร์ดเชิงปฏิบัติการ และเก็บลง Redshift เพื่อวิเคราะห์ย้อนหลังเชิงกลยุทธ์"
+              }
+            ],
+            "bullets": [
+              {
+                "en": "Implemented idempotent processing guards to prevent duplicate campaign metrics.",
+                "th": "วางกลไก idempotent processing เพื่อป้องกันข้อมูลแคมเปญซ้ำ"
+              },
+              {
+                "en": "Added dead-letter paths for controlled failure isolation and replay.",
+                "th": "เพิ่มเส้นทาง dead-letter เพื่อแยก failure และ replay ได้อย่างควบคุม"
+              },
+              {
+                "en": "Normalized cross-platform dimensions to support unified reporting and segmentation.",
+                "th": "ทำ normalization ของมิติข้อมูลข้ามแพลตฟอร์มเพื่อรองรับรายงานและการแบ่งกลุ่มแบบรวมศูนย์"
+              }
+            ]
+          },
+          {
+            "heading": {
+              "en": "Execution governance and performance management",
+              "th": "การกำกับการส่งมอบและการจัดการประสิทธิภาพ"
+            },
+            "paragraphs": [
+              {
+                "en": "To keep delivery predictable, I established release checkpoints around data completeness, latency thresholds, and reconciliation accuracy. These controls made scaling safer while retaining confidence in business reporting outputs.",
+                "th": "เพื่อให้การส่งมอบคาดการณ์ได้ ผมกำหนด release checkpoint จากความครบถ้วนข้อมูล ค่า latency threshold และความถูกต้องในการกระทบยอด การควบคุมนี้ช่วยให้การขยายระบบปลอดภัยขึ้นโดยยังรักษาความเชื่อมั่นในรายงานธุรกิจ"
+              },
+              {
+                "en": "The team also used runbooks for backfill and recovery routines, reducing operational variability and ensuring continuity during upstream API disruptions.",
+                "th": "ทีมยังใช้ runbook สำหรับงาน backfill และ recovery เพื่อลดความผันผวนเชิงปฏิบัติการ และรักษาความต่อเนื่องเมื่อระบบ API ต้นทางมีความผิดปกติ"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "en": "Established a resilient serverless ingestion framework across multiple ad platforms.",
+            "th": "สร้างกรอบการรับข้อมูลแบบ serverless ที่ทนทาน ครอบคลุมหลายแพลตฟอร์มโฆษณา"
+          },
+          {
+            "en": "Improved observability with near real-time operational dashboards.",
+            "th": "เพิ่มความสามารถในการมองเห็นระบบผ่านแดชบอร์ดเชิงปฏิบัติการใกล้เคียง real-time"
+          },
+          {
+            "en": "Enabled reliable long-term analytics through standardized warehouse ingestion.",
+            "th": "รองรับการวิเคราะห์ระยะยาวอย่างน่าเชื่อถือด้วยการนำเข้าข้อมูลสู่คลังข้อมูลที่เป็นมาตรฐาน"
+          }
+        ]
+      }
     },
     {
       "title": {
@@ -130,7 +404,140 @@
           "class": "devicon-typescript-plain",
           "name": "TypeScript"
         }
-      ]
+      ],
+      "article": {
+        "ctaLabel": {
+          "en": "Read full article",
+          "th": "อ่านบทความฉบับเต็ม"
+        },
+        "subtitle": {
+          "en": "A controlled multi-cloud sandbox for game mechanics, real-time sync patterns, and frontend architecture experiments.",
+          "th": "Sandbox แบบ multi-cloud ที่ควบคุมได้ สำหรับทดลองกลไกเกม รูปแบบการซิงก์ข้อมูลแบบเรียลไทม์ และสถาปัตยกรรมฝั่ง frontend"
+        },
+        "readTime": {
+          "en": "9 min read",
+          "th": "ใช้เวลาอ่านประมาณ 9 นาที"
+        },
+        "highlightTitle": {
+          "en": "Project Highlights",
+          "th": "ไฮไลต์ของโปรเจกต์"
+        },
+        "outcomesTitle": {
+          "en": "Operational Outcomes",
+          "th": "ผลลัพธ์ที่เกิดขึ้นจริง"
+        },
+        "visitProjectLabel": {
+          "en": "Visit project",
+          "th": "เปิดดูโปรเจกต์"
+        },
+        "coverImage": "images/portfolio/game-suite/preview.png",
+        "coverCaption": {
+          "en": "Preview of the interactive game sandbox spanning multiple deployment environments",
+          "th": "ภาพตัวอย่างชุดเกมโต้ตอบใน sandbox ที่กระจายบนหลายสภาพแวดล้อมการ deploy"
+        },
+        "highlights": [
+          {
+            "label": {
+              "en": "Game Modes",
+              "th": "โหมดเกม"
+            },
+            "value": {
+              "en": "Othello, Tic-Tac-Toe, Flashcards",
+              "th": "Othello, Tic-Tac-Toe, Flashcards"
+            }
+          },
+          {
+            "label": {
+              "en": "Cloud Targets",
+              "th": "คลาวด์ที่ใช้ทดลอง"
+            },
+            "value": {
+              "en": "Firebase, Supabase, Netlify",
+              "th": "Firebase, Supabase, Netlify"
+            }
+          },
+          {
+            "label": {
+              "en": "Architecture Focus",
+              "th": "จุดเน้นเชิงสถาปัตยกรรม"
+            },
+            "value": {
+              "en": "Real-time state and sync reliability",
+              "th": "สถานะแบบเรียลไทม์และความน่าเชื่อถือของการซิงก์"
+            }
+          }
+        ],
+        "sections": [
+          {
+            "heading": {
+              "en": "Experiment scope and product rationale",
+              "th": "ขอบเขตการทดลองและเหตุผลเชิงผลิตภัณฑ์"
+            },
+            "paragraphs": [
+              {
+                "en": "This project was created as an experimentation platform to compare how different cloud backends behave under interactive workloads. By implementing multiple game formats, I could evaluate responsiveness, synchronization quality, and user-state consistency in real-world scenarios.",
+                "th": "โปรเจกต์นี้ถูกสร้างขึ้นเป็นแพลตฟอร์มทดลองเพื่อเปรียบเทียบพฤติกรรมของ cloud backend ต่างๆ ภายใต้การใช้งานแบบโต้ตอบจริง การมีหลายรูปแบบเกมช่วยให้ประเมินได้ทั้งความเร็วตอบสนอง คุณภาพการซิงก์ และความสม่ำเสมอของสถานะผู้ใช้ในสถานการณ์ใช้งานจริง"
+              },
+              {
+                "en": "The suite also served as a proving ground for frontend structure decisions—component boundaries, state strategy, and failure handling in async data flows.",
+                "th": "ชุดเกมนี้ยังเป็นสนามพิสูจน์การตัดสินใจด้านโครงสร้าง frontend ทั้งการแบ่งขอบเขต component กลยุทธ์จัดการ state และการรับมือ failure ใน async data flow"
+              }
+            ]
+          },
+          {
+            "heading": {
+              "en": "System design and technical execution",
+              "th": "การออกแบบระบบและการลงมือพัฒนา"
+            },
+            "paragraphs": [
+              {
+                "en": "I designed each game as a reusable module with shared interaction patterns while keeping backend integration adapters isolated per environment. This made it easier to benchmark behavior differences without rewriting core gameplay logic.",
+                "th": "ผมออกแบบแต่ละเกมให้เป็นโมดูลที่ใช้รูปแบบปฏิสัมพันธ์ร่วมกัน และแยก adapter ฝั่ง backend ตามแต่ละสภาพแวดล้อมอย่างชัดเจน ทำให้เปรียบเทียบพฤติกรรมระบบได้ง่าย โดยไม่ต้องเขียน logic เกมใหม่ซ้ำๆ"
+              }
+            ],
+            "bullets": [
+              {
+                "en": "Implemented cross-provider state synchronization patterns for turn-based interactions.",
+                "th": "วางรูปแบบการซิงก์สถานะข้ามผู้ให้บริการ สำหรับการเล่นแบบผลัดตา"
+              },
+              {
+                "en": "Used TypeScript contracts to stabilize event payloads and reduce integration drift.",
+                "th": "ใช้สัญญาข้อมูลด้วย TypeScript เพื่อทำให้ event payload คงที่และลด integration drift"
+              },
+              {
+                "en": "Applied deployment checks across providers to validate parity in user experience.",
+                "th": "ทำ deployment check ข้ามผู้ให้บริการเพื่อยืนยันความสอดคล้องของประสบการณ์ผู้ใช้"
+              }
+            ]
+          },
+          {
+            "heading": {
+              "en": "Insights and next iteration path",
+              "th": "อินไซต์ที่ได้และทิศทางการพัฒนาต่อ"
+            },
+            "paragraphs": [
+              {
+                "en": "The project confirmed that provider differences are manageable when domain logic is decoupled from infrastructure details. The next step is to add analytics instrumentation and AI-assisted difficulty adaptation to make gameplay more personalized.",
+                "th": "ผลจากโปรเจกต์ยืนยันว่าความแตกต่างของผู้ให้บริการจัดการได้ หากแยก domain logic ออกจากรายละเอียดโครงสร้างพื้นฐานอย่างชัดเจน ขั้นถัดไปคือเพิ่ม analytics instrumentation และระบบปรับระดับความยากด้วย AI เพื่อให้ประสบการณ์เล่นมีความเป็นส่วนบุคคลมากขึ้น"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "en": "Established a reusable architecture for multi-cloud interactive prototypes.",
+            "th": "สร้างสถาปัตยกรรมที่นำกลับใช้ซ้ำได้สำหรับต้นแบบเกมโต้ตอบแบบ multi-cloud"
+          },
+          {
+            "en": "Improved confidence in cross-environment real-time synchronization design.",
+            "th": "เพิ่มความมั่นใจในการออกแบบการซิงก์แบบเรียลไทม์ข้ามสภาพแวดล้อม"
+          },
+          {
+            "en": "Created a practical foundation for future game-based learning experiments.",
+            "th": "วางรากฐานเชิงปฏิบัติสำหรับการทดลองเกมเพื่อการเรียนรู้ในระยะต่อไป"
+          }
+        ]
+      }
     },
     {
       "title": {
@@ -163,7 +570,156 @@
           "class": "fas fa-film",
           "name": "Multimedia AI"
         }
-      ]
+      ],
+      "article": {
+        "ctaLabel": {
+          "en": "Read full article",
+          "th": "อ่านบทความฉบับเต็ม"
+        },
+        "subtitle": {
+          "en": "A practical case study of building a personal AI R&D pipeline for image and video generation with production-minded discipline.",
+          "th": "กรณีศึกษาเชิงปฏิบัติของการสร้าง AI R&D Pipeline ส่วนตัวสำหรับงานสร้างภาพและวิดีโอ โดยใช้วินัยการทำงานแบบพร้อมต่อยอดสู่ production"
+        },
+        "readTime": {
+          "en": "12 min read",
+          "th": "ใช้เวลาอ่านประมาณ 12 นาที"
+        },
+        "highlightTitle": {
+          "en": "Project Highlights",
+          "th": "ไฮไลต์ของโปรเจกต์"
+        },
+        "outcomesTitle": {
+          "en": "Operational Outcomes",
+          "th": "ผลลัพธ์ที่เกิดขึ้นจริง"
+        },
+        "visitProjectLabel": {
+          "en": "Visit project",
+          "th": "เปิดดูโปรเจกต์"
+        },
+        "coverImage": "images/portfolio/ai-multimedia-lab/preview.png",
+        "coverCaption": {
+          "en": "Main workflow preview from the Generative AI & Multimedia R&D Lab",
+          "th": "ตัวอย่างภาพรวม workflow หลักจากห้องวิจัย Generative AI และมัลติมีเดีย"
+        },
+        "highlights": [
+          {
+            "label": {
+              "en": "Primary Stack",
+              "th": "เทคโนโลยีหลัก"
+            },
+            "value": {
+              "en": "ComfyUI, Python, RunPod",
+              "th": "ComfyUI, Python, RunPod"
+            }
+          },
+          {
+            "label": {
+              "en": "Focus Area",
+              "th": "จุดเน้นของงาน"
+            },
+            "value": {
+              "en": "Image/Video generation workflows",
+              "th": "Workflow สำหรับสร้างภาพและวิดีโอ"
+            }
+          },
+          {
+            "label": {
+              "en": "Operating Model",
+              "th": "รูปแบบการดำเนินงาน"
+            },
+            "value": {
+              "en": "Iterative R&D with reusable templates",
+              "th": "R&D แบบวนรอบพร้อมแม่แบบที่นำกลับใช้ได้"
+            }
+          }
+        ],
+        "sections": [
+          {
+            "heading": {
+              "en": "Background and strategic intent",
+              "th": "ที่มาและเป้าหมายเชิงกลยุทธ์"
+            },
+            "paragraphs": [
+              {
+                "en": "This side project started as a controlled lab to understand how modern generative models can be converted from isolated demos into repeatable creative operations. The objective was not only to generate attractive outputs, but to build a dependable workflow that could scale from personal experimentation to team-level usage.",
+                "th": "โปรเจกต์นี้เริ่มจากการทำห้องทดลองแบบควบคุม เพื่อทำความเข้าใจว่าการใช้โมเดล Generative สมัยใหม่จะเปลี่ยนจากการเดโมเฉพาะกิจ ไปสู่กระบวนการสร้างสรรค์ที่ทำซ้ำได้อย่างไร เป้าหมายไม่ได้อยู่ที่การสร้างผลงานสวยงามเท่านั้น แต่ต้องการ workflow ที่เชื่อถือได้และต่อยอดจากการทดลองส่วนตัวไปสู่การใช้งานระดับทีมได้"
+              },
+              {
+                "en": "I treated the project as a product system: define quality gates, control GPU cost, and standardize prompts, model versions, and post-processing decisions. That mindset dramatically reduced rework and improved output consistency over time.",
+                "th": "ผมวางกรอบการทำงานเหมือนระบบผลิตภัณฑ์จริง โดยกำหนด quality gate ควบคุมต้นทุน GPU และทำมาตรฐานสำหรับ prompt, เวอร์ชันโมเดล และขั้นตอน post-processing ซึ่งช่วยลดงานแก้ซ้ำและเพิ่มความสม่ำเสมอของผลลัพธ์อย่างชัดเจน"
+              }
+            ]
+          },
+          {
+            "heading": {
+              "en": "Architecture and workflow design",
+              "th": "สถาปัตยกรรมและการออกแบบ Workflow"
+            },
+            "paragraphs": [
+              {
+                "en": "The backbone is a node-based workflow in ComfyUI, orchestrated by Python utilities and backed by RunPod GPU sessions for high-throughput rendering. I designed separate lanes for concept generation, style refinement, upscaling, and short-form video synthesis, each with explicit checkpoints.",
+                "th": "แกนหลักของระบบคือ workflow แบบ node-based บน ComfyUI ผสานกับ utility script ด้วย Python และใช้ RunPod GPU session สำหรับงานประมวลผลจำนวนมาก ผมแยกเลนการทำงานออกเป็น concept generation, style refinement, upscaling และ short-form video synthesis พร้อม checkpoint ที่ชัดเจนในแต่ละช่วง"
+              }
+            ],
+            "bullets": [
+              {
+                "en": "Prompt templates were versioned to preserve reproducibility between experiments.",
+                "th": "ทำ version ให้ prompt template เพื่อรักษาความสามารถในการทำซ้ำระหว่างการทดลอง"
+              },
+              {
+                "en": "Model switching logic was isolated to prevent regression when trying new checkpoints or LoRAs.",
+                "th": "แยก logic การสลับโมเดลออกจากขั้นตอนอื่น เพื่อลด regression เมื่อทดลอง checkpoint หรือ LoRA ใหม่"
+              },
+              {
+                "en": "Each workflow stage exported metadata for traceability and later quality audits.",
+                "th": "แต่ละช่วงของ workflow มีการส่งออก metadata เพื่อรองรับการตรวจสอบย้อนกลับและ audit คุณภาพภายหลัง"
+              }
+            ]
+          },
+          {
+            "heading": {
+              "en": "Engineering discipline and quality control",
+              "th": "วินัยด้านวิศวกรรมและการควบคุมคุณภาพ"
+            },
+            "paragraphs": [
+              {
+                "en": "The most important lesson was that generative pipelines need software-engineering discipline. I introduced output scorecards (composition quality, artifact level, temporal coherence) and used them as release criteria for template updates.",
+                "th": "บทเรียนสำคัญที่สุดคือ pipeline งานสร้างสรรค์ด้วย AI ต้องมีวินัยแบบวิศวกรรมซอฟต์แวร์ ผมจึงกำหนด scorecard สำหรับผลลัพธ์ (คุณภาพองค์ประกอบภาพ ระดับ artifact และความต่อเนื่องของเฟรม) และใช้เป็นเกณฑ์ก่อนปล่อยแม่แบบเวอร์ชันใหม่"
+              },
+              {
+                "en": "I also implemented a lightweight operating playbook for fallback paths (lower VRAM mode, alternate sampler profiles, and emergency rerun rules). This made the lab stable even under variable GPU conditions.",
+                "th": "นอกจากนี้ผมยังจัดทำ operating playbook แบบกระชับสำหรับกรณีฉุกเฉิน เช่น โหมด VRAM ต่ำ โปรไฟล์ sampler สำรอง และกติกาการ rerun เมื่อผลลัพธ์ไม่ผ่านเกณฑ์ ทำให้ห้องทดลองมีความเสถียรแม้เงื่อนไข GPU จะเปลี่ยนไป"
+              }
+            ]
+          },
+          {
+            "heading": {
+              "en": "Practical outcomes and next phase",
+              "th": "ผลลัพธ์เชิงปฏิบัติและแผนระยะถัดไป"
+            },
+            "paragraphs": [
+              {
+                "en": "The lab now functions as a reusable creative engine: new concepts can be prototyped quickly, benchmarked consistently, and handed over with clear documentation. The next phase is to package selected flows into API-accessible services and add retrieval-augmented prompt context for stronger brand consistency.",
+                "th": "ปัจจุบันห้องทดลองนี้ทำหน้าที่เป็น creative engine ที่นำกลับใช้ซ้ำได้ โดยสามารถต้นแบบไอเดียใหม่ได้เร็ว วัดผลเทียบกันได้อย่างสม่ำเสมอ และส่งมอบพร้อมเอกสารที่ชัดเจน แผนถัดไปคือการแพ็ก workflow บางส่วนให้เรียกใช้ผ่าน API และเพิ่มบริบทแบบ retrieval-augmented ให้การสื่อสารแบรนด์มีความสอดคล้องสูงขึ้น"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "en": "Reduced iteration waste by standardizing prompts and model checkpoints.",
+            "th": "ลดงานเสียจากการทดลองซ้ำด้วยการทำมาตรฐาน prompt และ model checkpoint"
+          },
+          {
+            "en": "Improved consistency of visual outputs through measurable quality gates.",
+            "th": "ยกระดับความสม่ำเสมอของผลงานภาพด้วย quality gate ที่วัดผลได้"
+          },
+          {
+            "en": "Established a reusable blueprint for AI multimedia experiments with production-oriented controls.",
+            "th": "วางพิมพ์เขียวที่นำกลับใช้ได้สำหรับการทดลอง AI มัลติมีเดีย โดยมีแนวควบคุมแบบ production-oriented"
+          }
+        ]
+      }
     }
   ],
   "experience": [

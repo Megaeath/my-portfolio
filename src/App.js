@@ -106,10 +106,40 @@ function localizeResumeBasicInfo(basicInfo, language) {
 }
 
 function localizeProjects(projects, language) {
+  const localizeProjectArticle = (article) => {
+    if (!article) {
+      return article;
+    }
+
+    return {
+      ...article,
+      subtitle: localizeField(article.subtitle, language),
+      readTime: localizeField(article.readTime, language),
+      ctaLabel: localizeField(article.ctaLabel, language),
+      highlightTitle: localizeField(article.highlightTitle, language),
+      outcomesTitle: localizeField(article.outcomesTitle, language),
+      visitProjectLabel: localizeField(article.visitProjectLabel, language),
+      coverCaption: localizeField(article.coverCaption, language),
+      highlights: article.highlights?.map((item) => ({
+        ...item,
+        label: localizeField(item.label, language),
+        value: localizeField(item.value, language),
+      })),
+      sections: article.sections?.map((section) => ({
+        ...section,
+        heading: localizeField(section.heading, language),
+        paragraphs: section.paragraphs?.map((paragraph) => localizeField(paragraph, language)),
+        bullets: section.bullets?.map((bullet) => localizeField(bullet, language)),
+      })),
+      outcomes: article.outcomes?.map((outcome) => localizeField(outcome, language)),
+    };
+  };
+
   return projects?.map((project) => ({
     ...project,
     title: localizeField(project.title, language),
     description: localizeField(project.description, language),
+    article: localizeProjectArticle(project.article),
   }));
 }
 
