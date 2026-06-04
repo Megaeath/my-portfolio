@@ -52,6 +52,266 @@
   "projects": [
     {
       "title": {
+        "en": "Tower Fighter",
+        "th": "Tower Fighter"
+      },
+      "startDate": "2024",
+      "description": {
+        "en": "A strategic HTML5 action tower defense game built with PhaserJS. Players deploy a squad of customizable fantasy heroes (such as Knight, Embermage Fox, and Medibot) along the defense wall to hold off waves of incoming monsters. Features real-time hero ultimate moves, speed/damage stats upgrades, and dynamic battle waves.",
+        "th": "เกมป้องกันฐานแนววางแผนและแอคชันในรูปแบบ HTML5 พัฒนาด้วย PhaserJS ผู้เล่นจะจัดทีมฮีโร่แฟนตาซีสุดเท่ (เช่น Knight, Embermage Fox และ Medibot) ประจำการตามแนวป้อมปราการเพื่อต่อสู้และต้านฝูงมอนสเตอร์ที่เข้ามาเป็นเวฟ โดดเด่นด้วยระบบอัปเกรดสถานะ การปลดปล่อยท่าไม้ตายของฮีโร่ และเวฟศัตรูที่ท้าทายแบบเรียลไทม์"
+      },
+      "images": [
+        "images/portfolio/tower-fighter/preview.png"
+      ],
+      "url": "https://tower-fighter.pages.dev/",
+      "technologies": [
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        },
+        {
+          "class": "fas fa-gamepad",
+          "name": "PhaserJS"
+        },
+        {
+          "class": "devicon-html5-plain",
+          "name": "HTML5"
+        }
+      ],
+      "article": {
+        "ctaLabel": {
+          "en": "Play game",
+          "th": "เริ่มเล่นเกม"
+        },
+        "subtitle": {
+          "en": "Action-packed vertical tower defense gameplay with customizable hero classes and dynamic upgrades.",
+          "th": "เกมป้องกันฐานแนวตั้งสุดมันส์พร้อมคลาสฮีโร่ที่หลากหลายและระบบอัปเกรดแบบเรียลไทม์"
+        },
+        "readTime": {
+          "en": "5 min read",
+          "th": "ใช้เวลาอ่านประมาณ 5 นาที"
+        },
+        "highlightTitle": {
+          "en": "Game Features",
+          "th": "ฟีเจอร์เด่นของเกม"
+        },
+        "outcomesTitle": {
+          "en": "Key Achievements",
+          "th": "ความสำเร็จหลัก"
+        },
+        "visitProjectLabel": {
+          "en": "Play Game Live",
+          "th": "เล่นเกมบนเว็บจริง"
+        },
+        "coverImage": "images/portfolio/tower-fighter/preview.png",
+        "coverCaption": {
+          "en": "Tower Fighter gameplay interface, showing heroes defending the base wall at wave 7.",
+          "th": "หน้าจอตัวเกมจริงของ Tower Fighter ขณะที่กลุ่มฮีโร่กำลังป้องกันป้อมปราการในเวฟที่ 7"
+        },
+        "highlights": [
+          {
+            "label": {
+              "en": "Tech Stack",
+              "th": "เทคโนโลยีที่ใช้"
+            },
+            "value": {
+              "en": "PhaserJS, HTML5 Canvas, Vanilla CSS",
+              "th": "PhaserJS, HTML5 Canvas, Vanilla CSS"
+            }
+          },
+          {
+            "label": {
+              "en": "Hero System",
+              "th": "ระบบยูนิตฮีโร่"
+            },
+            "value": {
+              "en": "Multiple hero classes with custom ultimate moves",
+              "th": "คลาสฮีโร่ที่หลากหลายพร้อมการใช้ท่าไม้ตายเฉพาะตัว"
+            }
+          },
+          {
+            "label": {
+              "en": "Combat Engine",
+              "th": "ระบบการต่อสู้"
+            },
+            "value": {
+              "en": "Real-time stat updates, wave progression, gold economy",
+              "th": "ระบบอัปเกรดสถานะเรียลไทม์, เวฟศัตรูต่อเนื่อง และเศรษฐกิจทองคำในเกม"
+            }
+          }
+        ],
+        "sections": [
+          {
+            "heading": {
+              "en": "Strategic Placement and Hero Synergies",
+              "th": "การวางตำแหน่งเชิงยุทธศาสตร์และการผสานพลังของฮีโร่"
+            },
+            "paragraphs": [
+              {
+                "en": "Tower Fighter brings vertical action tower defense to mobile web browsers. Players manage gold economy gathered from defeated foes to level up hero stats dynamically in battle. Units like Embermage Fox deal area-of-effect elemental damage, while Knight provides sturdy defense, and Medibot-9 recovers health, requiring the player to balance offensive and defensive placement.",
+                "th": "Tower Fighter นำประสบการณ์เกมแนวป้องกันฐานแนวตั้งมาสู่เว็บเบราว์เซอร์ ผู้เล่นต้องบริหารทองคำที่ได้จากการปราบศัตรูเพื่อมาอัปเกรดเลเวลและสเตตัสตัวละครในระหว่างการรบอย่างเป็นยุทธศาสตร์ โดยมียูนิตอย่าง Embermage Fox ที่ทำดาเมจเวทมนตร์เป็นวงกว้าง Knight ที่เข้าโจมตีอย่างรุนแรง และ Medibot-9 คอยช่วยฟื้นฟูรักษา"
+              },
+              {
+                "en": "Through robust asset preloading and object pooling, the game dynamically handles dozens of active projectiles, custom particle explosions, and combat sprites simultaneously without frame rate degradation.",
+                "th": "ด้วยระบบโหลดทรัพยากรล่วงหน้าและการใช้ Object Pooling ตัวเกมจึงสามารถแสดงผลทั้งวิถีกระสุน เอฟเฟกต์ระเบิด และสไปรท์คอมแบทของศัตรูจำนวนมากได้พร้อมๆ กันบนหน้าจอโดยไม่หน่วง"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "en": "Developed a high-performance vertical layout game canvas running at stable 60 FPS on mobile and desktop.",
+            "th": "พัฒนาเกมสัดส่วนแนวตั้งประสิทธิภาพสูงที่ทำงานนิ่ง 60 FPS ทั้งบนเดสก์ท็อปและมือถือ"
+          },
+          {
+            "en": "Designed a dynamic real-time upgrade UI and sound loop trigger system using Phaser's UI Layering.",
+            "th": "สร้างอินเตอร์เฟสอัปเกรดแบบเรียลไทม์ที่ตอบสนองไวผ่านฟังก์ชัน UI Layering ของ Phaser"
+          },
+          {
+            "en": "Successfully deployed and distributed the game live on Cloudflare Pages with edge delivery.",
+            "th": "ติดตั้งเกมผ่าน Cloudflare Pages ช่วยให้ผู้เล่นเริ่มเล่นได้ทันทีโดยไม่ต้องโหลดไฟล์เพิ่มเติม"
+          }
+        ]
+      }
+    },
+    {
+      "title": {
+        "en": "Othello Fighter",
+        "th": "Othello Fighter"
+      },
+      "startDate": "2024",
+      "description": {
+        "en": "An interactive web-based HTML5 action board game built with PhaserJS. Players control custom-designed fantasy heroes that unleash unique signature animations and special combat moves against each other on the battlefield. Features fully self-produced character animation designs and custom retro soundtracks.",
+        "th": "เกมกระดานแอคชั่น HTML5 บนเว็บที่พัฒนาด้วย PhaserJS ผู้เล่นจะได้ควบคุมฮีโร่แฟนตาซีที่ออกแบบมาเป็นพิเศษ เพื่อทำท่าไม้ตายและอนิเมชันการต่อสู้สุดพิเศษใส่กันบนสนามรบ โดดเด่นด้วยการออกแบบอนิเมชันตัวละครและแต่งเพลงประกอบสไตล์ย้อนยุคเองทั้งหมด"
+      },
+      "images": [
+        "images/portfolio/othello-fighter/preview.png"
+      ],
+      "url": "https://othello-fighter.pages.dev/",
+      "technologies": [
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        },
+        {
+          "class": "fas fa-gamepad",
+          "name": "PhaserJS"
+        },
+        {
+          "class": "devicon-html5-plain",
+          "name": "HTML5"
+        }
+      ],
+      "article": {
+        "ctaLabel": {
+          "en": "Play game",
+          "th": "เริ่มเล่นเกม"
+        },
+        "subtitle": {
+          "en": "Fusing classic Reversi mechanics with high-energy chibi action battle sequences and self-composed music.",
+          "th": "ผสมผสานกติกาหมากกระดานโอเธลโลคลาสสิกเข้ากับฉากการต่อสู้สุดมันส์ของเหล่าตัวละคร Chibi และเพลงประกอบที่แต่งเอง"
+        },
+        "readTime": {
+          "en": "5 min read",
+          "th": "ใช้เวลาอ่านประมาณ 5 นาที"
+        },
+        "highlightTitle": {
+          "en": "Game Features",
+          "th": "ฟีเจอร์เด่นของเกม"
+        },
+        "outcomesTitle": {
+          "en": "Key Achievements",
+          "th": "ความสำเร็จหลัก"
+        },
+        "visitProjectLabel": {
+          "en": "Play Game Live",
+          "th": "เล่นเกมบนเว็บจริง"
+        },
+        "coverImage": "images/portfolio/othello-fighter/preview.png",
+        "coverCaption": {
+          "en": "Othello Fighter battle interface, showing players unleashing their special signature spells.",
+          "th": "หน้าจออินเตอร์เฟสเกม Othello Fighter ขณะที่ตัวละครกำลังใช้เวทย์มนตร์และท่าไม้ตายพิเศษ"
+        },
+        "highlights": [
+          {
+            "label": {
+              "en": "Tech Stack",
+              "th": "เทคโนโลยีที่ใช้"
+            },
+            "value": {
+              "en": "PhaserJS, HTML5 Canvas, Vanilla CSS",
+              "th": "PhaserJS, HTML5 Canvas, Vanilla CSS"
+            }
+          },
+          {
+            "label": {
+              "en": "Animation & Art",
+              "th": "งานศิลปะและแอนิเมชัน"
+            },
+            "value": {
+              "en": "Handcrafted character sprite animations",
+              "th": "แอนิเมชันสไปรท์ตัวละครทำมือทั้งหมด"
+            }
+          },
+          {
+            "label": {
+              "en": "Audio Production",
+              "th": "งานเสียงประกอบ"
+            },
+            "value": {
+              "en": "Self-composed game loops and sound effects",
+              "th": "แต่งเพลงประกอบและเอฟเฟกต์เสียงเองทั้งหมด"
+            }
+          }
+        ],
+        "sections": [
+          {
+            "heading": {
+              "en": "Fusing Strategy with Combat Animation",
+              "th": "การบรรจบกันระหว่างเกมกระดานและการต่อสู้แนวแอคชัน"
+            },
+            "paragraphs": [
+              {
+                "en": "Othello Fighter reimagines the ancient board game of Reversi as an active action battleground. Rather than just placing plain discs, every move corresponds to tactical moves. When disks are flipped, the corresponding hero initiates dynamic combat moves, giving a visual weight and visceral feedback to the abstract board positions.",
+                "th": "Othello Fighter พัฒนาเกมหมากกระดานสุดคลาสสิกอย่างโอเธลโลให้กลายเป็นสังเวียนแอคชันสุดตื่นเต้น แทนที่จะเป็นการวางตัวหมากแผ่นกลมธรรมดา ทุกครั้งที่ทำการคว่ำหรือพลิกหมากบนกระดาน ฮีโร่ที่เลือกจะปลดปล่อยท่าโจมตีและอนิเมชันแฟนตาซีหลากหลายทิศทาง มอบมิติและประสบการณ์ความรู้สึกสะใจในทุกตาเดิน"
+              },
+              {
+                "en": "All animations were storyboarded, designed, and optimized to run smoothly within a custom Phaser HTML5 canvas instance, assuring stable 60 FPS performance on both mobile web viewports and modern desktop browsers.",
+                "th": "อนิเมชันสไปรท์ทั้งหมดถูกออกแบบ วาด และปรับแต่งเพื่อให้แสดงผลได้นุ่มนวลสูงสุดภายใต้ Phaser HTML5 canvas ให้รันได้ระดับ 60 FPS นิ่งๆ ทั้งบนอุปกรณ์พกพาและเดสก์ท็อปโดยไม่กินทรัพยากรเครื่อง"
+              }
+            ]
+          },
+          {
+            "heading": {
+              "en": "Creating a Complete Audio and Visual Package",
+              "th": "การสร้างสรรค์ภาพ แอนิเมชัน และเสียงประกอบขึ้นเองทั้งหมด"
+            },
+            "paragraphs": [
+              {
+                "en": "Believing that games thrive on thematic consistency, I took charge of the entire creative workflow. Beyond programming the game engine, I drew and animated each character's special skill sets, and composed custom, looping background music tracks that enhance the intensity of the battle stages.",
+                "th": "ด้วยความเชื่อที่ว่าเกมจะยอดเยี่ยมได้ต้องมีความสอดคล้องกลมกลืนกันของธีม ผมจึงรับผิดชอบงานสร้างสรรค์ทั้งหมดด้วยตนเอง นอกจากการเขียนโค้ดคุมตัวเกมแล้ว ผมยังวาดคีย์เฟรมและแอนิเมชันท่าไม้ตายของแต่ละตัวละคร รวมถึงแต่งทำนองดนตรีประกอบแนว 8-bit/synth-wave ที่วนลูปเพื่อกระตุ้นอารมณ์การต่อสู้ในแต่ละด่าน"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "en": "Engineered a responsive game canvas running at stable 60 FPS with asset preloading and clean memory states.",
+            "th": "ออกแบบระบบพรีโหลดและเก็บข้อมูลเมมโมรี่ส่วนเกมให้ทำงานนิ่ง 60 FPS ตลอดการเล่น"
+          },
+          {
+            "en": "Completed 100% of character art, combat animations, and stage audio themes entirely from scratch.",
+            "th": "สร้างสรรค์งานศิลปะตัวละคร แอนิเมชันคอมแบท และเพลงดนตรีประจำด่านขึ้นใหม่เอง 100%"
+          },
+          {
+            "en": "Deployed a serverless web distribution with lightning fast edge page loads via Cloudflare Pages.",
+            "th": "ติดตั้งตัวแอปเล่นผ่านเว็บด้วย Cloudflare Pages ช่วยให้อ่านและเริ่มเล่นได้อย่างรวดเร็วจากทั่วโลก"
+          }
+        ]
+      }
+    },
+    {
+      "title": {
         "en": "TestMyKid Student App",
         "th": "แอปนักเรียน TestMyKid"
       },

@@ -1,0 +1,22 @@
+# Conversation Summary - 2026-06-04
+
+Implemented a premium horizontal scroll storytelling effect for the Projects section on the portfolio website, resolved navigation issues, added both Othello Fighter and Tower Fighter game projects, and resolved scroll jump bugs caused by scroll-behavior.
+
+## What was requested
+1. Replace the traditional project grid/table with a single row of project cards that scrolls horizontally (right to left) when the user scrolls vertically down into the Projects section.
+2. Fix the menubar links so that clicking them correctly jumps directly to any section (including the pinned Projects section) instead of getting stuck or stepping session by session.
+3. Add the "Othello Fighter" game (https://othello-fighter.pages.dev/) and "Tower Fighter" game (https://tower-fighter.pages.dev/) to the projects list.
+4. Move the Side Projects section layout in the main page so that it appears directly after the Experience section.
+5. Resolve navigation bug where smooth scrolling via menu buttons steps through one-by-one, and scrolling through Projects causes the page to bounce/jump directly to the bottom.
+
+## Steps Completed
+1. Refactored `Projects.js` from a class component to a modern functional component using `useRef` and `useEffect`.
+2. Integrated `gsap` and `ScrollTrigger` to create a smooth, pinned horizontal translation animation on desktop viewports.
+3. Updated `App.scss` to style the horizontal scroll layout and added native horizontal swiping (scroll-snap) on devices with viewport widths below `992px`.
+4. Fixed Jest test configuration by globally mocking `window.matchMedia` in `setupTests.js` to prevent GSAP initialization failures during unit test execution.
+5. Removed `scroll-behavior: smooth;` from `html` inside `index.scss`. This native CSS rule conflicts with GSAP ScrollTrigger's pinning updates, causing the browser to bounce/jump the scroll position to the bottom of the page when the pinned section unpinned.
+6. Implemented a custom navigation click handler `handleNavClick` in `App.js` that uses GSAP to smoothly animate the window scroll position (`gsap.to(scrollObj, { y: targetScroll, onUpdate: () => window.scrollTo(0, scrollObj.y) })`). This prevents the browser's native smooth-scrolling engine from clashing with GSAP ScrollTrigger, resolving the menu click issues and the "step-by-step" scroll highlight bug.
+7. Copied custom mockup and user screenshots into project assets and updated `public/res_primaryLanguage.json` with Tower Fighter and Othello Fighter project details.
+8. Reordered the DOM components in `App.js` so that `<Projects />` renders directly below `<Experience />`.
+9. Adjusted ScrollSpy configurations (`NAV_SECTIONS` list and menu rendering order) to match the new layout sequence (About -> Experience -> Projects -> Skills).
+10. Verified successful project compilation via `npm run build` and successful test execution of `Projects.test.js`.

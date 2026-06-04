@@ -17,6 +17,8 @@ import {
   writeStoredLanguage,
 } from "./utils/language";
 import BackgroundSystem from "./components/BackgroundSystem/BackgroundSystem";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 function localizeField(value, language) {
   if (
@@ -175,8 +177,8 @@ function localizeSkills(skills, language) {
 const NAV_SECTIONS = [
   { id: 'about' },
   { id: 'experience' },
-  { id: 'skills' },
   { id: 'projects' },
+  { id: 'skills' },
 ];
 const NAV_SECTION_ORDER = NAV_SECTIONS.reduce((sectionOrder, { id }, index) => {
   sectionOrder[id] = index;
@@ -197,6 +199,35 @@ class App extends Component {
     this.navSectionObserver = null;
     this.handleLanguageChange = this.handleLanguageChange.bind(this);
     this.observeRevealElements = this.observeRevealElements.bind(this);
+    this.handleNavClick = this.handleNavClick.bind(this);
+  }
+
+  handleNavClick(e, id) {
+    if (e) {
+      e.preventDefault();
+    }
+    const element = document.getElementById(id);
+    if (element) {
+      const trigger = ScrollTrigger.getAll().find(t => t.trigger === element);
+      let targetScroll = element.offsetTop;
+      if (trigger) {
+        targetScroll = trigger.start;
+      } else {
+        const rect = element.getBoundingClientRect();
+        targetScroll = rect.top + window.pageYOffset;
+      }
+      
+      const scrollObj = { y: window.scrollY };
+      gsap.to(scrollObj, {
+        y: targetScroll,
+        duration: 1.2,
+        ease: "power2.out",
+        overwrite: "auto",
+        onUpdate: () => {
+          window.scrollTo(0, scrollObj.y);
+        }
+      });
+    }
   }
 
   componentDidMount() {
@@ -365,10 +396,10 @@ class App extends Component {
             <div className="nav-logo">{sharedData?.name}</div>
             <div className="nav-actions">
               <div className="nav-links">
-                <a href="#about" className={this.state.activeSection === 'about' ? 'active' : ''}>{navLabels?.about}</a>
-                <a href="#experience" className={this.state.activeSection === 'experience' ? 'active' : ''}>{navLabels?.experience}</a>
-                <a href="#skills" className={this.state.activeSection === 'skills' ? 'active' : ''}>{navLabels?.skills}</a>
-                <a href="#projects" className={this.state.activeSection === 'projects' ? 'active' : ''}>{navLabels?.projects}</a>
+                <a href="#about" className={this.state.activeSection === 'about' ? 'active' : ''} onClick={(e) => this.handleNavClick(e, 'about')}>{navLabels?.about}</a>
+                <a href="#experience" className={this.state.activeSection === 'experience' ? 'active' : ''} onClick={(e) => this.handleNavClick(e, 'experience')}>{navLabels?.experience}</a>
+                <a href="#projects" className={this.state.activeSection === 'projects' ? 'active' : ''} onClick={(e) => this.handleNavClick(e, 'projects')}>{navLabels?.projects}</a>
+                <a href="#skills" className={this.state.activeSection === 'skills' ? 'active' : ''} onClick={(e) => this.handleNavClick(e, 'skills')}>{navLabels?.skills}</a>
               </div>
               <LanguageToggle
                 currentLanguage={language}
@@ -382,10 +413,10 @@ class App extends Component {
           <Header sharedData={sharedData} />
           <About resumeBasicInfo={resumeData.basic_info} sharedBasicInfo={sharedData} />
           <Experience resumeExperience={resumeData.experience} resumeBasicInfo={resumeData.basic_info} />
+          <Projects resumeProjects={resumeData.projects} resumeBasicInfo={resumeData.basic_info} />
           <Skills sharedSkills={localizeSkills(sharedDataState.skills, language)} resumeBasicInfo={resumeData.basic_info} />
           <Certificate sharedBasicInfo={sharedData} />
           <Graduation resumeGraduate={resumeData.graduate} resumeBasicInfo={resumeData.basic_info} />
-          <Projects resumeProjects={resumeData.projects} resumeBasicInfo={resumeData.basic_info} />
         </main>
 
         <Footer sharedBasicInfo={sharedData} />

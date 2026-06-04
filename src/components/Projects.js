@@ -1,39 +1,80 @@
-import React, { Component } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import SideProjectArticleModal from "./SideProjectArticleModal";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-class Projects extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeArticleProject: null,
-    };
+gsap.registerPlugin(ScrollTrigger);
 
-    this.openArticle = this.openArticle.bind(this);
-    this.closeArticle = this.closeArticle.bind(this);
+function Projects({ resumeProjects, resumeBasicInfo }) {
+  const [activeArticleProject, setActiveArticleProject] = useState(null);
+  const triggerRef = useRef(null);
+  const trackRef = useRef(null);
+
+  const openArticle = (project) => {
+    setActiveArticleProject(project);
+  };
+
+  const closeArticle = () => {
+    setActiveArticleProject(null);
+  };
+
+  useEffect(() => {
+    if (!resumeProjects || resumeProjects.length === 0) return;
+
+    let ctx = gsap.context(() => {
+      let mm = gsap.matchMedia();
+
+      mm.add("(min-width: 993px)", () => {
+        const track = trackRef.current;
+        if (!track) return;
+        
+        // Calculate scroll amount
+        const totalWidth = track.scrollWidth;
+        const viewWidth = window.innerWidth;
+        // Scroll amount is how much the track overflows the screen width, plus some padding/margin
+        const scrollAmount = totalWidth - viewWidth;
+
+        if (scrollAmount > 0) {
+          gsap.to(track, {
+            x: -scrollAmount,
+            ease: "none",
+            scrollTrigger: {
+              trigger: triggerRef.current,
+              pin: true,
+              scrub: 1,
+              start: "top top",
+              end: () => `+=${scrollAmount * 1.2}`,
+              invalidateOnRefresh: true,
+            },
+          });
+        }
+      });
+    }, triggerRef);
+
+    return () => ctx.revert();
+  }, [resumeProjects]);
+
+  if (!resumeProjects || !resumeBasicInfo) {
+    return null;
   }
 
-  openArticle(project) {
-    this.setState({ activeArticleProject: project });
-  }
+  const sectionName = resumeBasicInfo.section_name.projects;
+  const sectionTitle = resumeBasicInfo.section_title?.projects || sectionName;
 
-  closeArticle() {
-    this.setState({ activeArticleProject: null });
-  }
-
-  renderProjectCard(project) {
+  const renderProjectCard = (project) => {
     const imageSrc = [process.env.PUBLIC_URL, project.images[0]].filter(Boolean).join("/");
     const hasArticle = Boolean(project.article);
     const cardContent = (
       <>
         <div className="project-image">
-          <img src={imageSrc} alt={project.title} />
+          <img src={imageSrc} alt={project.title} loading="lazy" />
         </div>
         <div className="project-info">
-          <span style={{ fontSize: "0.9rem", fontWeight: "800", color: "var(--accent)", textTransform: "uppercase" }}>
+          <span className="project-date">
             {project.startDate}
           </span>
-          <h3 style={{ marginTop: "0.5rem" }}>{project.title}</h3>
-          <p style={{ marginTop: "1rem" }}>{project.description}</p>
+          <h3>{project.title}</h3>
+          <p>{project.description}</p>
           {hasArticle ? <span className="project-article-tag">{project.article.ctaLabel || "Read case study"}</span> : null}
         </div>
       </>
@@ -44,8 +85,8 @@ class Projects extends Component {
         <button
           key={project.title}
           type="button"
-          className="project-card project-card-button reveal"
-          onClick={() => this.openArticle(project)}
+          className="project-card project-card-button"
+          onClick={() => openArticle(project)}
         >
           {cardContent}
         </button>
@@ -56,7 +97,7 @@ class Projects extends Component {
       return (
         <a
           key={project.title}
-          className="project-card reveal"
+          className="project-card"
           href={project.url}
           target="_blank"
           rel="noopener noreferrer"
@@ -67,39 +108,33 @@ class Projects extends Component {
     }
 
     return (
-      <div key={project.title} className="project-card reveal">
+      <div key={project.title} className="project-card">
         {cardContent}
       </div>
     );
-  }
+  };
 
-  render() {
-    const { activeArticleProject } = this.state;
-
-    if (this.props.resumeProjects && this.props.resumeBasicInfo) {
-      var sectionName = this.props.resumeBasicInfo.section_name.projects;
-      var sectionTitle = this.props.resumeBasicInfo.section_title?.projects || sectionName;
-      var projects = this.props.resumeProjects.map((project) => this.renderProjectCard(project));
-    }
-
-    return (
-      <section id="projects">
-        <div className="container">
-          <div className="section-header reveal">
+  return (
+    <div ref={triggerRef} className="projects-scroll-container" id="projects">
+      <div className="projects-sticky-wrapper">
+        <div className="container projects-header-container">
+          <div className="section-header">
             <span className="section-label">{sectionName}</span>
             <h2 className="section-title">{sectionTitle}</h2>
           </div>
-          <div className="project-grid">{projects}</div>
         </div>
+        <div ref={trackRef} className="projects-horizontal-track">
+          {resumeProjects.map((project) => renderProjectCard(project))}
+        </div>
+      </div>
 
-        <SideProjectArticleModal
-          show={Boolean(activeArticleProject)}
-          onHide={this.closeArticle}
-          project={activeArticleProject}
-        />
-      </section>
-    );
-  }
+      <SideProjectArticleModal
+        show={Boolean(activeArticleProject)}
+        onHide={closeArticle}
+        project={activeArticleProject}
+      />
+    </div>
+  );
 }
 
 export default Projects;
