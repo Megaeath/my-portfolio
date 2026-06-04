@@ -4,9 +4,9 @@
 
   --bg-primary: #ffffff;
   --bg-secondary: #fbfbfd;
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --accent: #2563eb;
+  --text-primary: #050a17;
+  --text-secondary: #2d3748;
+  --accent: #1d4ed8;
   --border: #e5e7eb;
   --card-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
 }
@@ -31,8 +31,6 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
 }
-
-
 
 h1,
 h2,
@@ -75,6 +73,23 @@ ul {
 section {
   padding: 10rem 0;
   background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+/* Soft white overlay behind each section */
+section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(249, 250, 251, 0.62);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Hero section overlay slightly stronger */
+.hero::before {
+  background: rgba(249, 250, 251, 0.68);
 }
 
 @media (max-width: 768px) {

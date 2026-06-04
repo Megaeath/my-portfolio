@@ -17,6 +17,19 @@ import {
   writeStoredLanguage,
 } from "./utils/language";
 import BackgroundSystem from "./components/BackgroundSystem/BackgroundSystem";
+import { useScrollProgress } from "./hooks/useScrollProgress";
+
+/* Wires the scroll-progress hook into the class-based App */
+const BackgroundSystemWithScroll = () => {
+  const { progress, chapterIndex, intraProgress } = useScrollProgress();
+  return (
+    <BackgroundSystem
+      scrollProgress={progress}
+      chapterIndex={chapterIndex}
+      intraProgress={intraProgress}
+    />
+  );
+};
 
 function localizeField(value, language) {
   if (
@@ -359,7 +372,7 @@ class App extends Component {
 
     return (
       <div className="app-shell">
-        <BackgroundSystem />
+        <BackgroundSystemWithScroll />
         <nav className="nav">
           <div className="container nav-container">
             <div className="nav-logo">{sharedData?.name}</div>
